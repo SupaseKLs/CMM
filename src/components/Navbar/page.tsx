@@ -5,17 +5,13 @@ import Link from "next/link";
 export default function Navbar() {
     return (
         <>
-            {/* Parent Container */}
             <div className="relative w-11/12 mx-auto">
-                {/* Navbar with absolute position */}
                 <div className="absolute top-0 left-0 w-full z-20">
                     <div className="flex justify-between items-center py-4">
-                        {/* Logo Section */}
                         <div>
                             <Image src={Logo} width={150} height={150} alt="Logo" />
                         </div>
 
-                        {/* Navigation Links */}
                         <div className="flex items-center text-white">
                             <Link className="px-3 border-l-2 border-white" href="">
                                 หน้าหลัก
