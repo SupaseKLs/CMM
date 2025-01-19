@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Kanit } from 'next/font/google';
 import "./globals.css";
 import Navbar from "@/components/Navbar/page"
+import Footer from "@/components/Footer/page";
 import SmoothScroll from "@/components/SmoothScroll/page";
 
 const kanit = Kanit({
@@ -26,6 +27,7 @@ export default function RootLayout({
         <SmoothScroll>
           <Navbar />
           {children}
+          <Footer />
         </SmoothScroll>
       </body>
     </html>
