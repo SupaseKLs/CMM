@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import Carousel from "@/components/Carousel/page"
+import StickyCard from "@/components/StickyCard/page";
 export default function HomePage() {
 
     const testimonials = [
@@ -85,17 +86,15 @@ export default function HomePage() {
                 <div className="w-11/12 mx-auto">
                     <div className="text-white pt-10">
                         <h1 className="text-[3vw]">เราเรียนเกี่ยวกับไรบ้าง</h1>
-                        <p className="text-[1.3vw] w-[500px]">มหาวิทยาลัยมีหลักสูตรวิชาการนานาชาติที่หลากหลายให้เลือกเรียน ภาษาทางการ ได้แก่ อังกฤษ อิตาลี เยอรมัน และฝรั่งเศสซึ่งสร้างสภาพแวดล้อมที่สมบูรณ์แบบสำหรับการเรียนรู้และการวิจัยทางวิทยาศาสตร์</p>
+                        <p className="text-[1.3vw] w-7/12">มหาวิทยาลัยมีหลักสูตรวิชาการนานาชาติที่หลากหลายให้เลือกเรียน ภาษาทางการ ได้แก่ อังกฤษ อิตาลี เยอรมัน และฝรั่งเศสซึ่งสร้างสภาพแวดล้อมที่สมบูรณ์แบบสำหรับการเรียนรู้และการวิจัยทางวิทยาศาสตร์</p>
                     </div>
                     <Carousel />
                 </div>
             </section>
 
             <section className="h-full bg-white rounded-t-[50px] mt-40">
-                <div className="w-11/12 mx-auto">
-                    <div className="h-96">
-
-                    </div>
+                <StickyCard />
+                <div className="pt-10 w-11/12 mx-auto">
                     <div className="flex justify-between">
                         <div className="text-[2.2vw] font-semibold">
                             <h1>คณะครุศาสตร์อุตสาหกรรมและเทคโนโลยี</h1>
@@ -110,6 +109,7 @@ export default function HomePage() {
                             playsInline
                             autoPlay
                             loop
+                            muted
                             className="w-full rounded-xl h-[500px] object-cover"
                         >
                             <source src="/video/Teacher.mp4" type="video/mp4" />
