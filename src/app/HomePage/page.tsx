@@ -2,7 +2,11 @@
 import React, { useEffect, useState } from "react";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import Carousel from "@/components/Carousel/page"
+import Workspace from "@/assets/img/Workspace.jpg"
+import Services from "@/assets/img/Services.jpg"
+import Admission from "@/assets/img/Admission.jpg"
 import Parallax from "@/components/parallax/page"
+import Image from "next/image";
 import StickyCard from "@/components/StickyCard/page";
 export default function HomePage() {
 
@@ -30,7 +34,10 @@ export default function HomePage() {
     ];
     return (
         <>
-        <Parallax />
+            <div>
+                {/* <Parallax /> */}
+
+            </div>
             <header>
                 <div className="w-full">
                     <div className="relative">
@@ -62,18 +69,20 @@ export default function HomePage() {
                     </div>
 
                     <div className="my-24 flex flex-row justify-center space-x-2 md:space-x-10 items-center">
-                        <div className="rounded-xl w-80 h-40 md:h-96 bg-gray-400">
-                            <div>
-                                
-                            </div>
+                        <div className="relative rounded-xl w-80 h-40 md:h-96 bg-gray-400">
+                            <Image src={Workspace} alt="Workspace" layout="fill" objectFit="cover" className="rounded-xl" />
                         </div>
-                        <div className="rounded-xl w-80 h-40 md:h-96 bg-gray-400">
-                            2
+
+                        <div className="relative rounded-xl w-80 h-40 md:h-96 bg-gray-400">
+                            <Image src={Services} alt="Services" layout="fill" objectFit="cover" className="rounded-xl" />
                         </div>
-                        <div className="rounded-xl w-80 h-40 md:h-96 bg-gray-400">
-                            3
+
+                        <div className="relative rounded-xl w-80 h-40 md:h-96 bg-gray-400">
+                            <Image src={Admission} alt="Admission   " layout="fill" objectFit="cover" className="rounded-xl" />
                         </div>
+
                     </div>
+
 
                     <div className="flex flex-col md:flex-row justify-between">
                         <div className="text-xl md:text-[3vw] w-60 font-semibold">
@@ -89,7 +98,7 @@ export default function HomePage() {
             <section>
                 <div className="w-11/12 mx-auto">
                     <div className="text-white py-10">
-                        <h1 className="text-xl md:text-[3vw] py-4">เราเรียนเกี่ยวกับไรบ้าง</h1>
+                        <h1 className="text-xl md:text-[3vw] py-4">ผลงานชาวมัลติ</h1>
                         <p className="md:text-[1.3vw] w-11/12 md:w-7/12">มหาวิทยาลัยมีหลักสูตรวิชาการนานาชาติที่หลากหลายให้เลือกเรียน ภาษาทางการ ได้แก่ อังกฤษ อิตาลี เยอรมัน และฝรั่งเศสซึ่งสร้างสภาพแวดล้อมที่สมบูรณ์แบบสำหรับการเรียนรู้และการวิจัยทางวิทยาศาสตร์</p>
                     </div>
                     <Carousel />
@@ -97,7 +106,6 @@ export default function HomePage() {
             </section>
 
             <section className="h-full bg-white rounded-t-[50px] mt-40 pt-32">
-                <StickyCard />
                 <div className="pt-10 w-11/12 mx-auto">
                     <div className="flex flex-col md:flex-row justify-between">
                         <div className="text-xl md:text-[2.2vw] font-semibold">
@@ -122,7 +130,7 @@ export default function HomePage() {
                 </div>
             </section>
 
-            <section>
+            {/* <section>
                 <div className="rounded-md flex flex-col antialiased bg-primary dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
                     <InfiniteMovingCards
                         items={testimonials}
@@ -130,7 +138,7 @@ export default function HomePage() {
                         speed="slow"
                     />
                 </div>
-            </section>
+            </section> */}
         </>
     )
 }

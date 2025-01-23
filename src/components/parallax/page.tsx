@@ -38,7 +38,7 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen overflow-hidden flex items-center justify-center">
+    <div className="min-h-screen overflow-hidden flex   ">
       <motion.div
         className="relative w-full h-screen overflow-hidden"
         style={{

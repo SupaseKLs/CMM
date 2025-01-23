@@ -12,7 +12,7 @@ import {
         <div className='hidden md:block relative mt-10 w-full px-4'>
           <Carousel>
             <CarouselContent className='-ml-4'>
-              <CarouselItem className='basis-2/3 pl-4'>
+              <CarouselItem className='basis-3/4 pl-4'>
                 <div className='relative'>
                   <Image className='flex aspect-video items-center justify-center dark:border-zinc-800' src={Web} alt='Multimedia' />
                   <div className='absolute bottom-0 pb-10 pl-10'>
@@ -21,38 +21,38 @@ import {
                   </div>
                 </div>
               </CarouselItem>
-              <CarouselItem className='basis-2/3 pl-4'>
+              <CarouselItem className='basis-3/4 pl-4'>
                 <div className='relative'>
                   <Image className='flex aspect-video items-center justify-center dark:border-zinc-800' src={Web} alt='Multimedia' />
                   <div className='absolute bottom-0 pb-10 pl-10'>
-                    <h1 className='text-6xl text-white'>Web Development</h1>
+                    <h1 className='text-6xl text-white'>Production</h1>
                     <h1 className='text-4xl text-white'>การพัฒนาเว็ปไซต์</h1>
                   </div>
                 </div>
               </CarouselItem>
-              <CarouselItem className='basis-2/3 pl-4'>
+              <CarouselItem className='basis-3/4 pl-4'>
                 <div className='relative'>
                   <Image className='flex aspect-video items-center justify-center dark:border-zinc-800' src={Web} alt='Multimedia' />
                   <div className='absolute bottom-0 pb-10 pl-10'>
-                    <h1 className='text-6xl text-white'>Web Development</h1>
+                    <h1 className='text-6xl text-white'>Graphic Design</h1>
                     <h1 className='text-4xl text-white'>การพัฒนาเว็ปไซต์</h1>
                   </div>
                 </div>
               </CarouselItem>
-              <CarouselItem className='basis-2/3 pl-4'>
+              <CarouselItem className='basis-3/4 pl-4'>
                 <div className='relative'>
                   <Image className='flex aspect-video items-center justify-center dark:border-zinc-800' src={Web} alt='Multimedia' />
                   <div className='absolute bottom-0 pb-10 pl-10'>
-                    <h1 className='text-6xl text-white'>Web Development</h1>
+                    <h1 className='text-6xl text-white'>Game Development</h1>
                     <h1 className='text-4xl text-white'>การพัฒนาเว็ปไซต์</h1>
                   </div>
                 </div>
               </CarouselItem>
-              <CarouselItem className='basis-2/3 pl-4'>
+              <CarouselItem className='basis-3/4 pl-4'>
                 <div className='relative'>
                   <Image className='flex aspect-video items-center justify-center dark:border-zinc-800' src={Web} alt='Multimedia' />
                   <div className='absolute bottom-0 pb-10 pl-10'>
-                    <h1 className='text-6xl text-white'>Web Development</h1>
+                    <h1 className='text-6xl text-white'>Photography</h1>
                     <h1 className='text-4xl text-white'>การพัฒนาเว็ปไซต์</h1>
                   </div>
                 </div>
