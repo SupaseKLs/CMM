@@ -6,11 +6,11 @@ import Arrow_right from "@/assets/svg/arrow-right.svg"
 
 export default function Footer() {
     return (
-        <footer className="pt-10 text-white">
+        <footer className="pt-10 bg-gray-300 text-gray-800">
             <div className="mx-auto w-11/12">
                 <div className="flex flex-col md:flex-row justify-between">
                     <div>
-                        <h1 className="text-4xl uppercase text-gray-600 font-bold">get in touch</h1>
+                        <h1 className="text-4xl uppercase font-bold">get in touch</h1>
                         <div className="py-4 flex items-center md:justify-center">
                             <Image src={Arrow_right} width={20} height={20} alt="arrow_right" />
                             <p className="  text-xl">orgcomit@kmutt.ac.th</p>
@@ -18,7 +18,7 @@ export default function Footer() {
                     </div>
                     <div className="flex">
                         <div className="pr-10">
-                            <h1 className="text-4xl uppercase text-gray-600 font-bold">Page</h1>
+                            <h1 className="text-4xl uppercase font-bold">Page</h1>
                             <div className="flex">
                                 <ul>
                                     <li>
@@ -52,7 +52,7 @@ export default function Footer() {
                         </div>
 
                         <div>
-                            <h1 className="text-4xl uppercase text-gray-600 font-bold">contact</h1>
+                            <h1 className="text-4xl uppercase font-bold">contact</h1>
                             <ul>
                                 <li><Link href="">Facebook</Link></li>
                                 <li><Link href="">Instagram</Link></li>

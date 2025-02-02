@@ -8,15 +8,15 @@ module.exports = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/**/*.{ts,tsx}", // This line includes other relevant paths
+    "./src/**/*.{ts,tsx}", 
   ],
-  darkMode: "class", // Include darkMode setting
+  darkMode: "class", 
   theme: {
     extend: {
       colors: {
-        primary: "#14B4BC", // Custom primary color
-        background: "var(--background)", // Use CSS variables
-        foreground: "var(--foreground)", // Use CSS variables
+        primary: "#14B4BC",
+        background: "var(--background)", 
+        foreground: "var(--foreground)", 
       },
       animation: {
         scroll:
@@ -31,7 +31,7 @@ module.exports = {
       },
     },
   },
-  plugins: [addVariablesForColors], // Keep the plugin for CSS variables for colors
+  plugins: [addVariablesForColors],
 };
 
 function addVariablesForColors({ addBase, theme }: any) {
