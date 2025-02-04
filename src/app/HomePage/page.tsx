@@ -4,6 +4,7 @@ import Link from "next/link";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import Carousel from "@/components/Carousel/page"
 import Workspace from "@/assets/img/Workspace.jpg"
+import WorkSpace from "@/components/WorkSpace/page"
 import Services from "@/assets/img/Services.jpg"
 import Admission from "@/assets/img/Admission.jpg"
 import Parallax from "@/components/parallax/page"
@@ -112,7 +113,8 @@ export default function HomePage() {
                         <h1 className="text-4xl md:text-[3vw] font-semibold py-4">ผลงานชาวมัลติ</h1>
                         <p className="text-xl md:text-2xl w-11/12 md:w-6/12 pt-4">มหาวิทยาลัยมีหลักสูตรวิชาการนานาชาติที่หลากหลายให้เลือกเรียน ภาษาทางการ ได้แก่ อังกฤษ อิตาลี เยอรมัน และฝรั่งเศสซึ่งสร้างสภาพแวดล้อมที่สมบูรณ์แบบสำหรับการเรียนรู้และการวิจัยทางวิทยาศาสตร์</p>
                     </div>
-                    <div className="grid my-10 grid-cols-[60%_40%]">
+                    <WorkSpace />
+                    {/* <div className="grid my-10 grid-cols-[60%_40%]">
                         <Image className="rounded-xl" src={Admission} alt="img" />
                         <div className="p-4">
                             <div className="w-full h-full flex flex-col justify-center items-center">
@@ -175,7 +177,7 @@ export default function HomePage() {
                             </div>
                         </div>
                         <div> <Image className="rounded-xl" src={Admission} alt="img" /></div>
-                    </div>
+                    </div> */}
 
                     <div className="flex flex-col pt-10 mt-40 md:mt-52 md:flex-row justify-between">
                         <div className="text-2xl md:text-4xl pb-3 font-semibold">
