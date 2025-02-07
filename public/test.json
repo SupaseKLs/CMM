@@ -23,10 +23,13 @@
         },
         "expertise": {
             "first": "Management Information",
-            "second": "Business Intelligence / Data Analysis System",
-            "third": "Digital Learning / e-Learning",
-            "fourth": "Learning Management System / Massive Open Online Course",
-            "fifth": "Multimedia and Information Technology"
+            "second": "e-Learning",
+            "third": "Digital Learning",
+            "fourth": "Learning Management System",
+            "fifth": "Multimedia and Information Technology",
+            "sixty": "Business Intelligence",
+            "seventh": "Data Analysis System",
+            "eighty": "Massive Open Online Course"
         },
         "work_experience": {
             "first": {
