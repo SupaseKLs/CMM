@@ -92,9 +92,9 @@ const NavbarHeader = ({ social = [] }: NavbarHeaderProps) => {
         <>
             <div className="flex justify-center">
                 <motion.nav
-                    className={`w-11/12 z-50 px-10 md:px-10 py-14 fixed top-0 transition-all duration-700 ease-in-out h-16 font-medium flex items-center justify-center
+                    className={`w-full z-50 px-10 md:px-10 py-14 fixed top-0 transition-all duration-700 ease-in-out h-16 font-medium flex items-center justify-center
         ${isVisible ? "translate-y-0" : "-translate-y-full"} 
-        ${scrollPosition >= 50 ? 'bg-black bg-opacity-30 backdrop-blur-md rounded-full mt-8' : 'bg-transparent'}`}
+        ${scrollPosition >= 50 ? 'bg-black bg-opacity-30 backdrop-blur-md' : 'bg-transparent'}`}
                     variants={{
                         visible: { y: 0 },
                         hidden: { y: '-130%' },
@@ -103,7 +103,7 @@ const NavbarHeader = ({ social = [] }: NavbarHeaderProps) => {
                     animate={isVisible ? 'visible' : 'hidden'}
                     transition={{ duration: 0.2, ease: 'easeInOut' }}
                 >
-                    <div className="hidden md:block w-full z-20">
+                    <div className="hidden xl:block w-full z-20">
                         <div className="flex justify-between items-center ">
                             <div>
                                 <Image src={Logo} className="w-72 h-full" alt="Logo" />
@@ -170,8 +170,8 @@ const NavbarHeader = ({ social = [] }: NavbarHeaderProps) => {
                         </div>
                     </div>
 
-                    <motion.header className="block md:hidden fixed top-0 md:mt-12 md:mr-12 right-0 z-20">
-                        <div className="fixed md:top-8 top-2 md:left-8 left-6 z-30">
+                    <motion.header className="block lg:hidden fixed top-0 right-0 z-20">
+                        <div className="fixed lg:top-0 pt-5 top-2 md:left-8 left-6 z-30">
                             <Link href={"/"}>
                                 <div>
                                     <Image src={Logo} width={150} height={150} alt="Logo" />
@@ -182,7 +182,7 @@ const NavbarHeader = ({ social = [] }: NavbarHeaderProps) => {
                             initial={false}
                             animate={isActive ? "open" : "closed"}
                             variants={variants}
-                            className="absolute top-0 right-0 md:-top-6 md:-right-6 w-dvw md:w-[480px] h-dvh md:h-[calc(100dvh_-_3.5rem)] bg-primary"
+                            className="absolute top-0 right-0 w-dvw lg:w-[840px] h-dvh lg:h-[calc(100dvh_-_3.5rem)] bg-primary"
                         >
                             {isActive && (
                                 <nav className="flex justify-between flex-col w-full h-full px-10 pt-[100px] pb-[50px]">
@@ -192,7 +192,7 @@ const NavbarHeader = ({ social = [] }: NavbarHeaderProps) => {
                                                 <Link href={link.href} className="text-white flex flex-wrap overflow-hidden">
                                                     <motion.div
                                                         variants={{
-                                                            initial: { y: 50 },
+                                                            initial: { y: 50},
                                                             enter: {
                                                                 y: 0,
                                                                 transition: {
@@ -281,7 +281,7 @@ function Button({
     toggleMenu: () => void;
 }) {
     return (
-        <div className="absolute md:top-0 top-4 right-4 md:right-0 w-[100px] h-10 rounded-full overflow-hidden cursor-pointer">
+        <div className="absolute mt-9 mr-7 top-0 right-0 w-[100px] h-10 rounded-full overflow-hidden cursor-pointer">
             <motion.div
                 className="relative w-full h-full"
                 animate={{ top: isActive ? "-100%" : "0%" }}
