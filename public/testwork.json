@@ -1,0 +1,71 @@
+[
+    {
+        "id": 1,
+        "name": "Transforming Shopping with Style and Sustainability",
+        "categories": {
+            "first": "movie",
+            "second": "ghost",
+            "third": "scare"
+        },
+        "image": {
+            "first": "",
+            "second": "",
+            "third": ""
+        },
+        "video": "https://www.youtube.com/watch?v=iMCaCjgdnJ8",
+        "industry": "movie",
+        "year": "2023",
+        "product": "scare",
+        "detail": {
+            "first": "Vesto is a dynamic and innovative fashion e-commerce platform that's changing the way people shop for clothing and accessories online. With a focus on sustainability, style, and customer satisfaction, Vesto has emerged as a trendsetter in the competitive world of fashion e-commerce.",
+            "second": "Vesto stands as a testament to our dedication to blending technology, design, and user experience to redefine the fashion e-commerce realm. It continues to evolve, setting new benchmarks in the online fashion retail space.",
+            "third": "Our collaboration with Vesto resulted in a successful transformation of their fashion e-commerce platform. By focusing on user experience, personalized shopping, content marketing, and social commerce integration, we helped Vesto emerge as a leader in the fashion e-commerce industry. The combination of style and sustainability has propelled Vesto to new heights, setting a benchmark for the fashion e-commerce of the future."
+        }
+    },
+    {
+        "id": 2,
+        "name": "Transforming Shopping with Style and Sustainability",
+        "categories": {
+            "first": "movie",
+            "second": "ghost",
+            "third": "scare"
+        },
+        "image": {
+            "first": "",
+            "second": "",
+            "third": ""
+        },
+        "video": "https://www.youtube.com/watch?v=ZkbwJ4gVohQ",
+        "industry": "movie",
+        "year": "2024",
+        "product": "scare",
+        "detail": {
+            "first": "Vesto is a dynamic and innovative fashion e-commerce platform that's changing the way people shop for clothing and accessories online. With a focus on sustainability, style, and customer satisfaction, Vesto has emerged as a trendsetter in the competitive world of fashion e-commerce.",
+            "second": "Vesto stands as a testament to our dedication to blending technology, design, and user experience to redefine the fashion e-commerce realm. It continues to evolve, setting new benchmarks in the online fashion retail space.",
+            "third": "Our collaboration with Vesto resulted in a successful transformation of their fashion e-commerce platform. By focusing on user experience, personalized shopping, content marketing, and social commerce integration, we helped Vesto emerge as a leader in the fashion e-commerce industry. The combination of style and sustainability has propelled Vesto to new heights, setting a benchmark for the fashion e-commerce of the future."
+        }
+    },
+    {
+        "id": 3,
+        "name": "Transforming Shopping with Style and Sustainability",
+        "categories": {
+            "first": "movie",
+            "second": "ghost",
+            "third": "scare"
+        },
+        "image": {
+            "first": "",
+            "second": "",
+            "third": ""
+        },
+        "video": "https://www.youtube.com/watch?v=iMCaCjgdnJ8",
+        "industry": "movie",
+        "year": "2023",
+        "product": "scare",
+        "detail": {
+            "first": "Vesto is a dynamic and innovative fashion e-commerce platform that's changing the way people shop for clothing and accessories online. With a focus on sustainability, style, and customer satisfaction, Vesto has emerged as a trendsetter in the competitive world of fashion e-commerce.",
+            "second": "Vesto stands as a testament to our dedication to blending technology, design, and user experience to redefine the fashion e-commerce realm. It continues to evolve, setting new benchmarks in the online fashion retail space.",
+            "third": "Our collaboration with Vesto resulted in a successful transformation of their fashion e-commerce platform. By focusing on user experience, personalized shopping, content marketing, and social commerce integration, we helped Vesto emerge as a leader in the fashion e-commerce industry. The combination of style and sustainability has propelled Vesto to new heights, setting a benchmark for the fashion e-commerce of the future."
+        }
+    }
+]

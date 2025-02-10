@@ -92,7 +92,7 @@ const NavbarHeader = ({ social = [] }: NavbarHeaderProps) => {
         <>
             <div className="flex justify-center">
                 <motion.nav
-                    className={`w-full z-50 px-10 md:px-10 py-14 fixed top-0 transition-all duration-700 ease-in-out h-16 font-medium flex items-center justify-center
+                    className={`w-full z-50 px-10 md:px-10 py-10 fixed top-0 transition-all duration-700 ease-in-out h-16 font-medium flex items-center justify-center
         ${isVisible ? "translate-y-0" : "-translate-y-full"} 
         ${scrollPosition >= 50 ? 'bg-black bg-opacity-30 backdrop-blur-md' : 'bg-transparent'}`}
                     variants={{
@@ -106,7 +106,7 @@ const NavbarHeader = ({ social = [] }: NavbarHeaderProps) => {
                     <div className="hidden xl:block w-full z-20">
                         <div className="flex justify-between items-center ">
                             <div>
-                                <Image src={Logo} className="w-72 h-full" alt="Logo" />
+                                <Image src={Logo} className="w-20 md:w-32 lg:w-40 h-full" alt="Logo" />
                             </div>
 
                             <div className="flex items-center text-md 2xl:text-2xl text-white"

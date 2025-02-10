@@ -7,9 +7,7 @@ import Workspace from "@/assets/img/Workspace.jpg"
 import WorkSpace from "@/components/WorkSpace/page"
 import Services from "@/assets/img/Services.jpg"
 import Admission from "@/assets/img/Admission.jpg"
-import Parallax from "@/components/parallax/page"
 import Image from "next/image";
-import StickyCard from "@/components/StickyCard/page";
 export default function HomePage() {
 
     const testimonials = [
@@ -194,7 +192,7 @@ export default function HomePage() {
                             autoPlay
                             loop
                             muted
-                            className="w-full rounded-xl h-[300px] md:h-[650px] lg:h-[900px] object-cover"
+                            className="w-full rounded-xl h-[300px] md:h-[550px] lg:h-[600px] object-cover"
                         >
                             <source src="/video/Teacher.mp4" type="video/mp4" />
                         </video>
