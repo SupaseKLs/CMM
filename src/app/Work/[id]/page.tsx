@@ -9,6 +9,16 @@ interface WorkItem {
   year: string;
   product: string;
   video: string;
+  categories: {
+    first: string;
+    second: string;
+    third: string;
+  };
+  image: {
+    first: string;
+    second: string;
+    third: string;
+  };
   detail: {
     first: string;
     second: string;
@@ -16,12 +26,11 @@ interface WorkItem {
   };
 }
 
-const Home: React.FC = () => {
+const Work: React.FC = () => {
   const [work, setWork] = useState<WorkItem | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
-  // Assuming the ID is part of the URL, for example /work/1
   const workId = window.location.pathname.split("/").pop(); // Extract the ID from the URL
 
   useEffect(() => {
@@ -50,30 +59,78 @@ const Home: React.FC = () => {
   if (error) return <div>{error}</div>;
   if (!work) return <div>No data available for ID {workId}</div>;
 
-  return (
-    <div className="p-4">
-      <h1 className="text-2xl font-bold">{work.name}</h1>
-      <p className="text-gray-600">Industry: {work.industry}</p>
-      <p className="text-gray-600">Year: {work.year}</p>
-      <p className="text-gray-600">Product: {work.product}</p>
-      <p className="mt-2">{work.detail.first}</p>
-      <p className="mt-2">{work.detail.second}</p>
-      <p className="mt-2">{work.detail.third}</p>
+  const firstDetail = work.detail.first;
+  const SecondDetail = work.detail.second;
+  const ThirdDetail = work.detail.third;
 
-      {/* Show video if the URL is correct */}
-      <div className="mt-4">
-        <iframe
-          width="100%"
-          height="315"
-          src={work.video.replace("watch?v=", "embed/")}
-          title="YouTube video"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
+  const mappedCategories = Object.values(work.categories).map((category) => category.toUpperCase());
+  const mappedImages = Object.values(work.image);
+
+  const imagesToDisplay = mappedImages.slice(1, 3);
+
+  return (
+    <div className="bg-white h-full">
+      <div className="w-11/12 mx-auto">
+        <div className="pt-60 pb-10 text-left font-semibold text-8xl w-[40%]">
+          <h1>{work.name}</h1>
+        </div>
+
+        <div className="mt-4">
+          <iframe
+            width="100%"
+            height={1000}
+            src={work.video.replace("watch?v=", "embed/")}
+            title="YouTube video"
+            allowFullScreen
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          ></iframe>
+        </div>
+
+        <div className="flex justify-between py-20 w-full">
+          <div className="flex gap-10 w-[40%]">
+            <div>
+              <h1 className="text-gray-500">Industry</h1>
+              <h1 className="text-2xl">{work.industry}</h1>
+            </div>
+            <div>
+              <h1 className="text-gray-500">Year</h1>
+              <h1 className="text-2xl">{work.year}</h1>
+            </div>
+            <div>
+              <h1 className="text-gray-500">Product</h1>
+              <h1 className="text-2xl">{work.product}</h1>
+            </div>
+          </div>
+          <div className="pl-20 w-[60%]">
+            <h1 className="text-5xl">{firstDetail}</h1>
+          </div>
+        </div>
+      {/* Display Images 2 and 3 */}
+      <div className="mt-8 flex items-center justify-center gap-20">
+        {imagesToDisplay.map((image, index) => (
+          <div key={index} className="mb-6">
+            <img src={image} alt={`Image ${index + 2}`} className="w-full h-auto object-cover" />
+          </div>
+        ))}
       </div>
+
+      <div className="grid grid-cols-2">
+        <div>
+
+        </div>
+        <div>
+          <h1 className="py-20  text-5xl">{ThirdDetail}</h1>
+        </div>
+
+        <div>
+          <h1>our more project</h1>
+        </div>
+      </div>
+      </div>
+
+
     </div>
   );
 };
 
-export default Home;
+export default Work;
