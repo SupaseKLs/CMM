@@ -1,7 +1,6 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
+module.exports = {
+  reactStrictMode: true,
+  images: {
+    domains: ['videowebsite1.file.core.windows.net'], // Add this line
+  },
 };
-
-export default nextConfig;

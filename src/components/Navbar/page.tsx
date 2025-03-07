@@ -137,7 +137,7 @@ const NavbarHeader = ({ social = [] }: NavbarHeaderProps) => {
                                         {/* Dropdown menu for "หลักสูตร" with framer-motion */}
                                         {isDropdownOpen && link.title === "หลักสูตร" && (
                                             <motion.div
-                                                className="absolute top-full left-0 w-48 bg-white text-black shadow-md mt-2 rounded-lg"
+                                                className="absolute top-full left-0 w-48 bg-black bg-opacity-30 backdrop-blur-xl shadow-md mt- rounded-lg"
                                                 initial={{ opacity: 0, y: -20 }}
                                                 animate={{ opacity: 1, y: 0 }}
                                                 exit={{ opacity: 0, y: -20 }}

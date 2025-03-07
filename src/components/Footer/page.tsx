@@ -3,7 +3,7 @@ import Logo from "@/assets/img/Logo.png"
 import Kmutt from "@/assets/img/Kmutt.png"
 import Link from "next/link"
 import Arrow_right from "@/assets/svg/arrow-right.svg"
-
+import Physical from "@/components/Physical/page"
 export default function Footer() {
     return (
         <footer className="pt-10 bg-gray-300 text-gray-800">
@@ -63,6 +63,10 @@ export default function Footer() {
                     </div>
                 </div>
 
+<div>
+<Physical />
+
+</div>
                 <div className="w-11/12 md:w-[560px]">
                     <h1 className="text-xl text-gray-600">Appiled Computer Science-Multimedia</h1>
                     <p>สาขาวิชาคอมพิวเตอร์และเทคโนโลยีสารสนเทศ คณะครุศาสตร์อุตสาหกรรมและเทคโนโลยี อาคารเรียนรวมชั้น 6 มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี</p>
