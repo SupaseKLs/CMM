@@ -20,7 +20,7 @@ export default function HomePage() {
                             loop
                             className="w-full h-screen object-cover"
                         >
-                            <source src="/video/Homepagebg.mp4" type="video/mp4" />
+                            <source src="https://cmmworkspace.blob.core.windows.net/cmmsource/CMM/8198509-hd_1920_1080_25fps.mp4?sv=2023-01-03&st=2025-03-10T07%3A00%3A32Z&se=2025-03-11T07%3A00%3A32Z&sr=b&sp=r&sig=LDglI3kl3fcMK1dIQyKEyzcmIVebFTL%2FoxkBlKvvovw%3D" type="video/mp4" />
                         </video>
                         <div className="absolute bottom-0 mb-4">
                             <div className="w-11/12 mx-auto">
@@ -43,12 +43,13 @@ export default function HomePage() {
                             <div className="text-2xl w-[60%]">
                                 <h1>CMM KMUTT | Multimedia</h1>
                             </div>
+
                             <div className="text-2xl w-[40%]">
                                 <h1>ก้าวสู่โลกแห่งความคิดสร้างสรรค์และเทคโนโลยีที่ครบวงจรด้วยการเรียนรู้ทั้งการผลิตสื่อมัลติมีเดียการถ่ายภาพการจัดแสงและการตัดต่อวิดีโอที่มืออาชีพเลือกใช้พร้อมพัฒนาทักษะด้านการออกแบบและพัฒนาเว็บไซต์ให้ตอบโจทยโลกดิจิทัลอีกทั้งยังเสริมสร้างความสามารถ</h1>
                             </div>
                         </div>
                     </div>
-                    <div className="flex justify-center py-40 gap-10">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 py-40">
                         <Image src="https://videowebsite1.file.core.windows.net/image/images.jpg?sp=r&st=2025-03-05T07:15:26Z&se=2025-03-06T07:15:26Z&spr=https&sv=2022-11-02&sig=VaQ%2FuXPRg%2F1KG379RwMbxeYwvuu8NA9J6%2FzV38XO1PY%3D&sr=f" width={750} height={750} alt="test" />
                         <Image src="https://videowebsite1.file.core.windows.net/image/images.jpg?sp=r&st=2025-03-05T07:15:26Z&se=2025-03-06T07:15:26Z&spr=https&sv=2022-11-02&sig=VaQ%2FuXPRg%2F1KG379RwMbxeYwvuu8NA9J6%2FzV38XO1PY%3D&sr=f" width={750} height={750} alt="test" />
                         <Image src="https://videowebsite1.file.core.windows.net/image/images.jpg?sp=r&st=2025-03-05T07:15:26Z&se=2025-03-06T07:15:26Z&spr=https&sv=2022-11-02&sig=VaQ%2FuXPRg%2F1KG379RwMbxeYwvuu8NA9J6%2FzV38XO1PY%3D&sr=f" width={750} height={750} alt="test" />
@@ -83,10 +84,10 @@ export default function HomePage() {
                         autoPlay
                         muted
                         loop
-                        className="w-full h-screen object-cover"
+                        className="w-full opacity-60 h-screen object-cover"
                     >
                         <source
-                            src="https://videowebsite1.file.core.windows.net/video/work.mp4?sp=r&st=2025-03-05T08:53:08Z&se=2025-03-06T08:53:08Z&spr=https&sv=2022-11-02&sig=RM6OiexM8oUIcqabmRNtcXVn9xgn0iWrwlq4cfn34LA%3D&sr=f"
+                            src="https://cmmworkspace.blob.core.windows.net/cmmsource/CMM/8199326-hd_1920_1080_25fps.mp4?sv=2023-01-03&st=2025-03-10T07%3A00%3A56Z&se=2025-03-11T07%3A00%3A56Z&sr=b&sp=r&sig=aB1IVXumYfobLrAXA2WDn%2B9EB3W6uZ6KTA8bjwk5zg8%3D"
                             type="video/mp4"
                         />
                     </video>
@@ -119,8 +120,8 @@ export default function HomePage() {
             </section>
 
             <section className="bg-white h-full">
-            <div className="w-11/12 mx-auto">
-                    <div className="py-20 flex justify-between">
+                <div className="w-11/12 mx-auto">
+                    <div className="pt-60 flex justify-between">
                         <div className="text-5xl font-semibold">
                             <h1>คณะครุศาสตร์อุตสาหกรรมและเทคโนโลยี</h1>
                             <h1 className="text-gray-400 pt-6">สาขาวิชาวิทยาการคอมพิวเตอร์<br />ประยุกต์-มัลติมีเดีย</h1>
@@ -128,7 +129,20 @@ export default function HomePage() {
                         <div className="text-2xl w-[30%]">
                             <h1>คำตอบสำหรับคนที่มีความฝันอยากสร้างอนาคตในสายเทคโนโลยีและมัลติมีเดียด้วยหลักสูตรที่ผสมผสานความรู้ด้านการพัฒนาเทคโนโลยีคอมพิวเตอร์และการสร้างสรรค์สื่อมัลติมีเดียเข้าด้วยกันอย่างลงตัว</h1>
                         </div>
+
                     </div>
+                    <video
+                        playsInline
+                        autoPlay
+                        muted
+                        loop
+                        className="py-40 w-full h-[1200px] rounded-xl object-cover"
+                    >
+                        <source
+                            src="https://cmmworkspace.blob.core.windows.net/cmmsource/CMM/3256542-uhd_3840_2160_25fps.mp4?sv=2023-01-03&st=2025-03-10T07%3A06%3A11Z&se=2025-03-11T07%3A06%3A11Z&sr=b&sp=r&sig=MwBo3kAKZeYQ0SSrlA1cBaTQ51bJw1uUGBg6%2FhA3VnA%3D"
+                            type="video/mp4"
+                        />
+                    </video>
                 </div>
             </section>
         </>
