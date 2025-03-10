@@ -31,7 +31,7 @@ function index() {
               </div>
             </Slider>
             <Slider className='w-full'>
-              <div className='bg-yellow-500 rounded-xl h-[800px] w-full'>
+              <div className='rounded-xl h-[800px] w-full'>
                 <img src="https://cmmworkspace.blob.core.windows.net/cmmsource/CMM/pexels-expect-best-79873-1046151.jpg?sv=2023-01-03&st=2025-03-10T07%3A21%3A21Z&se=2025-03-11T07%3A21%3A21Z&sr=b&sp=r&sig=vmsqJMgobS0ZEH6QoLulwUEEf3RNRVtwDu0nzQiGKIg%3D" alt="" />
               </div>
             </Slider>
