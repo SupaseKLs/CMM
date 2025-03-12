@@ -20,7 +20,7 @@ export default function HomePage() {
                             loop
                             className="w-full h-screen object-cover"
                         >
-                            <source src="https://cmmworkspace.blob.core.windows.net/cmmsource/CMM/8198509-hd_1920_1080_25fps.mp4?sv=2023-01-03&st=2025-03-10T07%3A00%3A32Z&se=2025-03-11T07%3A00%3A32Z&sr=b&sp=r&sig=LDglI3kl3fcMK1dIQyKEyzcmIVebFTL%2FoxkBlKvvovw%3D" type="video/mp4" />
+                            <source src="https://cmmworkspace.blob.core.windows.net/cmmsource/CMM/8198509-hd_1920_1080_25fps.mp4?sv=2023-01-03&st=2025-03-12T04%3A42%3A52Z&se=2029-07-13T04%3A42%3A00Z&sr=b&sp=r&sig=9GzE54p4jn80XlqFiFcWRFOIkQzyKpRT1sn3W9ycew0%3D" type="video/mp4" />
                         </video>
                         <div className="absolute bottom-0 mb-4">
                             <div className="w-11/12 mx-auto">
@@ -87,7 +87,7 @@ export default function HomePage() {
                         className="w-full opacity-60 h-screen object-cover"
                     >
                         <source
-                            src="https://cmmworkspace.blob.core.windows.net/cmmsource/CMM/8199326-hd_1920_1080_25fps.mp4?sv=2023-01-03&st=2025-03-10T07%3A00%3A56Z&se=2025-03-11T07%3A00%3A56Z&sr=b&sp=r&sig=aB1IVXumYfobLrAXA2WDn%2B9EB3W6uZ6KTA8bjwk5zg8%3D"
+                            src="https://cmmworkspace.blob.core.windows.net/cmmsource/Final%20Vidieo2.mp4?sv=2023-01-03&st=2025-03-12T04%3A41%3A39Z&se=2029-07-13T04%3A41%3A00Z&sr=b&sp=r&sig=zLfBseXGfT6YQFWAWR%2FIw%2Fbqo%2FV7uZ48NUHU1jXeYUA%3D"
                             type="video/mp4"
                         />
                     </video>
@@ -139,7 +139,7 @@ export default function HomePage() {
                         className="py-40 w-full h-[1200px] rounded-xl object-cover"
                     >
                         <source
-                            src="https://cmmworkspace.blob.core.windows.net/cmmsource/CMM/3256542-uhd_3840_2160_25fps.mp4?sv=2023-01-03&st=2025-03-10T07%3A06%3A11Z&se=2025-03-11T07%3A06%3A11Z&sr=b&sp=r&sig=MwBo3kAKZeYQ0SSrlA1cBaTQ51bJw1uUGBg6%2FhA3VnA%3D"
+                            src="https://cmmworkspace.blob.core.windows.net/cmmsource/CMM/3256542-uhd_3840_2160_25fps.mp4?sv=2023-01-03&st=2025-03-12T04%3A44%3A48Z&se=2029-06-13T04%3A44%3A00Z&sr=b&sp=r&sig=SylGBn%2F8ilCRf6b0Ozd9UnzZnDQkNA7N%2FZ4H%2BQtO%2B64%3D"
                             type="video/mp4"
                         />
                     </video>
