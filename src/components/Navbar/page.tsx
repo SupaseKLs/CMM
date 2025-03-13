@@ -94,7 +94,7 @@ const NavbarHeader = ({ social = [] }: NavbarHeaderProps) => {
                 <motion.nav
                     className={`w-full z-50 px-10 md:px-10 py-10 fixed top-0 transition-all duration-700 ease-in-out h-16 font-medium flex items-center justify-center
         ${isVisible ? "translate-y-0" : "-translate-y-full"} 
-        ${scrollPosition >= 50 ? 'bg-black bg-opacity-30 backdrop-blur-md' : 'bg-transparent'}`}
+        ${scrollPosition >= 50 ? 'py-14 bg-black bg-opacity-30 backdrop-blur-md' : 'bg-transparent'}`}
                     variants={{
                         visible: { y: 0 },
                         hidden: { y: '-130%' },
@@ -185,7 +185,7 @@ const NavbarHeader = ({ social = [] }: NavbarHeaderProps) => {
                             className="absolute top-0 right-0 w-dvw lg:w-[840px] h-dvh lg:h-[calc(100dvh_-_3.5rem)] bg-primary"
                         >
                             {isActive && (
-                                <nav className="flex justify-between flex-col w-full h-full px-10 pt-[100px] pb-[50px]">
+                                <nav className="flex justify-between items-center flex-col w-full h-full px-10 pt-[100px] pb-[50px]">
                                     <div className="flex gap-2 flex-col">
                                         {navLinks.map((link, i) => (
                                             <div key={`b_${i}`} className="" onClick={() => setIsActive(false)}>
