@@ -8,8 +8,7 @@ export default function Executive() {
                 <Image className="h-screen" src={Services} alt="test" />
             </div>
             <div>
-                <div className="px-4 lg:pl-16 h-full py-4 bg-gray-300">
-                <h1>Our Team</h1>
+                <div className="px-4 lg:pl-16 h-full py-4 bg-black">
                     <Members />
                 </div>
             </div>
