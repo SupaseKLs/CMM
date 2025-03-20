@@ -46,7 +46,7 @@ export default function HomePage() {
                         <div className="flex flex-col md:flex-row justify-between">
                             <div className="w-[80%] md:w-[60%]">
                                 <h1 className="text-4xl font-bold tracking-tighter md:text-5xl lg:text-[4vw]">
-                                    CMM KMUTT | <AuroraText className="text-[15vw] md:text-[4vw]">Multimedia</AuroraText>
+                                    CMM KMUTT | <AuroraText className="text-[10vw] md:text-[4vw]">Multimedia</AuroraText>
                                 </h1>
                             </div>
 
@@ -58,9 +58,9 @@ export default function HomePage() {
                         </div>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 py-40">
-                        <Image src="https://videowebsite1.file.core.windows.net/image/images.jpg?sp=r&st=2025-03-05T07:15:26Z&se=2025-03-06T07:15:26Z&spr=https&sv=2022-11-02&sig=VaQ%2FuXPRg%2F1KG379RwMbxeYwvuu8NA9J6%2FzV38XO1PY%3D&sr=f" width={750} height={750} alt="test" />
-                        <Image src="https://videowebsite1.file.core.windows.net/image/images.jpg?sp=r&st=2025-03-05T07:15:26Z&se=2025-03-06T07:15:26Z&spr=https&sv=2022-11-02&sig=VaQ%2FuXPRg%2F1KG379RwMbxeYwvuu8NA9J6%2FzV38XO1PY%3D&sr=f" width={750} height={750} alt="test" />
-                        <Image src="https://videowebsite1.file.core.windows.net/image/images.jpg?sp=r&st=2025-03-05T07:15:26Z&se=2025-03-06T07:15:26Z&spr=https&sv=2022-11-02&sig=VaQ%2FuXPRg%2F1KG379RwMbxeYwvuu8NA9J6%2FzV38XO1PY%3D&sr=f" width={750} height={750} alt="test" />
+            <img src="https://videowebsite1.file.core.windows.net/image/images.jpg?sp=r&st=2025-03-05T07:15:26Z&se=2025-03-06T07:15:26Z&spr=https&sv=2022-11-02&sig=VaQ%2FuXPRg%2F1KG379RwMbxeYwvuu8NA9J6%2FzV38XO1PY%3D&sr=f" width={750} height={750} alt="test" />
+                        <img src="https://videowebsite1.file.core.windows.net/image/images.jpg?sp=r&st=2025-03-05T07:15:26Z&se=2025-03-06T07:15:26Z&spr=https&sv=2022-11-02&sig=VaQ%2FuXPRg%2F1KG379RwMbxeYwvuu8NA9J6%2FzV38XO1PY%3D&sr=f" width={750} height={750} alt="test" />
+                        <img src="https://videowebsite1.file.core.windows.net/image/images.jpg?sp=r&st=2025-03-05T07:15:26Z&se=2025-03-06T07:15:26Z&spr=https&sv=2022-11-02&sig=VaQ%2FuXPRg%2F1KG379RwMbxeYwvuu8NA9J6%2FzV38XO1PY%3D&sr=f" width={750} height={750} alt="test" />
                     </div>
 
                     <div className="flex flex-col md:flex-row justify-between">
