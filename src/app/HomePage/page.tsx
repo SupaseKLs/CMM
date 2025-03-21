@@ -5,8 +5,6 @@ import { AuroraText } from "@/components/ui/aurora"
 import { TextAnimate } from "@/components/ui/text_animate"
 import Button from "@/components/ui/button"
 import Counter from "@/components/Counter/page"
-import Image from "next/image";
-import Link from "next/link";
 export default function HomePage() {
     return (
         <>
@@ -45,8 +43,8 @@ export default function HomePage() {
                         </div>
                         <div className="flex flex-col md:flex-row justify-between">
                             <div className="w-[80%] md:w-[60%]">
-                                <h1 className="text-4xl font-bold tracking-tighter md:text-5xl lg:text-[4vw]">
-                                    CMM KMUTT | <AuroraText className="text-[10vw] md:text-[4vw]">Multimedia</AuroraText>
+                                <h1 className="text-4xl font-bold tracking-tighter md:text-3xl lg:text-[3vw]">
+                                    CMM KMUTT&nbsp;&nbsp;|&nbsp;&nbsp; <AuroraText>Multimedia</AuroraText>
                                 </h1>
                             </div>
 
@@ -67,9 +65,9 @@ export default function HomePage() {
                         <div className="font-semibold text-[6vw] md:text-[2.5vw] w-[250px] md:w-[200px] 2xl:w-[350px]">
                             <h1>เพลิดเพลินไปกับการเรียน</h1>
                         </div>
-                        <div className="text-[4vw] md:text-[2.2vw] w-[80%] md:w-[50%]">
+                        <div className="text-[4vw] md:text-[1.7vw] w-[80%] md:w-[40%]">
                         <TextAnimate animation="blurInUp" by="character" once>
-                            มหาวิทยาลัยมีหลักสูตรวิชาการนานาชาติที่หลากหลายให้เลือกเรียน ภาษาทางการ ได้แก่ อังกฤษ อิตาลี เยอรมัน และฝรั่งเศสซึ่งสร้างสภาพแวดล้อมที่สมบูรณ์แบบสำหรับการเรียนรู้และการวิจัยทางวิทยาศาสตร์
+                            มหาวิทยาลัยมีหลักสูตรวิชาการนานาชาติที่หลากหลายให้เลือกเรียน ได้แก่ อังกฤษ อิตาลี เยอรมัน และฝรั่งเศสซึ่งสร้างสภาพแวดล้อมที่สมบูรณ์แบบสำหรับการเรียนรู้และการวิจัยทางวิทยาศาสตร์
                         </TextAnimate>
                         </div>
                     </div>
@@ -142,10 +140,11 @@ export default function HomePage() {
                             <h1>คณะครุศาสตร์อุตสาหกรรมและเทคโนโลยี</h1>
                             <h1 className="text-gray-400 pt-2">สาขาวิชาวิทยาการคอมพิวเตอร์<br />ประยุกต์-มัลติมีเดีย</h1>
                         </div>
-                        <div className="text-[4vw] md:text-[1.5vw] w-[80%] md:w-[40%]">
-                            <h1>คำตอบสำหรับคนที่มีความฝันอยากสร้างอนาคตในสายเทคโนโลยีและมัลติมีเดียด้วยหลักสูตรที่ผสมผสานความรู้ด้านการพัฒนาเทคโนโลยีคอมพิวเตอร์และการสร้างสรรค์สื่อมัลติมีเดียเข้าด้วยกันอย่างลงตัว</h1>
-                        </div>
-
+                        <div className="text-[4vw] md:text-[1.7vw] w-[80%] md:w-[40%]">
+                                <TextAnimate animation="blurInUp" by="character" once>
+                                คำตอบสำหรับคนที่มีความฝันอยากสร้างอนาคตในสายเทคโนโลยีและมัลติมีเดียด้วยหลักสูตรที่ผสมผสานความรู้ด้านการพัฒนาเทคโนโลยีคอมพิวเตอร์และการสร้างสรรค์สื่อมัลติมีเดียเข้าด้วยกันอย่างลงตัว
+                                </TextAnimate>
+                            </div>
                     </div>
                     <video
                         playsInline

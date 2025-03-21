@@ -1,0 +1,533 @@
+[
+      {
+        "id": 1,
+        "name": {
+          "TH": "ผศ.ดร. ชนินทร์ ตั้งพานทอง",
+          "EN": "Asst.Prof.Dr.Chanin Tungpantong"
+        },
+        "image": "https://cmmworkspace.blob.core.windows.net/cmmsource/Member/Chanin.png?sv=2023-01-03&st=2025-03-16T20%3A09%3A14Z&se=2025-06-17T20%3A09%3A00Z&sr=b&sp=r&sig=9f8lYcxDyUq%2FA0cEFVTtZojZbyFfsOTRCKqinTCLwVE%3D",
+        "position": "อาจารย์",
+        "email": "chanin.tun@kmutt.ac.th",
+        "educational": {
+          "bachelor": {
+            "field": "วท.บ. (วิทยาการคอมพิวเตอร์ประยุกต์-มัลติมีเดีย)",
+            "university": "มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี"
+          },
+          "graduate": {
+            "field": "ค.อ.ม. (คอมพิวเตอร์และเทคโนโลยีสารสนเทศ)",
+            "university": "จุฬาลงกรณ์มหาวิทยาลัย"
+          },
+          "master": {
+            "field": "ค.อ.ม. (คอมพิวเตอร์และเทคโนโลยีสารสนเทศ)",
+            "university": "มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี"
+          }
+        },
+        "expertise": {
+          "first": "Management Information",
+          "second": "e-Learning",
+          "third": "Digital Learning",
+          "fourth": "Learning Management System",
+          "fifth": "Multimedia and Information Technology",
+          "sixty": "Business Intelligence",
+          "seventh": "Data Analysis System",
+          "eighty": "Massive Open Online Course"
+        },
+        "work_experience": {
+          "first": {
+            "period": "พ.ศ.2565 - ปัจจุบัน",
+            "position": "หัวหน้าสาขาสาขาวิชาคอมพิวเตอร์และเทคโนโลยีสารสนเทศ คณะครุศาสตร์อุตสาหกรรมและเทคโนโลยี มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี"
+          },
+          "second": {
+            "period": "พ.ศ.2551 - ปัจจุบัน",
+            "position": "อาจารย์ประจำหลักสูตรวิชาวิทยาการคอมพิวเตอร์ประยุกต์-มัลติมีเดีย คณะครุศาสตร์อุตสาหกรรมและเทคโนโลยี มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี"
+          }
+        },
+        "publications": {
+          "first": "Reetanon, K., Tungpantong, C., & Songsriwittaya, A. (2024, July). The Needs Analysis of a Learning Framework to Enhance Problem-Solving Skills in IoT Course for Non-Engineer Learners. In 2024 9th International STEM Education Conference (iSTEM-Ed) (pp. 1-4). IEEE, http://dx.doi.org/10.1109/iSTEM-Ed62750.2024.10663091",
+          "second": "ปรมินทร์ เณรลัพท์ และ ชนินทร์ ตั้งพานทอง (2567). การพัฒนาแอปพลิเคชันเพื่อบริหารจัดการงานพัสดุครุภัณฑ์ โรงเรียนโพธิสารพิทยากร. การประชุมวิชาการระดับชาติด้านนวัตกรรมการเรียนรู้ทางวิทยาศาสตร์และเทคโนโลยี ครั้งที่ 4 (NCLIST 2024). pp.498-508.",
+          "third": "จารุวิทย์ นันทวิโรจน์ และ ชนินทร์ ตั้งพานทอ (2567).การพัฒนาบทเรียนคอมพิวเตอร์ช่วยสอน วิชาเครือข่ายคอมพิวเตอร์เบื้องต้น สำหรับนักศึกษาระดับประกาศนียบัตรวิชาชีพปีที่ 3 สาขาวิชาคอมพิวเตอร์ธุรกิจ. การประชุมวิชาการระดับชาติด้านนวัตกรรมการเรียนรู้ทางวิทยาศาสตร์และเทคโนโลยี ครั้งที่ 4 (NCLIST 2024). pp.254-263.",
+          "fourth": "Tungpantong, C., Bonnkajai, C., & Tharasirameth, T. (2023, August). 2D Motion Graphics via Cartoon Style on “The Dangers of Blue Light”. In Proceedings of the 7th International Conference on Education and Multimedia Technology (pp. 166-172). Association for Computing Machinery (ACM) Publishing, https://doi.org/10.1145/3625704.3625761",
+          "fifth": "Saitum, W., & Tungpantong, C. (2023, August). Visual Art Design for Multimedia Technology Art Work “The Afterlife”. In Proceedings of the 7th International Conference on Education and Multimedia Technology (pp. 368-376). Association for Computing Machinery (ACM) Publishing, https://doi.org/10.1145/3625704.3625728",
+          "sixth": "Tungpantong, C., Nilsook, P., & Wannapiroon, P. (2022, March). Confirmatory factor analysis of enterprise architecture for higher education institutions. In 2022 International Conference on Decision Aid Sciences and Applications (DASA) (pp. 965-969). IEEE, https://doi.org/10.1109/DASA54658.2022.9764970"
+        },
+        "certification": {}
+      },
+      {
+        "id": 2,
+        "name": {
+          "TH": "ดร. กนิษฐา บางภู่ภมร",
+          "EN": "Dr.Kanittha Bangpoophamorn"
+        },
+        "image": "https://cmmworkspace.blob.core.windows.net/cmmsource/Member/Kanittha.png?sv=2023-01-03&st=2025-03-16T20%3A10%3A46Z&se=2025-06-17T20%3A10%3A00Z&sr=b&sp=r&sig=q51H4gE4IVbgUKOM2Zeq9Xin5BJgeAMzfWKiunmTMZ8%3D",
+        "position": "อาจารย์ประจำสาขาคอมพิวเตอร์และเทคโนโลยีสารสนเทศ",
+        "email": "kanittha.ban@kmutt.ac.th",
+        "educational": {
+          "bachelor": {
+            "field": "วิทยาศาสตรบัณฑิต (วท.บ.) (เทคโนโลยีสารสนเทศ)",
+            "university": "มหาวิทยาลัยหอการค้าไทย"
+          },
+          "graduate": {
+            "field": "Master of Information Communication Technology (MICT) (Enterprise Networking)",
+            "university": "University of Wollongong, Australia"
+          },
+          "master": {
+            "field": "ปรัชญาดุษฎีบัณฑิต (ปร.ด.) (เทคโนโลยีเทคนิคศึกษา)",
+            "university": "มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ"
+          }
+        },
+        "expertise": {
+          "first": "System Analysis And Design",
+          "second": "Digital Marketing",
+          "third": "Data Analytics",
+          "fourth": "Digital Learning Media"
+        },
+        "work_experience": {
+          "first": {
+            "period": "2018-ปัจจุบัน",
+            "position": "อาจารย์"
+          }
+        },
+        "publications": {
+          "first": "Pawarisa , S., Purida, P. and Kanittha, B., 2022, “The Virtual Exhibition about Behavior in Fanaticism on “FANLAB”, International Conference on Media Technology, Knowledge and Education in Next Normal (IMKEN 2022), 9-10 June 2022, Thailand, 101-105.",
+          "second": "ภัทร์พิชา พานทอง และ กนิษฐา บางภู่ภมร, 2566, “การพัฒนาบทเรียนแบบผสมผสาน เรื่องโปรแกรมประมวลผลคำสำหรับระดับชั้นประกาศนียบัตรวิชาชีพ (ปวช.)”, The 4th Santapol Academic and Research Nation Conference, 19 มีนาคม 2566, วิทยาลัยสัตพล อุดรธานี, หน้า 99-106.",
+          "third": "มินตรา เปียปิยะ, กนิษฐา บางภู่ภมร และ อลิสา ทรงศรีวิทยา, 2564, “การพัฒนาสื่อส่งเสริมการเรียนรู้ผสานเทคโนโลยีเออาร์ เรื่องรูปเรขาคณิตสามมิติ สำหรับนักเรียนชั้นมัธยมศึกษาปีที่ 3”, The 4th National Conference in Science and Technology : NCST 4th 2021, 22 พฤษภาคม 2564, คณะวิทยาศาสตร์ มหาวิทยาลัยราชภัฎจันทรเกษม, หน้า 217-222.",
+          "fourth": "นินนาท บุญสวัสดิ์, กนิษฐา บางภู่ภมร และ อลิสา ทรงศรีวิทยา, 2564, “การพัฒนาเกม The Walking TRASH เพื่อเป็นสื่อการเรียนรู้เรื่องการคัดแยกขยะมูลฝอยสำหรับนักเรียนชั้นประถมศึกษาปีที่ 6”, The 4th National Conference in Science and Technology : NCST 4th 2021, 22 พฤษภาคม 2564, คณะวิทยาศาสตร์ มหาวิทยาลัยราชภัฎจันทรเกษม, หน้า 223-230.",
+          "fifth": "ขจรศักดิ์ กั้นใช้, กนิษฐา บางภู่ภมร และ อลิสา ทรงศรีวิทยา, 2564, “การศึกษาสภาพปัญหาและแนวทางการส่งเสริมการใช้ระบบสนับสนุนการเรียนการสอน (LEB2) สำหรับสมาชิกมหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี”, The 11th Benjamitra Network National and International Conference, 27 พฤษภาคม 2564, สาขาศึกษาศาสตร์ วิทยาลัยเซสธ์อีสท์บางกอก, หน้า 160-174.",
+          "sixth": "กิตติศักดิ์ แป้นงาม และ กนิษฐา บางภู่ภมร, 2565, “การพัฒนาแนวทางการจัดการเรียนรู้ของครูให้นักเรียนชั้นประถมศึกษาปีที่ 6 เกิดการเรียนรู้ด้วยตนเองในสถานการณ์การระบาดของโรคติดเชื้อไวรัสโคโรนา 2019”, วารสารวิชาการศรีปทุม ชลบุรี, ปีที่ 19,  ฉบับที่ 1, หน้า 72-82.",
+          "seventh": "กนิษฐา บางภู่ภมร, 2563, “ความสามารถในการสอนโดยใช้แนวทางให้ผู้เรียนเกิดการเรียนรู้ด้วยตนเองของครูชั้นประถมศึกษาปีที่ 5 สังกัดสำนักงานเขตพื้นที่การศึกษาประถมศึกษานครนายก”, วารสารวิชาการศรีปทุม ชลบุรี, ปีที่ 17, ฉบับที่ 2, หน้า 32-42.",
+          "eighth": "Bangpoophamorn, K., 2019, “Undergraduate Students’ Perceptions in Faculty of Industrial Education and Technology at King Mongkut’s University of Technology Thonburi Toward Teaching and Learning in Thailand 4.0 Era.”, Sripatum Chonburi Journal, Vol.16, No.1, pp.1-13.",
+          "ninth": "Bangpoophamorn, K. and Viriyanont, T., 2019, “The Development of Flipped Classroom Model with Self-Directed Learning to Enhance Critical Thinking in an Undergraduate Course.”, Technical Education Journal King Mongkut’s University of Technology North Bangkok, Vol. 10, No.2, pp.41-50."
+        },
+        "certification": {}
+      },
+      {
+        "id": 3,
+        "name": {
+          "TH": "รศ.ดร. อลิสา ทรงศรีวิทยา",
+          "EN": "Assoc. Prof. Alisa Songsriwittaya"
+        },
+        "image": "https://cmmworkspace.blob.core.windows.net/cmmsource/Member/Alisa.png?sv=2023-01-03&st=2025-03-16T20%3A12%3A08Z&se=2025-06-17T20%3A12%3A00Z&sr=b&sp=r&sig=7V4LVg8zwPgMbrpB3PUaWikU8tv2exx3uFMoFu5xZUc%3D",
+        "position": "อาจารย์",
+        "email": "alisa.son@kmutt.ac.th",
+        "educational": {
+          "bachelor": {
+            "field": "วิทยาศาสตรบัณฑิต (วิทยาการคอมพิวเตอร์)",
+            "university": "วิทยาลัยครูบ้านสมเด็จเจ้าพระยา"
+          },
+          "graduate": {
+            "field": "พัฒนบริหารศาสตร์มหาบัณฑิต (คอมพิวเตอร์)",
+            "university": "NIDA"
+          },
+          "master": {
+            "field": "ปรัชญาดุษฎีบัณฑิต (นวัตกรรมการเรียนรู้และเทคโนโลยี)",
+            "university": "มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี"
+          }
+        },
+        "expertise": {
+          "first": "การทำวิจัยทางการศึกษา",
+          "second": "วิทยาการคอมพิวเตอร์",
+          "third": "การจัดการเรียนรู้"
+        },
+        "work_experience": {
+          "first": {
+            "period": "1997-ปัจจุบัน",
+            "position": "อาจารย์"
+          }
+        },
+        "publications": {
+          "first": "Meechai Junpho, Alisa Songsriwittaya, Puthyrom Tep, (2022). Reliability and Construct Validity of Computational Thinking Scale for Junior High School Students: Thai Adaptation, International Journal of Learning, Teaching and Educational Research, Volume 21, Number 9, September 2022, pp. 154-173.",
+          "second": "Komsan Raxsiri, Alisa Songsriwittaya, (2022). The Study of Differences between Self-compassion and Compassion to others using RUARCC Learning Framework in order to Enhance Compassion of Late Adolescence in Thailand, Journal of Positive Psychology & Wellbeing, Volume 6, Number 3, pp. 1-10.",
+          "third": "Pratompong Youjamnong, Alisa Songsriwittaya, (2021). The Model and Rubric to Guide the Creative Process with ICTs, International Journal of Innovation and Learning, Volume 30, Issue 2, August 2021, pp. 220-240.",
+          "fourth": "Theeraphant piattanasuk, Alisa Songsriwitaya. (2020). Development of an Instructional Model with Augmented Reality Technology for Vocational Certificate Students, International Journal of Instruction, Volume 13, Number 3, July 2020, pp. 539-554."
+        },
+        "certification": {}
+      },
+      {
+        "id": 4,
+        "name": {
+          "TH": "ผศ. สุริยงค์ เลิศกุลวาณิชย์",
+          "EN": "Asst.Prof. Suriyong Lertkulvanich"
+        },
+        "image": "https://cmmworkspace.blob.core.windows.net/cmmsource/Member/Suriyong.png?sv=2023-01-03&st=2025-03-16T20%3A13%3A19Z&se=2025-06-17T20%3A13%3A00Z&sr=b&sp=r&sig=04%2BmSRsY%2FxY5VsTuFsbFINd%2BIVM7obmofJFndCajI1E%3D",
+        "position": "ผู้ช่วยศาสตราจารย์",
+        "email": "Suriyong.lert@kmutt.ac.th",
+        "educational": {
+          "bachelor": {
+            "field": "วิศวกรรมไฟฟ้า",
+            "university": "สถาบันเทคโนโลยีพระจอมเกล้าธนบุรี"
+          },
+          "graduate": {
+            "field": "วิศวกรรมไฟฟ้า",
+            "university": "จุฬาลงกรณ์มหาวิทยาลัย"
+          },
+          "master": {
+            "field": "",
+            "university": ""
+          }
+        },
+        "expertise": {
+          "first": "Image Processing",
+          "second": "Physics for Electric",
+          "third": "Human Computer Interaction",
+          "fourth": "Microcontroller",
+          "fifth": "Computer Graphics"
+        },
+        "work_experience": {
+          "first": {
+            "period": "2540 - ปัจจุบัน",
+            "position": "ผู้ช่วยศาสตราจารย์"
+          }
+        },
+        "publications": {
+          "first": "Suriyong L, Suwanna S, Noppased B, Manas T, and Wanlop P.“Battle Quest 3D, A 3D role Playing Board Game Via Local Area Network, The 4th IIEEJ International Workshop on Image Electronics and Visual Computing 2014 (IEVC2014), The Institure of Image Electronics Engineers of Japan, Oct 7-10 Thailand",
+          "second": " Suriyong L., Pornpong R., Neerumporn S., and Waraporn S., A 3D Animation to Honor His Majesty the King Bhumibol’s Duties on the Hilltribe Support Royal Project Title “Yoddoi”, The 4th IIEEJ International Workshop on Image Electronics and Visual Computing 2014 (IEVC2014), The Institure of Image Electronics Engineers of Japan, Oct 7-10 Thailand ",
+          "third": "Suriyong L. and Nithi B., A Portable 3-Dimensional Digitizer for Computer Graphics 3D Modeling, Proceedings of the 3 rd International Conference on Communication and Management in Technological Innovation and academic Globalization (COMATIA’12), Recent Advance in Communications , Circuits & Technological Innovation, Dec, 2-4,2012, Paris.",
+          "fourth": ". Suiryong L., Charoenchai W., Suwanna S. Kanate S., Thanade S., and Weerapong S., A Developmentof Augmented Reality Application: AR Band, Journal of Computer Technology and Application Vol 3 no 8, Aug 2012, David Publishing Company., 2012",
+          "fifth": " Suriyong L., and Parinya P., English Composition Game on the computer using a Natural Language Processing, The Fourth TCU International e-Learning Conference “Smart Innovations in Education & Lifelong Learning, Jun 14-15,2012 Thailand Cyber University, 2012",
+          "sixth": "Suriyong L. and Inthira P., A Study of Development Prototype Information System for Digital Library Management,World Academy of Science, Engineering and Technology 61, 2012",
+          "seventh": "Suriyong L., and Borvonsak M., A 2D Animation Tool to Aid Creativity by Providing Visualization of Ideas, World Academy of Science, Engineering and Technology 61, 2012",
+          "eighth": "Suriyong L. and Watanyoo J., The Development of Prototype for Intelligent Energy Saving Control System for Personal Computer, World Academy of Science, Engineering and Technology 61, 2012",
+          "ninth": "Charoenchai W., Suriyong L., Kanate s., Thanade S., and Werapong S., A Development of Augmented Reality Application: AR Band,Proceeding of the 2011 International Conference on Computer and Computational Intelligence, ICCCI2011, Dec 2-4,2011, Thailand"
+        },
+        "certification": {}
+      },
+  
+      {
+        "id": 5,
+        "name": {
+          "TH": "ดร. วัยวัฒน์ สายทุ้ม",
+          "EN": "Dr.Waiyawat Saitum"
+        },
+        "image": "https://cmmworkspace.blob.core.windows.net/cmmsource/Member/Waiyawat.png?sv=2023-01-03&st=2025-03-16T20%3A14%3A17Z&se=2025-06-17T20%3A14%3A00Z&sr=b&sp=r&sig=xZry9Oh32wIUzK%2BIcDEBvwEyC5GAJ4z46loM0InBDPM%3D",
+        "position": "อาจารย์ประจำสาขาคอมพิวเตอร์และเทคโนโลยีสารสนเทศ",
+        "email": "waiyawat.sai@kmutt.ac.th",
+        "educational": {
+          "bachelor": {
+            "field": "การออกแบบตกแต่งภายใน",
+            "university": "มหาวิทยาลัยศิลปากร"
+          },
+          "graduate": {
+            "field": "ครุศาสตร์เทคโนโลยี",
+            "university": "มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี"
+          },
+          "master": {
+            "field": "DESIGN ARTS (INTERNATIONAL PROGRAM)",
+            "university": "มหาวิทยาลัยศิลปากร"
+          }
+        },
+        "expertise": {
+          "first": "Art and Design",
+          "second": "Graphic Design",
+          "third": "Visual Art",
+          "fourth": "Kinetic Art"
+        },
+        "work_experience": {
+          "first": {
+            "period": "2019-ปัจจุบัน",
+            "position": "อาจารย์ประจำหลักสูตรวิชาวิทยาการคอมพิวเตอร์ประยุกต์-มัลติมีเดีย คณะครุศาสตร์อุตสาหกรรมและเทคโนโลยี มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี"
+          }
+        },
+        "publications": {
+          "first": "Saitum, W., Sintuvanone, N. and Peasungnoen, K., Digital Cut-Out Animation titled 'MOMMY's SECRET #My mom's food is the most delicious', The 1st International Conference on Media Technology Knowledge and Education in Next Normal 2022, IMKEN 2022, P12-1 - P12-9, Online, June 2022.",
+          "second": "Saitum, W., Karun, T., Kongkawai, O., Animation media project using the projection mapping technique : 'WISH', The 1st International Conference on Media Technology Knowledge and Education in Next Normal 2022, IMKEN 2022, S07-1, Online, June 2022.",
+          "third": "Saitum, W., Tungpantong, C., Visual Art Design for Multimedia Technology ArtWork “The Afterlife”, The 7th International Conference on Education and Multimedia Technology, ICEMT 2023, P 368-371, August 2023.",
+          "fourth": "Saitum, W., Aksupapan, P. and Muenkem, P., 2019, 'The create of 3D animation to advertise King Mongkut's University of Technology Thonburi.', In The Ninth STOU National Research Conference 'Innovative research to serve society', 29 พ.ย. 2562, 18 มี.ค. 62, Sukhothai Thammathirat Open University, Nonthaburi, Thailand, หน้า 16-29.",
+          "fifth": "ดร. วัยวัฒน์ สายทุ้ม, ธมกร พุ่มพันธ์ และ ปณิธาน จันทิมาโพธิ์พงษ์, 'สื่อแอนิเมชันโดยใช้เทคนิคสตอปโมชัน เรื่อง กลอนดอกสร้อยรำพึงในป่าช้า Animation using Stop Motion Technique: Bolt said in a graveyard Daksrgai', โครงการประชุมวิชาการและนำเสนอผลงานวิจัยระดับชาติ ด้านศิลปะและวัฒนธรรม ครั้งที่ 1, หน้า 269-93, ออนไลน์, กุมภาพันธ์ 2564.",
+          "sixth": "ดร. วัยวัฒน์ สายทุ้ม, ดร.กฤษณพงศ์ เลิศบำรุงชัย และ นายวิทวัส ชุติสิริยานนท์, 'การผลิตสื่อโมชั่นกราฟิก 7 สมุนไพรไทยเสริมสร้างภูมิคุ้มกันร่างกายให้แข็งแรง The Production of Motion Graphic: 7 Herbs to Make Immunity for Body', โครงการประชุมวิชาการ บรรยายพิเศษและนำเสนอผลงานวิจัยด้านศิลปะและวัฒนธรรมระดับชาติครั้งที่ 2 และระดับนานาชาติ ครั้งที่ 1, หน้า 109-112, ออนไลน์, กรกฎาคม 2565."
+        },
+        "certification": {}
+      },
+      {
+        "id": 6,
+        "name": {
+          "TH": "ดร. นภัสนันท์ สุวรรณวงศ์",
+          "EN": "Dr.Naphatsanan Suwannawong"
+        },
+        "image": "https://cmmworkspace.blob.core.windows.net/cmmsource/Member/Naphatsanan.png?sv=2023-01-03&st=2025-03-16T20%3A15%3A15Z&se=2025-06-17T20%3A15%3A00Z&sr=b&sp=r&sig=e02fMOKwv%2FyHVgpvhNy3tdAxQenL4rsEpfAZiKWUxy8%3D",
+        "position": "อาจารย์ประจำสาขาคอมพิวเตอร์และเทคโนโลยีสารสนเทศ",
+        "email": "naphatsanan.suwa@kmutt.ac.th",
+        "educational": {
+          "bachelor": {
+            "field": "ศล.บ. (มีเดียอาตส์) เกียรตินิยมอันดับ 1",
+            "university": "มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี"
+          },
+          "graduate": {
+            "field": "ค.อ.ม. (เทคโนโลยีการเรียนรู้และสื่อสารมวลชน)",
+            "university": "มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี"
+          },
+          "master": {
+            "field": "ปร.ด. (เทคโนโลยีสารสนเทศและการสื่อสารเพื่อการศึกษา)",
+            "university": "มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ"
+          }
+        },
+        "expertise": {
+          "first": "Educational Technology",
+          "second": "Instructional Design",
+          "third": "ICT in Education"
+        },
+        "work_experience": {
+          "first": {
+            "period": "2565 – ปัจจุบัน",
+            "position": "อาจารย์ สาขาวิชาคอมพิวเตอร์และเทคโนโลยีสารสนเทศ คณะครุศาสตร์อุตสาหกรรมและเทคโนโลยี มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี"
+          },
+          "second": {
+            "period": "2564 – 2565",
+            "position": "นักเทคโนโลยีการศึกษา ฝ่ายสารสนเทศเพื่อการศึกษา สำนักงานอธิการบดี วิทยาลัยวิทยาศาสตร์การแพทย์เจ้าฟ้าจุฬาภรณ์ราชวิทยาลัยจุฬาภรณ์"
+          },
+          "third": {
+            "period": "2563 – 2564",
+            "position": "นักวิจัย สำนักวิชาการศึกษาคลินิกชั้นสูง วิทยาลัยวิทยาศาสตร์การแพทย์เจ้าฟ้าจุฬาภรณ์ ราชวิทยาลัยจุฬาภรณ์"
+          },
+          "fourth": {
+            "period": "2557 – 2562",
+            "position": "นักประชาสัมพันธ์ สำนักประชาสัมพันธ์และสารสนเทศ มหาวิทยาลัยราชภัฏบ้านสมเด็จเจ้าพระยา"
+          },
+          "fifth": {
+            "period": "2555 - 2556",
+            "position": "Animator บริษัท อัญญา แอนิเมชั่น (Anya Animation)"
+          }
+        },
+        "publications": {
+          "first": "Suwannawong, N., & Suwannakhun, S. (2024).Game-Based Learning Model Using Augmented Reality Technology to Promote Creative Problem Solving.",
+          "second": "Linthaluek, S., Chanthra, R., Suwannawong, N., Siriwattananon, N., Chunngam, B., & Satipong, P. (2024). Multimedia in Education: Readiness, Expertise and Multimedia Needs in Education. International Education Studies. Vol.17 No.6: 1-11.",
+          "third": "Suwannawong, N., Nilsook, P., & Wannapiroon, P. (2022). Personalized Cognitive Counseling Process to Promote Digital Health. Education Quarterly Reviews, 5(4).",
+          "fourth": "Eumbunnapong, K., Srikong, M., Prasongmanee, C., Warasart, M., Suwannawong, N., Linthaluek, S., & Sawangkul, S. (2021). Technology Acceptance Model: Cloud HD Video Meetings in the Context of Medical Education. International Journal of Educational Communications and Technology, 1(1), 30-44.",
+          "fifth": "Suwannawong, N., Nilsook, P., & Wannapiroon, P. (2021). An Empirical Study of Virtual Telehealth Game. In 2021 6th International STEM Education Conference (iSTEM-Ed) (pp. 1-4). IEEE.",
+          "sixth": "Suwannawong, N. and Wannapiroon, P. (2021). Digital-Based Learning Management for Enhancing Digital Intelligence. Panyapiwat Journal. Vol.13 No.1: 279-293",
+          "seventh": "Suwannawong, N., Boonlue, S., & Wongdee, P. (2017). The Development of Creative Problem Solving learning management in “Instructional and Lesson Plans” by using a Virtual Classroom in Cloud computing. Ramkhamhaeng University Journal: The Graduate School (Educational Technology). Vol.1 No.1: 17-32"
+        },
+        "certification": {}
+      },
+      {
+        "id": 7,
+        "name": {
+          "TH": "อ. ณัฐพงษ์ ประเสริฐสังข์",
+          "EN": "Nuttapong Prasertsung"
+        },
+        "image": "https://cmmworkspace.blob.core.windows.net/cmmsource/Member/Nuttaphong.png?sv=2023-01-03&st=2025-03-16T20%3A16%3A09Z&se=2025-06-17T20%3A16%3A00Z&sr=b&sp=r&sig=TGPz4V6vY3movlCLm5Mdd0NifNvktZKEBhrGwCvin7M%3D",
+        "position": "อาจารย์ประจำสาขาคอมพิวเตอร์และเทคโนโลยีสารสนเทศ",
+        "email": "nuttapong.pra@kmutt.ac.th",
+        "educational": {
+          "bachelor": {
+            "field": "วิศวกรรมเครื่องกล",
+            "university": "มหาวิทยาลัยอุบลราชธานี"
+          },
+          "graduate": {
+            "field": "คอมพิวเตอร์และเทคโนโลยีสารสนเทศ",
+            "university": "มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี"
+          },
+          "master": {
+            "field": "",
+            "university": ""
+          }
+        },
+        "expertise": {
+          "first": "",
+          "second": "",
+          "third": "",
+          "fourth": ""
+        },
+        "work_experience": {
+          "first": {
+            "period": "",
+            "position": "อาจารย์ประจำหลักสูตรวิชาวิทยาการคอมพิวเตอร์ประยุกต์-มัลติมีเดีย คณะครุศาสตร์อุตสาหกรรมและเทคโนโลยี มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี"
+          }
+        },
+        "publications": {
+          "first": "Nuttapong Prasertsung, Mai Noipitak & Sukanlaya Tantiwisawaruji. (2018). Learning Development By Using Peer Assisted Learning: A Case of Residential College. International Electrical Engineering Transactions, 4(2), 74-77.",
+          "second": "Prapanporn Rattana & Nuttapong Prasertsung. (2018). Development of Student Outcome: A case study of project-based learning in Math III for undergraduate engineering students. International Electrical Engineering Transactions, 4(2), 59-63.",
+          "third": "Tanyarat Khongkhuntian, Warakorn Rattanaareekul, Nuttapong Prasertsung & Sukanlaya Tantiwisawaruji. (2018). A Pilot Implementation in Residential College; Development of Independentproblem Solving Skills in PBL Classroom using FILA, iSTEM-Ed 2018 Proceedings, 11-13 July 2018 at KX KMUTT Bangkok Thailand (pp. T33-T3-35).",
+          "fourth": "Sukanlaya Tantiwisawaruji, Nuttapong Prasertsung, Mai Noipitak & Banyat Lekprasert. (2018). Analysis of Students’ Achievement and Satisfaction toward Welding Practice Teaching with PeerAssisted Learning, iSTEM-Ed 2018 Proceedings, 11-13 July 2018 at KX KMUTT Bangkok Thailand (pp.T7-8-T7-11)." 
+        },
+        "certification": {}
+      },
+      {
+        "id": 8,
+        "name": {
+          "TH": "อ. จิรุจน์ พัฒนจันทร์",
+          "EN": "Jiruth Patanachan"
+        },
+        "image": "https://cmmworkspace.blob.core.windows.net/cmmsource/Member/Jiruth.png?sv=2023-01-03&st=2025-03-16T20%3A16%3A49Z&se=2025-06-17T20%3A16%3A00Z&sr=b&sp=r&sig=QLC%2F9b7eXHi2JU%2FOmhaNT5cRJvHzn65vq1HeL0wvHdo%3D",
+        "position": "อาจารย์ประจำสาขาคอมพิวเตอร์และเทคโนโลยีสารสนเทศ",
+        "email": "jirtuh.pat@kmutt.ac.th",
+        "educational": {
+          "bachelor": {
+            "field": "ศ.บ. ประยุกต์ศิลปศึกษา",
+            "university": "มหาวิทยาลัยศิลปากร"
+          },
+          "graduate": {
+            "field": "ศล.ม. คอมพิวเตอร์อาร์ต",
+            "university": "มหาวิทยาลัยรังสิต"
+          }
+        },
+        "expertise": {
+          "first": "3D Animation",
+          "second": "Visual Effect",
+          "third": "Motion Graphics",
+          "fourth": "Game Art &  Design"
+        },
+        "work_experience": {
+          "first": {
+            "period": "2014-2016",
+            "position": "3D Artist - Black Element Software (Bohemia Interactive)"
+          },
+          "second": {
+            "period": "2018-ปัจจุบัน",
+            "position": "อาจารย์ประจำหลักสูตรวิชาวิทยาการคอมพิวเตอร์ประยุกต์-มัลติมีเดีย คณะครุศาสตร์อุตสาหกรรมและเทคโนโลยี มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี"
+          }
+        },
+        "publications": {
+          "first": "Patanachan, J., Lertariyasakchai, P., Suksri, S., (2022), “Agriculture Simulation Role-Playing 3D Game to Develop Positive Attitude towards Agriculture”, Proceeding of International Conference on Media Thechnology, Knowledge and Education in Next Normal (IMKEN2022) : 9-10 June 2022, King Mongkut's University of Technology Thonburi, Bangkok, Thailand, pp. 45-52",
+          "second": "Patanachan, J., Promputha, N., Kaewmanee, P., (2022), “Web Application Simulates Digital Assets Creation with the Technical Gamification”, Proceeding of International Conference on Media Thechnology, Knowledge and Education in Next Normal (IMKEN2022) : 9-10 June 2022, King Mongkut's University of Technology Thonburi, Bangkok, Thailand, pp. 163-164",
+          "third": "Patanachan, J., Suksompong N. and Mechamnan N., (2019), “Hemophobia test by Virutal Reality Game”, International Proceedings of the 4th Joint Symposium of KMUTT and TUT., 5 July 2019, Tokyo, Japan, PP. 43-49.",
+          "fourth": "Patanachan, J., Lertkulvanich S., Mabangyang T., Watthanasin K. and Kuksungnoen S., (2018), “3D Model Supplement with AR Technology about Royal Projects by King Bhumibol Adulyadej”, Proceeding of The 13 th National and International Sripatum University Conference (SPUCON2018): Research and Innovations for Thailand 4.0, 20 Dec 2018, Sripatum University, Bangkok, Thailand, pp. 2329-2337."
+        },
+        "certification": {}
+      },
+  
+      {
+        "id": 9,
+        "name": {
+          "TH": "นางอรญา เพ็ชรอุไร",
+          "EN": "Oraya Petchurai"
+        },
+        "image": "https://cmmworkspace.blob.core.windows.net/cmmsource/Member/Oraya.png?sv=2023-01-03&st=2025-03-16T20%3A17%3A18Z&se=2025-06-17T20%3A17%3A00Z&sr=b&sp=r&sig=iFlUm6uamabDhzp71g%2FpfyiGLa0WLkvoFKlrOB%2Fyi1w%3D",
+        "position": "นักบริหารงานทั่วไป",
+        "email": "oraya.pet@kmutt.ac.th",
+        "educational": {
+          "bachelor": {
+            "field": "ศิลปศาสตรบัณฑิต สาขาการจัดการทั่วไป",
+            "university": "สถาบันราชภัฏบ้านสมเด็จเจ้าพระยา"
+          },
+          "graduate": {
+            "field": "ครุศาสตร์อุตสาหกรรมมหาบัณฑิต สาขาคอมพิวเตอร์และเทคโนโลยีสารสนเทศ",
+            "university": "มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี"
+          },
+          "master": {
+            "field": "",
+            "university": ""
+          }
+        },
+        "expertise": {
+          "first": "วางแผนการดำเนินงานโครงการ",
+          "second": "ติดต่อประสานงานโครงการ",
+          "third": "การบริหารจัดการความเสี่ยง",
+          "fourth": "บริหารการเงินโครงการ"
+        },
+        "work_experience": {
+          "first": {
+            "period": "2544-ปัจจุบัน",
+            "position": "นักบริหารงานทั่วไป เลขานุการสาขาวิชาคอมพิวเตอร์และเทคโนโลยีสารสนเทศ ระยะเวลา 25 ปี"
+          },
+          "second": {
+            "period": "2555-ปัจจุบัน",
+            "position": "ผู้ประสานงานโครงการบริการวิชาการ ระยะเวลา 22 ปี"
+          }
+        },
+        "publications": {
+          "first": "กรรมการและเลขานุการคณะกรรมการสาขาวิชาคอมพิวเตอร์และเทคโนโลยีสารสนเทศ",
+          "second": "คณะทำงานบริหารความเสี่ยงและการควบคุมภายใน",
+          "third": "ผู้ประสานงาน โครงการพัฒนาเพิ่มประสิทธิภาพการรับแจ้งเหตุฉุกเฉินนักท่องเที่ยวผ่านแอปพลิเคชัน Thailand Tourist Police กองบัญชาการตำรวจท่องเที่ยว ตำบลหนองปรือ อำเภอบางพลี จังหวัดสมุทรปราการ",
+          "fourth": "ผู้ประสานงาน โครงการ Metaverse พลังงานแห่งอนาคต",
+          "fifth": "คณะทำงานโครงการกิจกรรม FIET OPEN HOUSE 2023",
+          "sixth": "รางวัลเจ้าหน้าที่ด้านการพัฒนานักศึกษาดีเด่น ประเภทผู้ทรงคุณค่าประจำปีการศึกษา 2565 งานเชิดชูเกียรติ มจธ. วันที่ 12 กรกฎาคม 2566",
+          "seventh": "คณะกรรมการดำเนินงานการประชุมวิชาการนานาชาติระหว่างสาขาวิชาคอมพิวเตอร์และเทคโนโลยีสารสนเทศ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี กับมหาวิทยาลัยเทคโนโลยีแห่งชาติโตเกียว ประจำปี 2022 “International Conference on Media Technology, Knowledge and Education in Next Normal (IMKEN2022)” ระหว่างวันที่ 28-30 มีนาคม 2565",
+          "eighth": "คณะทำงานและเลขานุการ โครงการ “การผลิตสื่อดิจิทัลการเรียนรู้เพื่อการสอนในยุคความปกติใหม่” ภายใต้โครงการพัฒนาคณะตามแผนกลยุทธ์ คณะครุศาสตร์อุตสาหกรรมและเทคโนโลยี มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี โครงการวิสัยทัศน์ ปี 2565",
+          "ninth": "ผู้ประสานงาน โครงการยืดอายุแม่พิมพ์ออฟเซตสำหรับงานพิมพ์บรรจุภัณฑ์",
+          "tenth": "ผู้ประสานงาน โครงการการจัดการสีสำหรับการพิมพ์บรรจุภัณฑ์ด้วยระบบเฟล็กโซ กราฟีและระบบการพิมพ์ดิจิตอล",
+          "eleventh": "ผู้ประสานงาน โครงการการผลิตสารตั้งต้นเพื่อใช้ในการผลิตพลาสติกชีวภาพจากวัสดุเหลือใช้ทางการเกษตร",
+          "twelfth": "ผู้ประสานงาน โครงการพัฒนากระบวนการพิมพ์บนฟิล์มพลาสติกชีวภาพตามมาตรฐานระบบคุณภาพสีเทากลาง G7 ด้วยเครื่องพิมพ์ระบบกราเวียร์",
+          "thirteenth": "ผู้ประสานงาน โครงการการพัฒนาระบบคุณภาพสำหรับงานพิมพ์ภาพสอดสีบน   บรรจุภัณฑ์กล่องลูกฟูกเพื่อขยายตลาดลูกค้า",
+          "fourteenth": "ผู้ประสานงาน โครงการการพัฒนาสื่อวีดิทัศน์เพื่อการประชาสัมพันธ์ผลงานวิจัยและการดำเนินงานของ สวทช.",
+          "fifteenth": "ผู้ประสานงาน โครงการพัฒนาการเรียนรู้แบบบูรณาการองค์ความรู้ด้านวิชาชีพด้วยเทคโนโลยีสารสนเทศและการสื่อสาร"
+        },
+        "certification": {}
+      },
+      {
+        "id": 10,
+        "name": {
+          "TH": "นายคมสัน รีตานนท์",
+          "EN": "Khomsan Reetanon"
+        },
+        "image": "https://cmmworkspace.blob.core.windows.net/cmmsource/Member/Komsan.png?sv=2023-01-03&st=2025-03-16T20%3A18%3A12Z&se=2025-06-17T20%3A18%3A00Z&sr=b&sp=r&sig=WqluGQMNUyjTJVT%2FgcjN7rthXRZVLjDndxYjUKD24Jo%3D",
+        "position": "นักคอมพิวเตอร์",
+        "email": "khomsan.ree@kmutt.ac.th",
+        "educational": {
+          "bachelor": {
+            "field": "วิทยาศาสตร์บัณฑิต (B.Sc.) สาขาฟิสิกส์",
+            "university": "สถาบันเทคโนโลยีพระจอมเกล้าธนบุรี"
+          },
+          "graduate": {
+            "field": "ครุศาสตร์อุตสาหกรรมมหาบัณฑิต (M.S.Ind.Ed.) สาขาคอมพิวเตอร์และเทคโนโลยีสารสนเทศ",
+            "university": "มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี"
+          },
+          "master": {
+            "field": "สาขาวิชานวัตกรรมการเรียนรู้และเทคโนโลยี (กำลังศึกษา)",
+            "university": "มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี"
+          }
+        },
+        "expertise": {
+          "first": "Internet of Things"
+        },
+        "work_experience": {
+          "first": {
+            "period": "2551-ปัจจุบัน",
+            "position": "นักคอมพิวเตอร์ สาขาวิชาคอมพิวเตอร์และเทคโนโลยีสารสนเทศ คณะครุศาสตร์อุตสาหกรรมและเทคโนโลยี มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี"
+          }
+        },
+        "publications": {
+          "first": "Khomsan Reetanon , Chanin Tungpantong and Alisa Songsriwittaya, The Needs Analysis of a Learning Framework to Enhance Problem-Solving Skills in IoT Course for Non-Engineer Learners, 2024 9th International STEM Education Conference, 2024, pp. 1-4.",
+          "second": "Khomsan Reetanon , “SECONDSLIDE, a Lecture Supporting Software, Using Two Screens Presentation”, The 5th International Conference on Learning Innovation in Science and Technology, Pattaya Thailand, 27-29 January 2016, p.285-293",
+          "third": "Khomsan Reetanon , Suriyong Lertkunvanich , Suwanna Sombunsukho and Nithi Buranajant, “Development of Information Systems for Computer Room Services Management at major of Computer and Information Technology, Phase 1”, 2nd International Conference on Computer Technology and Development” Cairo Egypt, 2 - 4 November 2010, p.493."
+        },
+        "certification": {
+          "first": "ได้รับการรับรองมาตรฐานอาชีพและคุณวุฒิวิชาชีพระดับ 4 อาชีพนักพัฒนาระบบ สาขาซอฟต์แวร์และการประยุกต์ สาขาวิชาชีพอุตสาหกรรมดิจิทัล (2565)",
+          "second": "ได้รับการรับรองมาตรฐานอาชีพและคุณวุฒิวิชาชีพระดับ 3 อาชีพนักพัฒนาคอร์สแวร์ สาขาอีเลิร์นนิง สาขาวิชาชีพอุตสาหกรรมดิจิทัล (2565)",
+          "third": "NECTEC Certified NETPIE Trainer (2560)"
+        }
+      },
+      {
+        "id": 11,
+        "name": {
+          "TH": "นายสรุต วงศ์ดนตรี",
+          "EN": "Saruit Wongdontri"
+        },
+        "image": "https://cmmworkspace.blob.core.windows.net/cmmsource/Member/Sarut.png?sv=2023-01-03&st=2025-03-16T20%3A18%3A39Z&se=2025-06-17T20%3A18%3A00Z&sr=b&sp=r&sig=0BCUtbrV1rQIePwY%2FuAZnghYOdM7027b%2F7e43po%2F1%2Bk%3D",
+        "position": "นักเทคโนโลยีการศึกษา",
+        "email": "saruit.wongd@kmutt.ac.th",
+        "educational": {
+          "bachelor": {
+            "field": "ภาควิชาเทคโนโลยีและสื่อสารการศึกษา คณะครุศาสตร์อุตสาหกรรมและเทคโนโลยี",
+            "university": "มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี"
+          },
+          "graduate": {
+            "field": "",
+            "university": ""
+          },
+          "master": {
+            "field": "",
+            "university": ""
+          }
+        },
+        "expertise": {
+          "first": "การถ่ายภาพนิ่ง",
+          "second": "การทำสื่อวิดิโอ",
+          "third": "Production",
+          "fourth": "Adobe Photoshop",
+          "fifth": "Lightroom",
+          "sixth": "Premiere Pro",
+          "seventh": "illustrator"
+        },
+        "work_experience": {
+          "first": {
+            "period": "2566-ปัจจุบัน",
+            "position": "นักเทคโนโลยีการศึกษา"
+          }
+        },
+        "publications": {
+          "first": "",
+          "second": ""
+        },
+        "certification": {}
+      }
+    ]
