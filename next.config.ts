@@ -8,6 +8,6 @@ module.exports = {
     ];
   },
   images: {
-    domains: ['images.unsplash.com'], // เพิ่มโดเมนที่อนุญาต
+    domains: ['images.unsplash.com', 'cmmworkspace.blob.core.windows.net'], // ✅ แก้ไขให้ถูกต้อง
   },
 };

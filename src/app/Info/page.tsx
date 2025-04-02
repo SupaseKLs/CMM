@@ -38,7 +38,7 @@ export default function Info() {
                     </div>
                 </div>
                 <div className='relative flex justify-center'>
-                    <div className="relative w-[90%] h-[500px] overflow-hidden">
+                    <div className="relative w-[90%] h-[900px] overflow-hidden">
                         <Image src={Admissions} className='w-full h-full rounded-full' alt='test' />
                         <div className='absolute top-0 left-0 w-full h-full grid place-content-center'>
                             <ScrollBaseAnimation
@@ -60,6 +60,8 @@ export default function Info() {
                         pricePlaceholder="Select Month"
                         brandPlaceholder="Select Brand" />
                 </div>
+
+                
             </section>
         </>
     )

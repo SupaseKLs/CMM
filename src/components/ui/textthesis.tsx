@@ -71,9 +71,9 @@ export default function ScrollBaseAnimation({
   });
 
   return (
-    <div className='overflow-hidden whitespace-nowrap flex flex-nowrap'>
+    <div className='overflow-hidden whitespace-nowrap h-full flex rotate-[1200rad] flex-nowrap'>
       <motion.div
-        className='flex whitespace-nowrap font-bold text-white px-10 flex-nowrap'
+        className='flex justify-center items-center whitespace-nowrap font-bold text-white px-10 flex-nowrap'
         style={{ x }}
       >
         <span className={cn(`block text-[8vw]`, clasname)}>{children}</span>
