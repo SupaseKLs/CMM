@@ -1,50 +1,65 @@
 "use client";
-import Image from "next/image";
-import Logo from "@/assets/img/Logo.png";
-import Link from "next/link";
-import Chevron_Down from "@/assets/svg/chevron-down.svg"; // Imported Chevron_Down icon
+
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SocialHandle } from "@/utils/interface";
 import { TextReveal } from "@/components/ui/typography";
+import Link from "next/link";
+import { FaChevronDown } from 'react-icons/fa';
 import { useMediaQuery } from "@/utils/useMediaQuery";
-
 interface NavbarHeaderProps {
     social: SocialHandle[];
 }
 
-const NavbarHeader = ({ social = [] }: NavbarHeaderProps) => {
-    const [isActive, setIsActive] = useState(false);
-    const [isDropdownOpen, setIsDropdownOpen] = useState(false); // Track dropdown visibility
+
+const menuItems = [
+    { title: "หน้าหลัก", href: "/" },
+    { title: "บุคลากร", href: "/staff" },
+    {
+        title: "หลักสูตร",
+        links: [
+            {
+                label: "ปริญญาตรี",
+                href: "/courses/bachelor",
+                image: "/images/image 161.png",
+            },
+            {
+                label: "ปริญญาโท",
+                href: "/courses/master",
+                image: "/images/image 162.png",
+            },
+        ],
+    },
+    { title: "บริการ", href: "/services" },
+    { title: "ข่าวสาร", href: "/news" },
+    { title: "ติดต่อเรา", href: "/contact" },
+];
+const navLinks = [
+    { title: "หน้าหลัก", href: "/" },
+    { title: "บุคลากร", href: "#" },
+    { title: "หลักสูตร", href: "#", hasChevron: true },
+    { title: "บริการ", href: "#" },
+    { title: "ข่าวสาร", href: "#" },
+    { title: "ติดต่อเรา", href: "#" },
+];
+const courseDropdownLinks = [
+    { title: "ปริญญาตรี", href: "/courses/bachelor" },
+    { title: "ปริญญาโท", href: "/courses/master" },
+];
+
+const Navbar: React.FC<NavbarHeaderProps> = ({ social = [] }) => {
     const isMobile = useMediaQuery("(max-width:768px)");
+    const [hoveredMenu, setHoveredMenu] = useState<string | null>(null);
+    const [hoveredSubItem, setHoveredSubItem] = useState<string | null>(null);
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const [isActive, setIsActive] = useState(false);
+    const MotionLink = motion.create(Link);
     const [scrollPosition, setScrollPosition] = useState(0);
     const [isVisible, setIsVisible] = useState(true);
-    const MotionLink = motion.create(Link);
-    const menuVars = {
-        initial: {
-            scaleY: 0,
-        },
-        animate: {
-            scaleY: 1,
-            transition: {
-                duration: 0.5,
-                ease: [0.12, 0, 0.39, 0],
-            },
-        },
-        exit: {
-            scaleY: 0,
-            transition: {
-                delay: 0.5,
-                duration: 0.5,
-                ease: [0.22, 1, 0.36, 1],
-            },
-        },
-    };
     useEffect(() => {
         const handleScroll = () => {
             const currentScrollState = window.scrollY;
-
-            if (currentScrollState > scrollPosition && currentScrollState > 100) {
+            if (currentScrollState > scrollPosition && currentScrollState > 50) {
                 setIsVisible(false);
             } else {
                 setIsVisible(true);
@@ -52,10 +67,12 @@ const NavbarHeader = ({ social = [] }: NavbarHeaderProps) => {
             setScrollPosition(currentScrollState);
         };
 
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener("scroll", handleScroll);
         return () => {
-            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener("scroll", handleScroll);
         };
+
+
     }, [scrollPosition]);
     const variants = {
         open: {
@@ -72,206 +89,207 @@ const NavbarHeader = ({ social = [] }: NavbarHeaderProps) => {
             },
         },
     };
-
-    const navLinks = [
-        { title: "หน้าหลัก", href: "/" },
-        { title: "บุคลากร", href: "#" },
-        { title: "หลักสูตร", href: "#", hasChevron: true }, 
-        { title: "บริการ", href: "#" },
-        { title: "ข่าวสาร", href: "#" },
-        { title: "ติดต่อเรา", href: "#" },
-    ];
-
-    const courseDropdownLinks = [
-        { title: "หลักสูตร A", href: "#" },
-        { title: "หลักสูตร B", href: "#" },
-        { title: "หลักสูตร C", href: "#" },
-    ];
+    const currentImage =
+        menuItems
+            .find((item) => item.title === "หลักสูตร")
+            ?.links?.find((link) => link.label === hoveredSubItem)?.image || "";
 
     return (
         <>
-            <div className="flex justify-center">
-                <motion.nav
-                    className={`w-full z-50 px-10 md:px-10 py-10 fixed top-0 transition-all duration-700 ease-in-out h-16 font-medium flex items-center justify-center
-        ${isVisible ? "translate-y-0" : "-translate-y-full"} 
-        ${scrollPosition >= 50 ? 'py-14 bg-black bg-opacity-30 backdrop-blur-md' : 'bg-transparent'}`}
-                    variants={{
-                        visible: { y: 0 },
-                        hidden: { y: '-130%' },
-                    }}
-                    initial={{ y: '-100%' }}
-                    animate={isVisible ? 'visible' : 'hidden'}
-                    transition={{ duration: 0.2, ease: 'easeInOut' }}
-                >
-                    <div className="hidden xl:block w-full z-20">
-                        <div className="flex justify-between items-center ">
-                            <div>
-                                <Image src={Logo} className="w-20 md:w-32 lg:w-40 h-full" alt="Logo" />
-                            </div>
+            {/* Desktop Navbar */}
+            <AnimatePresence>
+                {hoveredMenu === "หลักสูตร" && hoveredSubItem && (
+                    <motion.div
+                        key={hoveredSubItem}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: -20 }}
+                        transition={{ duration: 0.3 }}
+                        className="fixed top-0 left-0 w-64 h-40 z-50"
+                    >
+                        <img
+                            src={currentImage}
+                            alt=""
+                            className="ml-20 mt-24 w-full h-full object-cover rounded-r-lg shadow-lg"
+                        />
+                    </motion.div>
+                )}
+            </AnimatePresence>
 
-                            <div className="flex items-center text-md 2xl:text-2xl text-white"
+            <motion.nav
+                animate={{ height: hoveredMenu === "หลักสูตร" || hoveredSubItem ? 280 : 80 }}
+                transition={{ duration: 0.45, ease: "easeInOut" }}
+                className="hidden md:block fixed top-0 left-0 z-40 w-full overflow-hidden 
+       bg-black/30 backdrop-blur-md backdrop-saturate-150 shadow"
+            >
+                <div className="w-11/12 mx-auto px-6 py-4 flex justify-between items-center">
+                    <Link href="/" className="text-2xl font-bold text-white">
+                        <img src="/images/Logo.png" width={150} alt="" />
+                    </Link>
+
+                    <div className="flex space-x-10">
+                        {menuItems.map((item) => (
+                            <div
+                                key={item.title}
+                                className="relative"
+                                onMouseEnter={() => item.links && setHoveredMenu(item.title)}
+                                onMouseLeave={() => {
+                                    setHoveredMenu(null);
+                                    setHoveredSubItem(null);
+                                }}
                             >
-                                {navLinks.map((link, index) => (
-                                    <div
-                                        key={index}
-                                        className="relative"
-                                        onMouseEnter={() => link.title === "หลักสูตร" && setIsDropdownOpen(true)} // Show dropdown when hovering
-                                        onMouseLeave={() => link.title === "หลักสูตร" && setIsDropdownOpen(false)} // Hide dropdown when mouse leaves
-                                    >
-                                        <Link
-                                            className="px-3 border-l-2 border-white"
-                                            href={link.href}
+                                <Link
+                                    href={item.href ?? "#"}
+                                    className="text-white text-md 2xl:text-2xl font-medium hover:text-blue-400 transition flex items-center" // Added flex for alignment
+                                >
+                                    {item.title}
+
+                                    {/* Chevron Icon with Rotation Animation */}
+                                    {item.links && (
+                                        <motion.div
+                                            className="ml-2" // Added margin to space it from the text
                                         >
-                                            {link.title}
-                                            {link.hasChevron && (
-                                                <Image
-                                                    src={Chevron_Down}
-                                                    width={16}
-                                                    height={16}
-                                                    alt="Chevron Down"
-                                                    className="inline ml-2"
-                                                />
-                                            )}
-                                        </Link>
-
-                                        {/* Dropdown menu for "หลักสูตร" with framer-motion */}
-                                        {isDropdownOpen && link.title === "หลักสูตร" && (
                                             <motion.div
-                                                className="absolute top-full left-0 w-48 bg-black bg-opacity-30 backdrop-blur-xl shadow-md mt- rounded-lg"
-                                                initial={{ opacity: 0, y: -20 }}
-                                                animate={{ opacity: 1, y: 0 }}
-                                                exit={{ opacity: 0, y: -20 }}
-                                                transition={{ duration: 0.3 }}
+                                                initial={{ rotate: 0 }} // Initial rotation (0 degrees)
+                                                animate={{
+                                                    rotate: hoveredMenu === item.title ? 180 : 0, // Rotate on hover
+                                                }}
+                                                transition={{ duration: 0.3 }} // Smooth transition
                                             >
-                                                {courseDropdownLinks.map((dropdownLink, idx) => (
-                                                    <Link
-                                                        key={idx}
-                                                        href={dropdownLink.href}
-                                                        className="block px-4 py-2 hover:bg-gray-200"
-                                                    >
-                                                        {dropdownLink.title}
-                                                    </Link>
-                                                ))}
+                                                <FaChevronDown className="text-white" />
                                             </motion.div>
-                                        )}
-                                    </div>
-                                ))}
+                                        </motion.div>
+                                    )}
+                                </Link>
 
-                                {/* สมัครเรียน Button */}
-                                <div>
-                                    <Link
-                                        className="bg-primary px-5 py-2 rounded-full text-white hover:bg-opacity-90"
-                                        href="#"
-                                    >
-                                        สมัครเรียน
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <motion.header className="block lg:hidden fixed top-0 right-0 z-20">
-                        <div className="fixed lg:top-0 pt-5 top-2 md:left-8 left-6 z-30">
-                            <Link href={"/"}>
-                                <div>
-                                    <Image src={Logo} width={150} height={150} alt="Logo" />
-                                </div>
-                            </Link>
-                        </div>
-                        <motion.div
-                            initial={false}
-                            animate={isActive ? "open" : "closed"}
-                            variants={variants}
-                            className="absolute top-0 right-0 w-dvw lg:w-[840px] h-dvh lg:h-[calc(100dvh_-_3.5rem)] bg-primary"
-                        >
-                            {isActive && (
-                                <nav className="flex justify-between items-center flex-col w-full h-full px-10 pt-[100px] pb-[50px]">
-                                    <div className="flex gap-2 flex-col">
-                                        {navLinks.map((link, i) => (
-                                            <div key={`b_${i}`} className="" onClick={() => setIsActive(false)}>
-                                                <Link href={link.href} className="text-white flex flex-wrap overflow-hidden">
-                                                    <motion.div
-                                                        variants={{
-                                                            initial: { y: 50},
-                                                            enter: {
-                                                                y: 0,
-                                                                transition: {
-                                                                    duration: 0.65,
-                                                                    delay: 0.5 + i * 0.1,
-                                                                    ease: [0.215, 0.61, 0.355, 1],
-                                                                    opacity: { duration: 0.35 },
-                                                                },
-                                                            },
-                                                        }}
-                                                        initial="initial"
-                                                        animate="enter"
-                                                        whileHover="whileHover"
-                                                        whileTap="whileHover"
-                                                        exit="exit"
-                                                        className="text-5xl text-background flex items-center justify-between"
-                                                    >
-                                                        <motion.span
-                                                            variants={{
-                                                                initial: { x: -20 },
-                                                                whileHover: { x: 0 },
-                                                            }}
-                                                        />
-                                                        <motion.span
-                                                            variants={{
-                                                                initial: { x: 0 },
-                                                                whileHover: { x: 20 },
-                                                            }}
-                                                        >
-                                                            {link.title}
-                                                        </motion.span>
-                                                    </motion.div>
+                                <AnimatePresence>
+                                    {hoveredMenu === item.title && item.links && (
+                                        <motion.div
+                                            initial={{ opacity: 0, y: -10 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            exit={{ opacity: 0, y: -10 }}
+                                            transition={{ duration: 0.25 }}
+                                            className="absolute top-10 left-0 mt-4 w-64 p-4 z-40"
+                                        >
+                                            {item.links?.map((link) => (
+                                                <Link
+                                                    key={link.label}
+                                                    href={link.href}
+                                                    onMouseEnter={() => setHoveredSubItem(link.label)}
+                                                    onMouseLeave={() => setHoveredSubItem(null)}
+                                                    className="block text-4xl text-white py-1 hover:text-blue-500 transition"
+                                                >
+                                                    {link.label}
                                                 </Link>
-                                            </div>
-                                        ))}
-                                    </div>
-                                    <motion.div className="flex flex-wrap">
-                                        {social.map((link, i) => (
-                                            <MotionLink
-                                                href={link.url}
-                                                target="_blank"
-                                                className=" w-1/2 mt-1 text-background"
+                                            ))}
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </motion.nav>
+
+            {/* Mobile Navbar */}
+            <motion.header className="block md:hidden fixed top-0 right-0 z-20">
+                <div className="fixed lg:top-0 pt-5 top-2 md:left-8 left-6 z-30">
+                    <Link href={"/"}>
+                        <div>
+                            <img src="/images/Logo.png" width={150} height={150} alt="Logo" />
+                        </div>
+                    </Link>
+                </div>
+                <motion.div
+                    initial={false}
+                    animate={isActive ? "open" : "closed"}
+                    variants={variants}
+                    className="absolute top-0 right-0 w-dvw lg:w-[840px] h-dvh lg:h-[calc(100dvh_-_3.5rem)] bg-primary"
+                >
+                    {isActive && (
+                        <nav className="flex justify-between items-center flex-col w-full h-full px-10 pt-[100px] pb-[50px]">
+                            <div className="flex gap-2 flex-col">
+                                {navLinks.map((link, i) => (
+                                    <div key={`b_${i}`} className="" onClick={() => setIsActive(false)}>
+                                        <Link href={link.href} className="text-white flex flex-wrap overflow-hidden">
+                                            <motion.div
                                                 variants={{
-                                                    initial: { opacity: 0, y: 20 },
-                                                    enter: (i: number) => ({
-                                                        opacity: 1,
+                                                    initial: { y: 50 },
+                                                    enter: {
                                                         y: 0,
                                                         transition: {
-                                                            duration: 0.5,
-                                                            delay: 0.75 + i * 0.1,
+                                                            duration: 0.65,
+                                                            delay: 0.5 + i * 0.1,
                                                             ease: [0.215, 0.61, 0.355, 1],
+                                                            opacity: { duration: 0.35 },
                                                         },
-                                                    }),
-                                                    exit: { opacity: 0, transition: { duration: 0.5, type: "tween", ease: "easeInOut" } },
+                                                    },
                                                 }}
-                                                custom={i}
-                                                key={link._id}
+                                                initial="initial"
+                                                animate="enter"
+                                                whileHover="whileHover"
+                                                whileTap="whileHover"
+                                                exit="exit"
+                                                className="text-5xl text-background flex items-center justify-between"
                                             >
-                                                <TextReveal>{link.platform}</TextReveal>
-                                            </MotionLink>
-                                        ))}
-                                    </motion.div>
-                                </nav>
-                            )}
-                        </motion.div>
-                        <Button
-                            isActive={isActive}
-                            toggleMenu={() => {
-                                setIsActive(!isActive);
-                            }}
-                        />
-                    </motion.header>
-                </motion.nav>
-            </div>
+                                                <motion.span
+                                                    variants={{
+                                                        initial: { x: -20 },
+                                                        whileHover: { x: 0 },
+                                                    }}
+                                                />
+                                                <motion.span
+                                                    variants={{
+                                                        initial: { x: 0 },
+                                                        whileHover: { x: 20 },
+                                                    }}
+                                                >
+                                                    {link.title}
+                                                </motion.span>
+                                            </motion.div>
+                                        </Link>
+                                    </div>
+                                ))}
+                            </div>
+                            <motion.div className="flex flex-wrap">
+                                {social.map((link, i) => (
+                                    <MotionLink
+                                        href={link.url}
+                                        target="_blank"
+                                        className=" w-1/2 mt-1 text-background"
+                                        variants={{
+                                            initial: { opacity: 0, y: 20 },
+                                            enter: (i: number) => ({
+                                                opacity: 1,
+                                                y: 0,
+                                                transition: {
+                                                    duration: 0.5,
+                                                    delay: 0.75 + i * 0.1,
+                                                    ease: [0.215, 0.61, 0.355, 1],
+                                                },
+                                            }),
+                                            exit: { opacity: 0, transition: { duration: 0.5, type: "tween", ease: "easeInOut" } },
+                                        }}
+                                        custom={i}
+                                        key={link._id}
+                                    >
+                                        <TextReveal>{link.platform}</TextReveal>
+                                    </MotionLink>
+                                ))}
+                            </motion.div>
+                        </nav>
+                    )}
+                </motion.div>
+                <Button
+                    isActive={isActive}
+                    toggleMenu={() => {
+                        setIsActive(!isActive);
+                    }}
+                />
+            </motion.header>
         </>
     );
 };
-
-export default NavbarHeader;
 
 function Button({
     isActive,
@@ -307,3 +325,6 @@ function Button({
         </div>
     );
 }
+
+
+export default Navbar;

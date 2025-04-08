@@ -13,7 +13,7 @@ function Projects() {
             <section className="bg-white h-full">
                 <div className="w-11/12 mx-auto">
                     <div className='pt-60 pb-40 flex flex-col md:flex-row justify-between'>
-                        <div className='font-semibold w-[80%] md:w-[25%] text-[12vw] md:text-8xl'>
+                        <div className='font-semibold w-[80%] md:w-[25%] text-[12vw] md:text-6xl'>
                             <h1>We strive to innovate</h1>
                         </div>
                         <div className="text-[4vw] md:text-[1.7vw] w-[80%] md:w-[40%]">

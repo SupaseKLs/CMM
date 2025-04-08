@@ -1,16 +1,26 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import Carousel from "@/components/Carousel/page"
-import { AuroraText } from "@/components/ui/aurora"
-import { TextAnimate } from "@/components/ui/text_animate"
-import Button from "@/components/ui/button"
-import Counter from "@/components/Counter/page"
+import React, { useEffect } from "react";
+import Carousel from "@/components/Carousel/page";
+import { AuroraText } from "@/components/ui/aurora";
+import Button from "@/components/ui/button";
+import Counter from "@/components/Counter/page";
+import 'aos/dist/aos.css'; // Import AOS styles
+import AOS from 'aos'; 
+import "aos/dist/aos.css"; // นำเข้า AOS styles
+
 export default function HomePage() {
+    useEffect(() => {
+        AOS.init({
+            duration: 1000, // กำหนดความเร็วของการทำ animation
+            easing: 'ease-in-out', // กำหนด easing ของ animation
+            once: true, // ให้แสดงผลแค่ครั้งเดียว
+        });
+    }, []);
+
     return (
         <>
             <div>
                 {/* <Parallax /> */}
-
             </div>
             <header>
                 <div className="w-full">
@@ -22,7 +32,10 @@ export default function HomePage() {
                             loop
                             className="w-full h-screen object-cover"
                         >
-                            <source src="https://cmmworkspace.blob.core.windows.net/cmmsource/CMM/8198509-hd_1920_1080_25fps.mp4?sv=2023-01-03&st=2025-03-12T04%3A42%3A52Z&se=2029-07-13T04%3A42%3A00Z&sr=b&sp=r&sig=9GzE54p4jn80XlqFiFcWRFOIkQzyKpRT1sn3W9ycew0%3D" type="video/mp4" />
+                            <source
+                                src="https://cmmworkspace.blob.core.windows.net/cmmsource/CMM/8198509-hd_1920_1080_25fps.mp4?sv=2023-01-03&st=2025-03-12T04%3A42%3A52Z&se=2029-07-13T04%3A42%3A00Z&sr=b&sp=r&sig=9GzE54p4jn80XlqFiFcWRFOIkQzyKpRT1sn3W9ycew0%3D"
+                                type="video/mp4"
+                            />
                         </video>
                         <div className="absolute bottom-0 mb-4">
                             <div className="w-11/12 mx-auto">
@@ -48,27 +61,41 @@ export default function HomePage() {
                                 </h1>
                             </div>
 
-                            <div className="text-[4vw] md:text-[1.7vw] w-[80%] md:w-[40%]">
-                                <TextAnimate animation="blurInUp" by="character" once>
-                                    ก้าวสู่โลกแห่งความคิดสร้างสรรค์และเทคโนโลยีที่ครบวงจรด้วยการเรียนรู้ทั้งการผลิตสื่อมัลติมีเดียการถ่ายภาพการจัดแสงและการตัดต่อวิดีโอที่มืออาชีพเลือกใช้พร้อมพัฒนาทักษะด้านการออกแบบและพัฒนาเว็บไซต์ให้ตอบโจทยโลกดิจิทัลอีกทั้งยังเสริมสร้างความสามารถ
-                                </TextAnimate>
+                            <div className="text-[4vw] md:text-[1.7vw] w-[80%] md:w-[40%]" data-aos="fade-up">
+                                ก้าวสู่โลกแห่งความคิดสร้างสรรค์และเทคโนโลยีที่ครบวงจรด้วยการเรียนรู้ทั้งการผลิตสื่อมัลติมีเดียการถ่ายภาพการจัดแสงและการตัดต่อวิดีโอที่มืออาชีพเลือกใช้พร้อมพัฒนาทักษะด้านการออกแบบและพัฒนาเว็บไซต์ให้ตอบโจทยโลกดิจิทัลอีกทั้งยังเสริมสร้างความสามารถ
                             </div>
                         </div>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 py-40">
-            <img src="https://videowebsite1.file.core.windows.net/image/images.jpg?sp=r&st=2025-03-05T07:15:26Z&se=2025-03-06T07:15:26Z&spr=https&sv=2022-11-02&sig=VaQ%2FuXPRg%2F1KG379RwMbxeYwvuu8NA9J6%2FzV38XO1PY%3D&sr=f" width={750} height={750} alt="test" />
-                        <img src="https://videowebsite1.file.core.windows.net/image/images.jpg?sp=r&st=2025-03-05T07:15:26Z&se=2025-03-06T07:15:26Z&spr=https&sv=2022-11-02&sig=VaQ%2FuXPRg%2F1KG379RwMbxeYwvuu8NA9J6%2FzV38XO1PY%3D&sr=f" width={750} height={750} alt="test" />
-                        <img src="https://videowebsite1.file.core.windows.net/image/images.jpg?sp=r&st=2025-03-05T07:15:26Z&se=2025-03-06T07:15:26Z&spr=https&sv=2022-11-02&sig=VaQ%2FuXPRg%2F1KG379RwMbxeYwvuu8NA9J6%2FzV38XO1PY%3D&sr=f" width={750} height={750} alt="test" />
+                        <img
+                            src="https://videowebsite1.file.core.windows.net/image/images.jpg?sp=r&st=2025-03-05T07:15:26Z&se=2025-03-06T07:15:26Z&spr=https&sv=2022-11-02&sig=VaQ%2FuXPRg%2F1KG379RwMbxeYwvuu8NA9J6%2FzV38XO1PY%3D&sr=f"
+                            width={750}
+                            height={750}
+                            alt="test"
+                            data-aos="fade-up"
+                        />
+                        <img
+                            src="https://videowebsite1.file.core.windows.net/image/images.jpg?sp=r&st=2025-03-05T07:15:26Z&se=2025-03-06T07:15:26Z&spr=https&sv=2022-11-02&sig=VaQ%2FuXPRg%2F1KG379RwMbxeYwvuu8NA9J6%2FzV38XO1PY%3D&sr=f"
+                            width={750}
+                            height={750}
+                            alt="test"
+                            data-aos="fade-up"
+                        />
+                        <img
+                            src="https://videowebsite1.file.core.windows.net/image/images.jpg?sp=r&st=2025-03-05T07:15:26Z&se=2025-03-06T07:15:26Z&spr=https&sv=2022-11-02&sig=VaQ%2FuXPRg%2F1KG379RwMbxeYwvuu8NA9J6%2FzV38XO1PY%3D&sr=f"
+                            width={750}
+                            height={750}
+                            alt="test"
+                            data-aos="fade-up"
+                        />
                     </div>
 
                     <div className="flex flex-col md:flex-row justify-between">
-                        <div className="font-semibold text-[6vw] md:text-[2.5vw] w-[250px] md:w-[200px] 2xl:w-[350px]">
+                        <div className="font-semibold text-[6vw] w-full md:text-[2.5vw] md:w-[200px] 2xl:w-[350px]" data-aos="fade-up">
                             <h1>เพลิดเพลินไปกับการเรียน</h1>
                         </div>
-                        <div className="text-[4vw] md:text-[1.7vw] w-[80%] md:w-[40%]">
-                        <TextAnimate animation="blurInUp" by="character" once>
+                        <div className="text-[4vw] md:text-[1.7vw] w-[80%] md:w-[40%]" data-aos="fade-up">
                             มหาวิทยาลัยมีหลักสูตรวิชาการนานาชาติที่หลากหลายให้เลือกเรียน ได้แก่ อังกฤษ อิตาลี เยอรมัน และฝรั่งเศสซึ่งสร้างสภาพแวดล้อมที่สมบูรณ์แบบสำหรับการเรียนรู้และการวิจัยทางวิทยาศาสตร์
-                        </TextAnimate>
                         </div>
                     </div>
                 </div>
@@ -77,14 +104,13 @@ export default function HomePage() {
             <section>
                 <div className="w-11/12 mx-auto">
                     <div className="py-20 text-white">
-                        <h1 className="text-[6vw] md:text-[4vw]">เราเรียนเกี่ยวกับไรบ้าง</h1>
-                        <h1 className="w-[80%} md:w-[50%] pt-10 text-[4vw] md:text-[1.8vw]">มหาวิทยาลัยมีหลักสูตรวิชาการนานาชาติที่หลากหลายให้เลือกเรียน ภาษาทางการ ได้แก่ อังกฤษ อิตาลี เยอรมัน และฝรั่งเศสซึ่งสร้างสภาพแวดล้อมที่สมบูรณ์แบบสำหรับการเรียนรู้และการวิจัยทางวิทยาศาสตร์</h1>
+                        <h1 className="text-[6vw] md:text-[4vw]" data-aos="fade-up">เราเรียนเกี่ยวกับไรบ้าง</h1>
+                        <h1 className="w-[80%} md:w-[50%] pt-10 text-[4vw] md:text-[1.8vw]" data-aos="fade-up">มหาวิทยาลัยมีหลักสูตรวิชาการนานาชาติที่หลากหลายให้เลือกเรียน ภาษาทางการ ได้แก่ อังกฤษ อิตาลี เยอรมัน และฝรั่งเศสซึ่งสร้างสภาพแวดล้อมที่สมบูรณ์แบบสำหรับการเรียนรู้และการวิจัยทางวิทยาศาสตร์</h1>
                     </div>
                     <div className="my-20">
                         <Carousel />
                     </div>
                     <h1 className="text-6xl py-20 text-white">ผลงานนักศึกษา</h1>
-
                 </div>
                 <div className="relative">
                     <video
@@ -104,17 +130,17 @@ export default function HomePage() {
                             <div className="text-white font-semibold grid grid-cols-3 gap-10">
                                 <div className="flex justify-center items-center">
                                     <div className="text-white text-[8vw] md:text-[5vw]">
-                                    <Counter value={20} />+
+                                        <Counter value={20} />+
                                     </div>
                                 </div>
                                 <div className="border-l-4 flex justify-center items-center">
                                     <div className="text-white text-[8vw] md:text-[5vw]">
-                                    <Counter value={120} />+
+                                        <Counter value={120} />+
                                     </div>
                                 </div>
                                 <div className="border-l-4 flex justify-center items-center">
-                                <div className="text-white text-[8vw] md:text-[5vw]">
-                                    <Counter value={220} />+
+                                    <div className="text-white text-[8vw] md:text-[5vw]">
+                                        <Counter value={220} />+
                                     </div>
                                 </div>
                             </div>
@@ -125,7 +151,7 @@ export default function HomePage() {
                             <div>
                                 <h1 className="text-white text-[8vw] md:text-[4vw] font-semibold">Explore to Project</h1>
                                 <div className="my-10">
-                                <Button text="Read more" onClick={() => alert("Submitted!")} />
+                                    <Button text="Read more" onClick={() => alert("Submitted!")} />
                                 </div>
                             </div>
                         </div>
@@ -136,15 +162,13 @@ export default function HomePage() {
             <section className="bg-white h-full">
                 <div className="w-11/12 mx-auto">
                     <div className="pt-20 md:pt-60 flex flex-col md:flex-row justify-between">
-                        <div className="text-[5vw] md:text-[2vw] font-semibold">
+                        <div className="text-[5vw] md:text-[2vw] font-bold" data-aos="fade-up">
                             <h1>คณะครุศาสตร์อุตสาหกรรมและเทคโนโลยี</h1>
                             <h1 className="text-gray-400 pt-2">สาขาวิชาวิทยาการคอมพิวเตอร์<br />ประยุกต์-มัลติมีเดีย</h1>
                         </div>
-                        <div className="text-[4vw] md:text-[1.7vw] w-[80%] md:w-[40%]">
-                                <TextAnimate animation="blurInUp" by="character" once>
-                                คำตอบสำหรับคนที่มีความฝันอยากสร้างอนาคตในสายเทคโนโลยีและมัลติมีเดียด้วยหลักสูตรที่ผสมผสานความรู้ด้านการพัฒนาเทคโนโลยีคอมพิวเตอร์และการสร้างสรรค์สื่อมัลติมีเดียเข้าด้วยกันอย่างลงตัว
-                                </TextAnimate>
-                            </div>
+                        <div className="text-[4vw] md:text-[1.7vw] w-full md:w-[40%]" data-aos="fade-up">
+                            คำตอบสำหรับคนที่มีความฝันอยากสร้างอนาคตในสายเทคโนโลยีและมัลติมีเดียด้วยหลักสูตรที่ผสมผสานความรู้ด้านการพัฒนาเทคโนโลยีคอมพิวเตอร์และการสร้างสรรค์สื่อมัลติมีเดียเข้าด้วยกันอย่างลงตัว
+                        </div>
                     </div>
                     <video
                         playsInline
@@ -161,5 +185,5 @@ export default function HomePage() {
                 </div>
             </section>
         </>
-    )
+    );
 }
