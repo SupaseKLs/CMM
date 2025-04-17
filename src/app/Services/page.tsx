@@ -18,11 +18,11 @@ export default function Services() {
                     <source src="https://executivemembers.file.core.windows.net/executive/2887463-hd_1920_1080_25fps.mp4?sp=r&st=2025-02-11T10:41:53Z&se=2030-02-12T10:41:00Z&sv=2022-11-02&sig=hYGanDs8HU0L9%2FEcwboVA2kQ77jSbdJcGldZGQCwugk%3D&sr=f" type="video/mp4" />
                 </video>
                 <div className="w-11/12 mx-auto">
-                    <div className="py-20 flex justify-between">
-                        <div className="text-6xl w-[40%]">
+                    <div className="py-20 flex flex-col md:flex-row justify-between">
+                        <div className="text-6xl w-full md:w-[40%]">
                             <h1>บริการของ<br />ทาง Multimedia</h1>
                         </div>
-                        <div className="w-[40%]">
+                        <div className="w-full md:w-[40%] pt-6 md:pt-0">
                             <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi magni numquam architecto repellat vel laboriosam, quaerat amet dignissimos, cum consectetur laudantium, fugiat provident earum minus ducimus sint laborum. Itaque, corporis.</h1>
                         </div>
                     </div>

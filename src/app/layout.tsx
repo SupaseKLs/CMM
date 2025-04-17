@@ -21,6 +21,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        
+      </head>
+      <link rel="icon" href="/cmm.ico" />
       <body
         className={kanit.className}
       >

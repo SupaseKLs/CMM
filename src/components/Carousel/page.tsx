@@ -11,7 +11,7 @@ function index() {
   return (
     <>
       <>
-        <Carousel options={OPTIONS} isAutoPlay={true} className='w-4/5 mx-auto'>
+        <Carousel options={OPTIONS} isAutoPlay={true} className='w-full mx-auto'>
           <SliderContainer className='gap-2'>
             <Slider className='w-full'>
               <div className='rounded-xl h-[200px] md:h-[800px] w-full'>

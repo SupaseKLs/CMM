@@ -7,6 +7,7 @@ import Counter from "@/components/Counter/page";
 import 'aos/dist/aos.css'; // Import AOS styles
 import AOS from 'aos'; 
 import "aos/dist/aos.css"; // นำเข้า AOS styles
+import VideoScroller from "@/components/VideOnScroll/page";
 
 export default function HomePage() {
     useEffect(() => {
@@ -55,10 +56,16 @@ export default function HomePage() {
                             <div className="bg-black h-[2px]" />
                         </div>
                         <div className="flex flex-col md:flex-row justify-between">
-                            <div className="w-[80%] md:w-[60%]">
+                            <div className="hidden md:block w-[80%] md:w-[60%]">
                                 <h1 className="text-4xl font-bold tracking-tighter md:text-3xl lg:text-[3vw]">
                                     CMM KMUTT&nbsp;&nbsp;|&nbsp;&nbsp; <AuroraText>Multimedia</AuroraText>
                                 </h1>
+                            </div>
+                            <div className="w-[80%] block md:hidden md:w-[60%]">
+                                <h1 className="text-4xl font-bold tracking-tighter md:text-3xl lg:text-[3vw]">
+                                    CMM KMUTT&nbsp;&nbsp;|&nbsp;&nbsp; 
+                                </h1>
+                                <AuroraText className="text-[8vw] font-bold">Multimedia</AuroraText>
                             </div>
 
                             <div className="text-[4vw] md:text-[1.7vw] w-[80%] md:w-[40%]" data-aos="fade-up">
@@ -158,6 +165,10 @@ export default function HomePage() {
                     </div>
                 </div>
             </section>
+
+            <div>
+                <VideoScroller />
+            </div>
 
             <section className="bg-white h-full">
                 <div className="w-11/12 mx-auto">
