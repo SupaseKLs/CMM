@@ -5,7 +5,7 @@ import { AuroraText } from "@/components/ui/aurora";
 import Button from "@/components/ui/button";
 import Counter from "@/components/Counter/page";
 import 'aos/dist/aos.css'; // Import AOS styles
-import AOS from 'aos'; 
+import AOS from 'aos';
 import "aos/dist/aos.css"; // นำเข้า AOS styles
 import VideoScroller from "@/components/VideOnScroll/page";
 
@@ -63,7 +63,7 @@ export default function HomePage() {
                             </div>
                             <div className="w-[80%] block md:hidden md:w-[60%]">
                                 <h1 className="text-4xl font-bold tracking-tighter md:text-3xl lg:text-[3vw]">
-                                    CMM KMUTT&nbsp;&nbsp;|&nbsp;&nbsp; 
+                                    CMM KMUTT&nbsp;&nbsp;|&nbsp;&nbsp;
                                 </h1>
                                 <AuroraText className="text-[8vw] font-bold">Multimedia</AuroraText>
                             </div>
@@ -74,27 +74,27 @@ export default function HomePage() {
                         </div>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 py-40">
-                        <img
-                            src="https://videowebsite1.file.core.windows.net/image/images.jpg?sp=r&st=2025-03-05T07:15:26Z&se=2025-03-06T07:15:26Z&spr=https&sv=2022-11-02&sig=VaQ%2FuXPRg%2F1KG379RwMbxeYwvuu8NA9J6%2FzV38XO1PY%3D&sr=f"
-                            width={750}
-                            height={750}
-                            alt="test"
-                            data-aos="fade-up"
-                        />
-                        <img
-                            src="https://videowebsite1.file.core.windows.net/image/images.jpg?sp=r&st=2025-03-05T07:15:26Z&se=2025-03-06T07:15:26Z&spr=https&sv=2022-11-02&sig=VaQ%2FuXPRg%2F1KG379RwMbxeYwvuu8NA9J6%2FzV38XO1PY%3D&sr=f"
-                            width={750}
-                            height={750}
-                            alt="test"
-                            data-aos="fade-up"
-                        />
-                        <img
-                            src="https://videowebsite1.file.core.windows.net/image/images.jpg?sp=r&st=2025-03-05T07:15:26Z&se=2025-03-06T07:15:26Z&spr=https&sv=2022-11-02&sig=VaQ%2FuXPRg%2F1KG379RwMbxeYwvuu8NA9J6%2FzV38XO1PY%3D&sr=f"
-                            width={750}
-                            height={750}
-                            alt="test"
-                            data-aos="fade-up"
-                        />
+                        {[
+                            { src: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=3870&auto=format&fit=crop', label: 'ผลงานนักศึกษา' },
+                            { src: 'https://images.unsplash.com/photo-1560264357-8d9202250f21?q=80&w=3000&auto=format&fit=crop', label: 'บริการ' },
+                            { src: 'https://images.unsplash.com/photo-1590070302028-b9a00b0c5354?q=80&w=2262&auto=format=fit=crop', label: 'ข่าวสาร' },
+                        ].map((item, index) => (
+                            <div
+                                key={index}
+                                className="relative w-full overflow-hidden rounded-md group"
+                                data-aos="fade-up"
+                                data-aos-delay={index * 100}
+                            >
+                                <img
+                                    src={item.src}
+                                    alt={item.label}
+                                    className="w-full h-[500px] object-cover rounded-md group-hover:scale-105 transition-transform duration-300"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end pl-10 pb-6">
+                                    <span className="text-white text-5xl font-semibold">{item.label}</span>
+                                </div>
+                            </div>
+                        ))}
                     </div>
 
                     <div className="flex flex-col md:flex-row justify-between">
@@ -158,7 +158,7 @@ export default function HomePage() {
                             <div>
                                 <h1 className="text-white text-[8vw] md:text-[4vw] font-semibold">Explore to Project</h1>
                                 <div className="my-10">
-                                    <Button text="Read more" onClick={() => alert("Submitted!")} />
+                                    <Button text="อ่านเพิ่มเติม" onClick={() => alert("Submitted!")} />
                                 </div>
                             </div>
                         </div>

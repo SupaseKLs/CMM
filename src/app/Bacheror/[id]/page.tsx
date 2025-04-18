@@ -27,15 +27,15 @@ export default function Bacheror() {
                     </div>
                 </div>
 
-                <div className="bg-red-200 flex flex-col md:flex-row rounded-2xl">
-                    <div className="w-full md:w-[60%]">
+                <div className="bg-red-200 flex flex-col lg:flex-row rounded-2xl">
+                    <div className="w-full lg:w-full 2xl:w-[40%]">
                         <Image src={Student} className="rounded-2xl w-auto h-auto md:h-full" alt="" />
                     </div>
                     <div className="h-full px-5 pt-10 w-full md:w-[70%]">
                         <div>
-                            <h1 className="font-bold text-xl md:text-2xl pb-6">ชื่อปริญญาและสาขาวิชา</h1>
+                            <h1 className="font-bold text-xl md:text-2xl 2xl:text-4xl pb-6">ชื่อปริญญาและสาขาวิชา</h1>
                             <div className="grid grid-rows-2">
-                                <div className="text-sm md:text-md grid" style={{ gridTemplateColumns: "20% 37% 1fr" }}>
+                                <div className="text-sm md:text-md 2xl:text-xl grid" style={{ gridTemplateColumns: "20% 37% 1fr" }}>
                                     <div>
                                         <h1>ชื่อเต็ม</h1>
                                     </div>
@@ -46,7 +46,7 @@ export default function Bacheror() {
                                         <h1>วิทยาศาสตรบัณฑิต<br /> (วิทยาการคอมพิวเตอร์ประยุกต์-มัลติมีเดีย)</h1>
                                     </div>
                                 </div>
-                                <div className="text-sm md:text-md grid" style={{ gridTemplateColumns: "20% 37% 1fr" }}>
+                                <div className="text-sm md:text-md 2xl:text-xl grid" style={{ gridTemplateColumns: "20% 37% 1fr" }}>
                                     <div>
                                     </div>
                                     <div>
@@ -58,7 +58,7 @@ export default function Bacheror() {
                                 </div>
                             </div>
                             <div className="pt-4 text-sm md:text-md grid grid-rows-2">
-                                <div className="grid" style={{ gridTemplateColumns: "20% 37% 43%" }}>
+                                <div className="text-sm md:text-md 2xl:text-xl grid" style={{ gridTemplateColumns: "20% 37% 43%" }}>
                                     <div>
                                         <h1>ชื่อย่อ</h1>
                                     </div>
@@ -69,7 +69,7 @@ export default function Bacheror() {
                                         <h1>วท.บ.<br />(วิทยาการคอมพิวเตอร์ประยุกต์-มัลติมีเดีย) </h1>
                                     </div>
                                 </div>
-                                <div className="grid" style={{ gridTemplateColumns: "20% 37% 1fr" }}>
+                                <div className="text-sm md:text-md 2xl:text-xl grid" style={{ gridTemplateColumns: "20% 37% 1fr" }}>
                                     <div>
                                     </div>
                                     <div>
@@ -83,8 +83,8 @@ export default function Bacheror() {
                         </div>
 
                         <div className="py-6">
-                            <h1 className="font-bold text-xl md:text-2xl pb-6">หน่วยกิต</h1>
-                            <ul className="text-sm md:text-md">
+                            <h1 className="font-bold text-xl md:text-2xl 2xl:text-4xl pb-6">หน่วยกิต</h1>
+                            <ul className="text-sm md:text-md 2xl:text-xl">
                                 <li className="grid" style={{ gridTemplateColumns: "58% 10% 1fr" }}>
                                     <div>
                                         หมวดวิชาเลือกศึกษาทั่วไป
@@ -133,8 +133,8 @@ export default function Bacheror() {
                         </div>
 
                         <div className="py-6">
-                            <h1 className="font-bold text-xl md:text-2xl pb-6">คุณสมบัติของผู้เข้าศึกษา</h1>
-                            <ol className="px-3 list-decimal text-sm md:text-md">
+                            <h1 className="font-bold text-xl md:text-2xl 2xl:text-4xl pb-6">คุณสมบัติของผู้เข้าศึกษา</h1>
+                            <ol className="px-3 list-decimal text-sm md:text-md 2xl:text-xl">
                                 <li>เป็นผู้สำเร็จการศึกษาระดับมัธยมศึกษาตอนปลาย กลุ่มสาระการเรียนรู้วิทยาศาสตร์ และกลุ่มสาระการเรียนรู้คณิตศาสตร์ หรือสายการเรียนวิทยาศาสตร์-คณิตศาสตร์ หรือประกาศนียบัตรที่กระทรวงศึกษาการเทียบเท่าสายวิทยาศาสตร์</li>
                                 <li>ผู้ที่ไม่อยู่ในเกณฑ์ข้างต้นให้อยู่ในดุลยพินิจของคณะกรรมการประจำหลักสูตร</li>
                             </ol>
@@ -144,7 +144,6 @@ export default function Bacheror() {
 
                 <div className="mt-20">
                     <CardStacking />
-
                 </div>
                 <div className="h-[500px] md:h-full py-12">
                     <h1 className="text-4xl md:text-5xl font-bold">โครงสร้างหลักสูตร</h1>

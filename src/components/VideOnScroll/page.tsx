@@ -1,45 +1,42 @@
 "use client";
 
-import { useRef, useEffect } from "react";
-import { motion, useScroll, useTransform, useAnimationFrame } from "framer-motion";
+import { useRef, useState, useEffect } from "react";
+import { useScroll, useTransform, motion } from "framer-motion";
 
-const AppleSmoothScrollVideo = () => {
+const TOTAL_FRAMES = 960;
+const IMAGE_PATH = (index: number) => `/images/frame${index}.jpg`;
+
+const ScrollImageSequence = () => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const [currentFrame, setCurrentFrame] = useState(1);
 
-  // Scroll progress from Framer Motion (0 - 1)
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start end", "end start"], // start when top of container hits bottom of screen
+    offset: ["start end", "end start"],
   });
 
-  // Smooth transform to simulate video scrub progress
-  const videoProgress = useTransform(scrollYProgress, [0, 1], [0, 1]);
+  const frameIndex = useTransform(scrollYProgress, [0, 1], [1, TOTAL_FRAMES]);
 
-  useAnimationFrame(() => {
-    if (videoRef.current) {
-      const video = videoRef.current;
-      const duration = video.duration || 1;
+  useEffect(() => {
+    const unsubscribe = frameIndex.on("change", (v) => {
+      setCurrentFrame(Math.floor(v));
+    });
 
-      videoProgress.get() !== undefined &&
-        (video.currentTime += (videoProgress.get() * duration - video.currentTime) * 0.05); // easing
-    }
-  });
+    return () => unsubscribe();
+  }, [frameIndex]);
 
   return (
     <div ref={containerRef} className="relative h-[500vh]">
-      <div className="sticky top-0 h-screen w-full bg-black">
-        <motion.video
-          ref={videoRef}
-          src="/video/thesis.mp4"
-          className="w-full h-full object-cover"
-          muted
-          playsInline
-          preload="auto"
+      <div className="sticky top-0 h-screen w-full flex items-center justify-center bg-black">
+        <motion.img
+          src={IMAGE_PATH(currentFrame)}
+          alt={`Frame ${currentFrame}`}
+          className="w-full h-full"
+          loading="eager"
         />
       </div>
     </div>
   );
 };
 
-export default AppleSmoothScrollVideo;
+export default ScrollImageSequence;

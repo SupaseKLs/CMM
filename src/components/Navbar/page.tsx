@@ -14,7 +14,7 @@ interface NavbarHeaderProps {
 
 const menuItems = [
     { title: "หน้าหลัก", href: "/" },
-    { title: "บุคลากร", href: "/staff" },
+    { title: "บุคลากร", href: "/Executive" },
     {
         title: "หลักสูตร",
         links: [
@@ -30,9 +30,9 @@ const menuItems = [
             },
         ],
     },
-    { title: "บริการ", href: "/services" },
-    { title: "ข่าวสาร", href: "/news" },
-    { title: "ติดต่อเรา", href: "/contact" },
+    { title: "บริการ", href: "/Services" },
+    { title: "ข่าวสาร", href: "/Info" },
+    { title: "ติดต่อเรา", href: "/Contact" },
 ];
 const navLinks = [
     { title: "หน้าหลัก", href: "/" },
@@ -119,7 +119,7 @@ const Navbar: React.FC<NavbarHeaderProps> = ({ social = [] }) => {
             <motion.nav
                 animate={{ height: hoveredMenu === "หลักสูตร" || hoveredSubItem ? 280 : 80 }}
                 transition={{ duration: 0.45, ease: "easeInOut" }}
-                className="hidden md:block fixed top-0 left-0 z-40 w-full overflow-hidden 
+                className="hidden lg:block fixed top-0 left-0 z-40 w-full overflow-hidden 
        bg-black/30 backdrop-blur-md backdrop-saturate-150 shadow"
             >
                 <div className="w-11/12 mx-auto px-6 py-4 flex justify-between items-center">
@@ -192,7 +192,7 @@ const Navbar: React.FC<NavbarHeaderProps> = ({ social = [] }) => {
             </motion.nav>
 
             {/* Mobile Navbar */}
-            <motion.header className="block md:hidden fixed top-0 right-0 z-20">
+            <motion.header className="block lg:hidden fixed top-0 right-0 z-20">
                 <div className="fixed lg:top-0 pt-5 top-2 md:left-8 left-6 z-30">
                     <Link href={"/"}>
                         <div>
