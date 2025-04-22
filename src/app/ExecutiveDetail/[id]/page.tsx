@@ -91,10 +91,9 @@ const InfoDetail: React.FC = () => {
     <div className='bg-white'>
       {/* Header */}
       <div className="bg-green-200 h-80 pt-20 md:h-full grid grid-cols-[80%_20%]">
-        <div className='flex flex-col text-xl md:text-5xl justify-center items-center'>
-          <h1>{safeGet(memberData?.name?.TH)}</h1>
-          <h1>{safeGet(memberData?.name?.EN)}</h1>
-        </div>
+    <div>
+      
+    </div>
         <div>
           <Image width={500} height={500} src={memberData?.image || ''} alt='Profile Image' />
         </div>
@@ -106,7 +105,10 @@ const InfoDetail: React.FC = () => {
           <div className='w-full lg:w-[70%] pb-10 mx-auto'>
             <div className="w-full px-5 lg:px-20 h-full flex flex-col justify-center text-center">
               <h1 className='text-3xl lg:text-5xl'>
-                Je combine esthétique et fonctionnalité pour offrir des expériences utilisateur intuitives et engageantes
+                <div className='flex flex-col text-xl md:text-5xl justify-center items-center'>
+                  <h1>{safeGet(memberData?.name?.TH)}</h1>
+                  <h1>{safeGet(memberData?.name?.EN)}</h1>
+                </div>
               </h1>
               <div className="flex justify-start mt-4">
                 <Link className='mt-10 border-2 text-xl border-black rounded-full px-16 py-4 transition-all duration-300 hover:bg-black hover:text-white' href="">
@@ -158,7 +160,7 @@ const InfoDetail: React.FC = () => {
             </div>
 
             <div className="grid grid-col-1 lg:grid-cols-3 gap-10">
-              {[ 
+              {[
                 { level: 'ปริญญาตรี', field: memberData?.educational.bachelor.field, university: memberData?.educational.bachelor.university },
                 { level: 'ปริญญาโท', field: memberData?.educational.graduate.field, university: memberData?.educational.graduate.university },
                 { level: 'ปริญญาเอก', field: memberData?.educational.master.field, university: memberData?.educational.master.university },

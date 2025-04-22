@@ -2,6 +2,7 @@ import Image from "next/image"
 import CardStacking from "@/components/CardStacking/page"
 import Tabs from "@/components/tabs/page"
 import Student from "@/assets/img/Suti.png"
+import MarqueeCareers from "@/components/MarqueeCareers/page"
 import {
     Table,
     TableBody,
@@ -10,6 +11,7 @@ import {
     TableHeader,
     TableRow,
 } from "@/components/ui/table";
+import FAQ from "@/components/Faq/page"
 export default function Bacheror() {
     return (
         <section className="bg-white">
@@ -29,13 +31,13 @@ export default function Bacheror() {
 
                 <div className="bg-red-200 flex flex-col lg:flex-row rounded-2xl">
                     <div className="w-full lg:w-full 2xl:w-[40%]">
-                        <Image src={Student} className="rounded-2xl w-auto h-auto md:h-full" alt="" />
+                        <Image src={Student} className="rounded-2xl w-full 2xl:w-auto h-auto md:h-full" alt="" />
                     </div>
-                    <div className="h-full px-5 pt-10 w-full md:w-[70%]">
+                    <div className="h-full px-5 pt-10 w-full">
                         <div>
-                            <h1 className="font-bold text-xl md:text-2xl 2xl:text-4xl pb-6">ชื่อปริญญาและสาขาวิชา</h1>
+                            <h1 className="font-bold text-xl md:text-3xl 2xl:text-4xl pb-6">ชื่อปริญญาและสาขาวิชา</h1>
                             <div className="grid grid-rows-2">
-                                <div className="text-sm md:text-md 2xl:text-xl grid" style={{ gridTemplateColumns: "20% 37% 1fr" }}>
+                                <div className="text-sm md:text-2xl 2xl:text-xl grid" style={{ gridTemplateColumns: "20% 37% 1fr" }}>
                                     <div>
                                         <h1>ชื่อเต็ม</h1>
                                     </div>
@@ -46,7 +48,7 @@ export default function Bacheror() {
                                         <h1>วิทยาศาสตรบัณฑิต<br /> (วิทยาการคอมพิวเตอร์ประยุกต์-มัลติมีเดีย)</h1>
                                     </div>
                                 </div>
-                                <div className="text-sm md:text-md 2xl:text-xl grid" style={{ gridTemplateColumns: "20% 37% 1fr" }}>
+                                <div className="text-sm md:text-2xl 2xl:text-xl grid" style={{ gridTemplateColumns: "20% 37% 1fr" }}>
                                     <div>
                                     </div>
                                     <div>
@@ -58,7 +60,7 @@ export default function Bacheror() {
                                 </div>
                             </div>
                             <div className="pt-4 text-sm md:text-md grid grid-rows-2">
-                                <div className="text-sm md:text-md 2xl:text-xl grid" style={{ gridTemplateColumns: "20% 37% 43%" }}>
+                                <div className="text-sm md:text-2xl 2xl:text-xl grid" style={{ gridTemplateColumns: "20% 37% 43%" }}>
                                     <div>
                                         <h1>ชื่อย่อ</h1>
                                     </div>
@@ -69,7 +71,7 @@ export default function Bacheror() {
                                         <h1>วท.บ.<br />(วิทยาการคอมพิวเตอร์ประยุกต์-มัลติมีเดีย) </h1>
                                     </div>
                                 </div>
-                                <div className="text-sm md:text-md 2xl:text-xl grid" style={{ gridTemplateColumns: "20% 37% 1fr" }}>
+                                <div className="text-sm md:text-2xl 2xl:text-xl grid" style={{ gridTemplateColumns: "20% 37% 1fr" }}>
                                     <div>
                                     </div>
                                     <div>
@@ -83,8 +85,8 @@ export default function Bacheror() {
                         </div>
 
                         <div className="py-6">
-                            <h1 className="font-bold text-xl md:text-2xl 2xl:text-4xl pb-6">หน่วยกิต</h1>
-                            <ul className="text-sm md:text-md 2xl:text-xl">
+                            <h1 className="font-bold text-xl md:text-4xl 2xl:text-4xl pb-6">หน่วยกิต</h1>
+                            <ul className="text-sm md:text-2xl 2xl:text-xl">
                                 <li className="grid" style={{ gridTemplateColumns: "58% 10% 1fr" }}>
                                     <div>
                                         หมวดวิชาเลือกศึกษาทั่วไป
@@ -133,8 +135,8 @@ export default function Bacheror() {
                         </div>
 
                         <div className="py-6">
-                            <h1 className="font-bold text-xl md:text-2xl 2xl:text-4xl pb-6">คุณสมบัติของผู้เข้าศึกษา</h1>
-                            <ol className="px-3 list-decimal text-sm md:text-md 2xl:text-xl">
+                            <h1 className="font-bold text-xl md:text-4xl 2xl:text-4xl pb-6">คุณสมบัติของผู้เข้าศึกษา</h1>
+                            <ol className="px-10 list-decimal text-sm md:text-2xl 2xl:text-xl">
                                 <li>เป็นผู้สำเร็จการศึกษาระดับมัธยมศึกษาตอนปลาย กลุ่มสาระการเรียนรู้วิทยาศาสตร์ และกลุ่มสาระการเรียนรู้คณิตศาสตร์ หรือสายการเรียนวิทยาศาสตร์-คณิตศาสตร์ หรือประกาศนียบัตรที่กระทรวงศึกษาการเทียบเท่าสายวิทยาศาสตร์</li>
                                 <li>ผู้ที่ไม่อยู่ในเกณฑ์ข้างต้นให้อยู่ในดุลยพินิจของคณะกรรมการประจำหลักสูตร</li>
                             </ol>
@@ -174,108 +176,123 @@ export default function Bacheror() {
                             </TableHeader>
 
                             <TableBody>
-                                {/* Mobile + Desktop rows */}
                                 {[
-                                    { name: "ก. หมวดวิชาศึกษาทั่วไป", credits: 31 },
-                                    { name: "ข. หมวดวิชาเฉพาะ", credits: 101 },
-                                    { name: "ข.1 วิชาหลัก", credits: 15 },
-                                    { name: "ข.2 วิชาเฉพาะด้าน", credits: 80 },
-                                    { name: "ข.2.1 กลุ่มวิชาศิลปะและการออกแบบมัลติมีเดีย", credits: 36 },
-                                    { name: "ข.2.2 กลุ่มวิชาวิทยาการคอมพิวเตอร์", credits: 21 },
-                                    { name: "ข.2.3 กลุ่มวิชาฮาร์ดแวร์สำหรับมัลติมีเดีย", credits: 5 },
-                                    { name: "ข.2.4 กลุ่มวิชาบริหารจัดการโครงงาน", credits: 16 },
-                                    { name: "ข.2.5 กลุ่มวิชาฝึกงาน", credits: 2 },
-                                    { name: "ข.3 วิชาเลือก", credits: 6 },
-                                    { name: "ค. หมวดวิชาเลือกเสรี", credits: 6 },
+                                    { name: "ก. หมวดวิชาศึกษาทั่วไป", credits: 31, type: "บังคับ", note: "-" },
+                                    { name: "ข. หมวดวิชาเฉพาะ", credits: 101, type: "บังคับ", note: "-" },
+                                    { name: "ข.1 วิชาหลัก", credits: 15, type: "บังคับ", note: "พื้นฐาน" },
+                                    { name: "ข.2 วิชาเฉพาะด้าน", credits: 80, type: "เลือก", note: "-" },
+                                    { name: "ข.3 วิชาเลือก", credits: 6, type: "เลือก", note: "เลือกเสรี" },
+                                    { name: "ค. หมวดวิชาเลือกเสรี", credits: 6, type: "เลือก", note: "-" },
                                 ].map((item, index) => (
                                     <TableRow
                                         key={item.name}
                                         className={`divide-x ${index % 2 === 0 ? "bg-gray-100" : ""}`}
                                     >
-                                        <TableCell className="md:col-span-1 font-medium text-left">
-                                            {item.name}
-                                        </TableCell>
-                                        <TableCell className="text-center">{item.credits} หน่วยกิต</TableCell>
+                                        <TableCell className="w-1/2 font-medium text-left">{item.name}</TableCell>
+                                        <TableCell className="w-1/5 text-center">{item.credits}</TableCell>
+                                        <TableCell className="w-1/6 text-center">{item.type}</TableCell>
+                                        <TableCell className="w-1/6 text-center">{item.note}</TableCell>
                                     </TableRow>
                                 ))}
                             </TableBody>
-
                         </Table>
                     </div>
-
 
                     {/* ค่าบำรุงการศึกษา */}
                     <h1 className="text-4xl md:text-6xl font-bold mt-32 mb-12">ค่าบำรุงการศึกษา</h1>
                     <div className="rounded-lg border shadow-sm">
                         <Table className="text-md md:text-xl">
                             <TableHeader>
-                                {/* Mobile: 2 columns */}
+                                {/* Mobile View */}
                                 <TableRow className="md:hidden divide-x">
-                                    <TableHead className="w-2/3 font-bold text-center p-2">ค่าบำรุงการศึกษา</TableHead>  {/* กว้างขึ้นเป็น 2/3 */}
-                                    <TableHead className="w-1/3 text-right p-2">116,000 บาท</TableHead>  {/* กว้างขึ้นเป็น 1/3 */}
+                                    <TableHead className="w-2/3 text-center font-bold p-2">
+                                        ค่าบำรุงการศึกษา
+                                    </TableHead>
+                                    <TableHead className="w-1/3 text-right p-2">
+                                        116,000 บาท
+                                    </TableHead>
                                 </TableRow>
 
-                                {/* Desktop: 4 columns */}
+                                {/* Desktop View */}
                                 <TableRow className="hidden md:table-row divide-x">
-                                    <TableHead className="w-2/4 font-bold">ค่าบำรุงการศึกษา</TableHead>  {/* กว้างขึ้นเป็น 2/4 */}
+                                    <TableHead className="w-1/4 font-bold">ค่าบำรุงการศึกษา</TableHead>
                                     <TableHead className="w-1/4">14,500 บาท/ภาคการศึกษา</TableHead>
                                     <TableHead className="w-1/4">8 ภาคการศึกษา</TableHead>
-                                    <TableHead className="w-1/4 font-bold">116,000 บาท</TableHead>
+                                    <TableHead className="w-2/4 font-bold">116,000 บาท</TableHead>
                                 </TableRow>
                             </TableHeader>
 
                             <TableBody>
-                                {/* Mobile: 3 columns */}
-                                <TableRow className="md:hidden divide-x bg-gray-100">
-                                    <TableCell className="w-1/3 font-bold text-left">ค่าบำรุงการศึกษา</TableCell>  {/* กว้างขึ้นเป็น 1/3 */}
-                                    <TableCell className="w-1/3 text-left">14,500 บาท/ภาคการศึกษา</TableCell>  {/* กว้างขึ้นเป็น 1/3 */}
-                                    <TableCell className="w-1/3 text-right">116,000 บาท</TableCell>  {/* กว้างขึ้นเป็น 1/3 */}
+                                {/* Mobile Rows */}
+                                {[
+                                    {
+                                        label: 'ค่าบำรุงการศึกษา',
+                                        detail: '14,500 บาท/ภาคการศึกษา',
+                                        total: '116,000 บาท',
+                                    },
+                                    {
+                                        label: 'ค่าลงทะเบียน',
+                                        detail: '500 บาท/หน่วยกิต',
+                                        total: '138 หน่วยกิต',
+                                    },
+                                ].map((item, i) => (
+                                    <TableRow key={i} className="md:hidden divide-x bg-white odd:bg-gray-100">
+                                        <TableCell className="w-1/3 font-bold text-left">{item.label}</TableCell>
+                                        <TableCell className="w-1/3 text-left">{item.detail}</TableCell>
+                                        <TableCell className="w-1/3 text-right">{item.total}</TableCell>
+                                    </TableRow>
+                                ))}
+
+                                <TableRow className="md:hidden divide-x bg-white">
+                                    <TableCell className="w-1/3 font-bold text-left">
+                                        ค่าใช้จ่ายตลอดหลักสูตร
+                                    </TableCell>
+                                    <TableCell className="w-2/3 text-right">
+                                        205,200 บาท
+                                    </TableCell>
                                 </TableRow>
 
-                                <TableRow className="md:hidden divide-x">
-                                    <TableCell className="w-1/3 font-bold text-left">ค่าลงทะเบียน</TableCell>  {/* กว้างขึ้นเป็น 1/3 */}
-                                    <TableCell className="w-1/3 text-left">500 บาท/หน่วยกิต</TableCell>  {/* กว้างขึ้นเป็น 1/3 */}
-                                    <TableCell className="w-1/3 text-right">138 หน่วยกิต</TableCell>  {/* กว้างขึ้นเป็น 1/3 */}
-                                </TableRow>
-
-                                <TableRow className="md:hidden divide-x">
-                                    <TableCell className="w-1/3 font-bold text-left">ค่าใช้จ่ายตลอดหลักสูตร</TableCell>  {/* กว้างขึ้นเป็น 1/3 */}
-                                    <TableCell className="w-2/3 text-right">205,200 บาท</TableCell>  {/* กว้างขึ้นเป็น 2/3 */}
-                                </TableRow>
-
-                                {/* Desktop: 4 columns */}
+                                {/* Desktop Rows */}
                                 <TableRow className="hidden md:table-row divide-x bg-gray-100">
                                     <TableCell className="font-bold">ค่าบำรุงการศึกษา</TableCell>
-                                    <TableCell className="truncate">14,500 บาท/ภาคการศึกษา</TableCell>
-                                    <TableCell className="truncate">8 ภาคการศึกษา</TableCell>
+                                    <TableCell>14,500 บาท/ภาคการศึกษา</TableCell>
+                                    <TableCell>8 ภาคการศึกษา</TableCell>
                                     <TableCell className="font-bold">116,000 บาท</TableCell>
                                 </TableRow>
+
                                 <TableRow className="hidden md:table-row divide-x">
                                     <TableCell className="font-bold">ค่าลงทะเบียน</TableCell>
-                                    <TableCell className="truncate">500 บาท/หน่วยกิต</TableCell>
-                                    <TableCell className="truncate">138 หน่วยกิต</TableCell>
+                                    <TableCell>500 บาท/หน่วยกิต</TableCell>
+                                    <TableCell>138 หน่วยกิต</TableCell>
                                     <TableCell className="font-bold">69,000 บาท</TableCell>
                                 </TableRow>
-                                <TableRow className="hidden md:table-row divide-x">
+
+                                <TableRow className="hidden md:table-row divide-x bg-gray-100">
                                     <TableCell className="font-bold">ค่าใช้จ่ายตลอดหลักสูตร</TableCell>
-                                    <TableCell></TableCell>
-                                    <TableCell></TableCell>
+                                    <TableCell />
+                                    <TableCell />
                                     <TableCell className="font-bold">205,200 บาท</TableCell>
                                 </TableRow>
                             </TableBody>
-
                         </Table>
                     </div>
                 </div>
 
-                <div>
+                <div className="my-20">
                     <div className="uppercase font-bold">
                         <h1 className="text-9xl">Future</h1>
                         <h1 className="text-9xl pl-60">Careers</h1>
+
+                        <div>
+                            <FAQ />
+                        </div>
                     </div>
 
                 </div>
+
             </div>
+            <MarqueeCareers />
+
         </section>
     )
 }

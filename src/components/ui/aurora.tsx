@@ -29,7 +29,7 @@ export const AuroraText = ({
 
       {/* Visible gradient text */}
       <span
-        className="relative animate-aurora bg-[length:200%_auto] bg-clip-text text-transparent"
+        className="relative animate-aurora uppercase bg-[length:200%_auto] bg-clip-text text-transparent"
         style={gradientStyle}
         aria-hidden="true"
       >

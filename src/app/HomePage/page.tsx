@@ -4,25 +4,21 @@ import Carousel from "@/components/Carousel/page";
 import { AuroraText } from "@/components/ui/aurora";
 import Button from "@/components/ui/button";
 import Counter from "@/components/Counter/page";
-import 'aos/dist/aos.css'; // Import AOS styles
 import AOS from 'aos';
-import "aos/dist/aos.css"; // นำเข้า AOS styles
+import "aos/dist/aos.css";
 import VideoScroller from "@/components/VideOnScroll/page";
 
 export default function HomePage() {
     useEffect(() => {
         AOS.init({
-            duration: 1000, // กำหนดความเร็วของการทำ animation
-            easing: 'ease-in-out', // กำหนด easing ของ animation
-            once: true, // ให้แสดงผลแค่ครั้งเดียว
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true,
         });
     }, []);
 
     return (
         <>
-            <div>
-                {/* <Parallax /> */}
-            </div>
             <header>
                 <div className="w-full">
                     <div className="relative">
@@ -69,15 +65,16 @@ export default function HomePage() {
                             </div>
 
                             <div className="text-[4vw] md:text-[1.7vw] w-[80%] md:w-[40%]" data-aos="fade-up">
-                                ก้าวสู่โลกแห่งความคิดสร้างสรรค์และเทคโนโลยีที่ครบวงจรด้วยการเรียนรู้ทั้งการผลิตสื่อมัลติมีเดียการถ่ายภาพการจัดแสงและการตัดต่อวิดีโอที่มืออาชีพเลือกใช้พร้อมพัฒนาทักษะด้านการออกแบบและพัฒนาเว็บไซต์ให้ตอบโจทยโลกดิจิทัลอีกทั้งยังเสริมสร้างความสามารถ
+                            เรียนรู้การผลิตสื่อมัลติมีเดียอย่างมืออาชีพ ทั้งการถ่ายภาพ การจัดแสง และการตัดต่อวิดีโอ พร้อมเสริมทักษะการออกแบบและพัฒนาเว็บไซต์ให้ทันสมัยและตอบโจทย์โลกดิจิทัล พัฒนาความสามารถทั้งด้านเทคนิคและความคิดสร้างสรรค์ เพื่อก้าวสู่สายอาชีพยุคใหม่ได้อย่างมั่นใจ
                             </div>
                         </div>
                     </div>
+
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 py-40">
                         {[
-                            { src: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=3870&auto=format&fit=crop', label: 'ผลงานนักศึกษา' },
-                            { src: 'https://images.unsplash.com/photo-1560264357-8d9202250f21?q=80&w=3000&auto=format&fit=crop', label: 'บริการ' },
-                            { src: 'https://images.unsplash.com/photo-1590070302028-b9a00b0c5354?q=80&w=2262&auto=format=fit=crop', label: 'ข่าวสาร' },
+                            { src: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=3870&auto=format&fit=crop', label: 'ผลงานนักศึกษา', link: '/works' },
+                            { src: 'https://images.unsplash.com/photo-1560264357-8d9202250f21?q=80&w=3000&auto=format&fit=crop', label: 'บริการ', link: '/Services' },
+                            { src: 'https://images.unsplash.com/photo-1590070302028-b9a00b0c5354?q=80&w=2262&auto=format=fit=crop', label: 'ข่าวสาร', link: '/Info' },
                         ].map((item, index) => (
                             <div
                                 key={index}
@@ -85,14 +82,16 @@ export default function HomePage() {
                                 data-aos="fade-up"
                                 data-aos-delay={index * 100}
                             >
-                                <img
-                                    src={item.src}
-                                    alt={item.label}
-                                    className="w-full h-[500px] object-cover rounded-md group-hover:scale-105 transition-transform duration-300"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end pl-10 pb-6">
-                                    <span className="text-white text-5xl font-semibold">{item.label}</span>
-                                </div>
+                                <a href={item.link}>
+                                    <img
+                                        src={item.src}
+                                        alt={item.label}
+                                        className="w-full 2xl:h-[500px] object-cover rounded-md group-hover:scale-105 transition-transform duration-300"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end pl-10 pb-6">
+                                        <span className="text-white text-5xl font-semibold">{item.label}</span>
+                                    </div>
+                                </a>
                             </div>
                         ))}
                     </div>
@@ -102,7 +101,10 @@ export default function HomePage() {
                             <h1>เพลิดเพลินไปกับการเรียน</h1>
                         </div>
                         <div className="text-[4vw] md:text-[1.7vw] w-[80%] md:w-[40%]" data-aos="fade-up">
-                            มหาวิทยาลัยมีหลักสูตรวิชาการนานาชาติที่หลากหลายให้เลือกเรียน ได้แก่ อังกฤษ อิตาลี เยอรมัน และฝรั่งเศสซึ่งสร้างสภาพแวดล้อมที่สมบูรณ์แบบสำหรับการเรียนรู้และการวิจัยทางวิทยาศาสตร์
+                            สำหรับผู้ที่มีใจรักในเทคโนโลยีและมัลติมีเดีย นี่คือหลักสูตรที่ออกแบบมาเพื่อคุณ!
+                            เรียนรู้การเขียนโปรแกรม พัฒนาเว็บไซต์ สร้างเกม ออกแบบแอนิเมชัน 2D/3D
+                            พร้อมปลูกฝังทักษะวิเคราะห์ สร้างสรรค์ และคิดอย่างเป็นระบบ
+                            ทั้งหมดนี้ในสภาพแวดล้อมการเรียนรู้ที่ผสมผสานความรู้วิชาการกับการปฏิบัติจริงอย่างลงตัว
                         </div>
                     </div>
                 </div>
@@ -112,7 +114,7 @@ export default function HomePage() {
                 <div className="w-11/12 mx-auto">
                     <div className="py-20 text-white">
                         <h1 className="text-[6vw] md:text-[4vw]" data-aos="fade-up">เราเรียนเกี่ยวกับไรบ้าง</h1>
-                        <h1 className="w-[80%} md:w-[50%] pt-10 text-[4vw] md:text-[1.8vw]" data-aos="fade-up">มหาวิทยาลัยมีหลักสูตรวิชาการนานาชาติที่หลากหลายให้เลือกเรียน ภาษาทางการ ได้แก่ อังกฤษ อิตาลี เยอรมัน และฝรั่งเศสซึ่งสร้างสภาพแวดล้อมที่สมบูรณ์แบบสำหรับการเรียนรู้และการวิจัยทางวิทยาศาสตร์</h1>
+                        <h1 className="w-[80%} md:w-[50%] pt-10 text-[4vw] md:text-[1.8vw]"></h1>
                     </div>
                     <div className="my-20">
                         <Carousel />
@@ -178,7 +180,7 @@ export default function HomePage() {
                             <h1 className="text-gray-400 pt-2">สาขาวิชาวิทยาการคอมพิวเตอร์<br />ประยุกต์-มัลติมีเดีย</h1>
                         </div>
                         <div className="text-[4vw] md:text-[1.7vw] w-full md:w-[40%]" data-aos="fade-up">
-                            คำตอบสำหรับคนที่มีความฝันอยากสร้างอนาคตในสายเทคโนโลยีและมัลติมีเดียด้วยหลักสูตรที่ผสมผสานความรู้ด้านการพัฒนาเทคโนโลยีคอมพิวเตอร์และการสร้างสรรค์สื่อมัลติมีเดียเข้าด้วยกันอย่างลงตัว
+                            จุดเริ่มต้นสำหรับผู้มีฝันในสายเทคโนโลยีและมัลติมีเดีย ด้วยหลักสูตรที่ผสมผสานความรู้ด้านการพัฒนาเทคโนโลยีคอมพิวเตอร์กับการสร้างสรรค์สื่อมัลติมีเดียอย่างลงตัว เปิดโอกาสให้คุณได้เรียนรู้ สร้างสรรค์ และเติบโตไปพร้อมกับอนาคตแห่งโลกดิจิทัล
                         </div>
                     </div>
                     <video

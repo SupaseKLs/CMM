@@ -51,11 +51,7 @@ const CarouselSpacing = () => {
 
   return (
     <div className="flex flex-col gap-10">
-      <h1 className="text-[3vw] text-white">หัวหน้าสาขาวิชา</h1>
-
-      {/* Display a list of info */}
-      <h2 className="text-[2vw] text-white">ข้อมูลทั้งหมด</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 pt-20">
         {Info.map((item) => (
           <div
             key={item.id}
@@ -64,7 +60,7 @@ const CarouselSpacing = () => {
           >
             <div className="relative overflow-hidden">
               <img
-                className="w-full h-auto md:h-[500px] rounded-lg transition duration-300 group-hover:blur-sm"
+                className="w-full h-[250px] 2xl:h-[500px] rounded-lg transition duration-300 group-hover:blur-sm"
                 src={item.cards.image}
                 alt={item.cards.title}
               />

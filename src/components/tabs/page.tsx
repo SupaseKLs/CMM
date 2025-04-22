@@ -1,17 +1,9 @@
-"use client"
-import React, { useState } from 'react';
+'use client';
+import React from 'react';
 import Image from 'next/image';
 import { TabsBtn, TabsContent, TabsProvider } from '@/components/core/tabs';
 
 function Tab() {
-  // สถานะการซูมของภาพ
-  const [isZoomed, setIsZoomed] = useState(false);
-
-  // ฟังก์ชันคลิกเพื่อซูมภาพ
-  const handleImageClick = () => {
-    setIsZoomed(!isZoomed); // สลับสถานะการซูม
-  };
-
   return (
     <div className='p-4 py-12 relative'>
       <TabsProvider defaultValue={'design'}>
@@ -32,86 +24,38 @@ function Tab() {
           </div>
         </div>
 
-        <TabsContent value='design'>
-          <div className='w-full'>
-            <div
-              onClick={handleImageClick} // คลิกเพื่อซูม
-              className={`w-full mx-auto rounded-md transition-transform duration-500 ${
-                isZoomed ? 'transform scale-150' : '' // ซูมภาพเมื่อ isZoomed เป็น true
-              }`}
-            >
-              <Image
-                src={
-                  'https://images.unsplash.com/photo-1506097425191-7ad538b29cef?q=80&w=1000&auto=format&fit=crop'
-                }
-                width={1000}
-                height={1000}
-                alt='preview_img'
-                className='w-full object-cover h-full'
-              />
+        {[
+          {
+            value: 'design',
+            src: 'https://images.unsplash.com/photo-1506097425191-7ad538b29cef?q=80&w=1000&auto=format&fit=crop',
+          },
+          {
+            value: 'collaborate',
+            src: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1000&auto=format&fit=crop',
+          },
+          {
+            value: 'share',
+            src: 'https://images.unsplash.com/photo-1665470909901-162912ec16f7?q=80&w=1000&auto=format&fit=crop',
+          },
+          {
+            value: 'publish',
+            src: 'https://images.unsplash.com/photo-1694022861804-840f61d1c452?q=80&w=1000&auto=format&fit=crop',
+          },
+        ].map((tab) => (
+          <TabsContent value={tab.value} key={tab.value}>
+            <div className='w-full flex justify-center'>
+              <div className='w-full max-w-6xl mx-auto rounded-md overflow-hidden'>
+                <Image
+                  src={tab.src}
+                  width={1000}
+                  height={1000}
+                  alt='preview_img'
+                  className='w-full object-cover h-auto rounded-md'
+                />
+              </div>
             </div>
-          </div>
-        </TabsContent>
-        <TabsContent value='collaborate'>
-          <div className='w-full'>
-            <div
-              onClick={handleImageClick} // คลิกเพื่อซูม
-              className={`w-full mx-auto rounded-md transition-transform duration-500 ${
-                isZoomed ? 'transform scale-150' : '' // ซูมภาพเมื่อ isZoomed เป็น true
-              }`}
-            >
-              <Image
-                src={
-                  'https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1000&auto=format&fit=crop'
-                }
-                width={1000}
-                height={1000}
-                alt='preview_img'
-                className='w-full object-cover h-full'
-              />
-            </div>
-          </div>
-        </TabsContent>
-        <TabsContent value='share'>
-          <div className='w-full'>
-            <div
-              onClick={handleImageClick} // คลิกเพื่อซูม
-              className={`w-full mx-auto rounded-md transition-transform duration-500 ${
-                isZoomed ? 'transform scale-150' : '' // ซูมภาพเมื่อ isZoomed เป็น true
-              }`}
-            >
-              <Image
-                src={
-                  'https://images.unsplash.com/photo-1665470909901-162912ec16f7?q=80&w=1000&auto=format&fit=crop'
-                }
-                width={1000}
-                height={1000}
-                alt='preview_img'
-                className='w-full object-cover h-full'
-              />
-            </div>
-          </div>
-        </TabsContent>
-        <TabsContent value='publish'>
-          <div className='w-full'>
-            <div
-              onClick={handleImageClick} // คลิกเพื่อซูม
-              className={`w-full mx-auto rounded-md transition-transform duration-500 ${
-                isZoomed ? 'transform scale-150' : '' // ซูมภาพเมื่อ isZoomed เป็น true
-              }`}
-            >
-              <Image
-                src={
-                  'https://images.unsplash.com/photo-1694022861804-840f61d1c452?q=80&w=1000&auto=format&fit=crop'
-                }
-                width={1000}
-                height={1000}
-                alt='preview_img'
-                className='w-full object-cover h-full'
-              />
-            </div>
-          </div>
-        </TabsContent>
+          </TabsContent>
+        ))}
       </TabsProvider>
     </div>
   );

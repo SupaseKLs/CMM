@@ -54,7 +54,7 @@ export default function ScrollBaseAnimation({
   useAnimationFrame((t, delta) => {
     if (!hasStarted.current) return; // Skip if delay hasn't passed
 
-    let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
+    let moveBy = directionFactor.current * baseVelocity * (delta / 2600);
 
     // Reverse direction if scrollDependent is true
     if (scrollDependent) {

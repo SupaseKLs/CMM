@@ -6,7 +6,7 @@ import Footer from "@/components/Footer/page";
 import SmoothScroll from "@/components/SmoothScroll/page";
 
 const kanit = Kanit({
-  weight: '300', 
+  weight: '300',
   subsets: ['latin', 'thai'],
 });
 export const metadata: Metadata = {
@@ -22,17 +22,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        
-      </head>
       <link rel="icon" href="/cmm.ico" />
+      </head>
       <body
         className={kanit.className}
       >
-        <SmoothScroll>
-          <Navbar />
-          {children}
-          <Footer />
-        </SmoothScroll>
+        <div className="relative">
+          <SmoothScroll>
+            <Navbar social={[]} />
+            {children}
+            <Footer />
+          </SmoothScroll>
+        </div>
       </body>
     </html>
   );

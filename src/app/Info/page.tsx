@@ -52,13 +52,13 @@ export default function Info() {
     return (
         <section className="bg-white h-full">
             <div className="w-11/12 mx-auto">
-                <div className="pt-40 pb-20 flex justify-between">
-                    <div className="w-[60%] text-8xl">
+                <div className="pt-40 pb-20 flex flex-col md:flex-row justify-between">
+                    <div className="w-full font-bold md:w-[60%] text-8xl">
                         <h1>
                             we strive <br /> to innovate
                         </h1>
                     </div>
-                    <div className="w-[40%] text-xl">
+                    <div className="w-full md:w-[40%] pt-4 md:pt-0 text-xl">
                         <h1>
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt, aut illo fuga ex
                             cumque, totam odio vel in, cum voluptas ducimus? Labore quos at voluptate
@@ -70,19 +70,20 @@ export default function Info() {
 
             <div className="relative flex justify-center">
                 <div className="w-11/12 mx-auto">
-                    <div className="relative w-full h-[600px] overflow-hidden">
+                    <div className="relative w-full h-[300px] md:h-[400px] 2xl:h-[900px] overflow-hidden">
                         <Image
                             src={Admissions}
-                            className="w-full h-full rounded-full"
+                            className="w-full h-full object-cover rounded-full"
                             alt="test"
                             placeholder="blur"
                         />
                         <div className="absolute top-0 left-0 w-full h-full grid place-content-center">
                             <ScrollBaseAnimation baseVelocity={3} scrollDependent={true}>
-                                Top-Tier Multimedia
+                                &nbsp;・ Applied Computer Science Multimedia
                             </ScrollBaseAnimation>
                         </div>
                     </div>
+
 
                     <div>
                         <InfoDetails />

@@ -8,6 +8,15 @@ module.exports = {
     ];
   },
   images: {
-    domains: ['images.unsplash.com', 'cmmworkspace.blob.core.windows.net'], // ✅ แก้ไขให้ถูกต้อง
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cmmworkspace.blob.core.windows.net',
+      },
+    ],
   },
 };

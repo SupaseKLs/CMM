@@ -36,11 +36,11 @@ const menuItems = [
 ];
 const navLinks = [
     { title: "หน้าหลัก", href: "/" },
-    { title: "บุคลากร", href: "#" },
+    { title: "บุคลากร", href: "/Executive" },
     { title: "หลักสูตร", href: "#", hasChevron: true },
-    { title: "บริการ", href: "#" },
-    { title: "ข่าวสาร", href: "#" },
-    { title: "ติดต่อเรา", href: "#" },
+    { title: "บริการ", href: "/Services" },
+    { title: "ข่าวสาร", href: "/Info" },
+    { title: "ติดต่อเรา", href: "/Contact" },
 ];
 const courseDropdownLinks = [
     { title: "ปริญญาตรี", href: "/courses/bachelor" },
@@ -60,7 +60,7 @@ const Navbar: React.FC<NavbarHeaderProps> = ({ social = [] }) => {
         const handleScroll = () => {
             const currentScrollState = window.scrollY;
             if (currentScrollState > scrollPosition && currentScrollState > 50) {
-                setIsVisible(false);
+            setIsVisible(false);
             } else {
                 setIsVisible(true);
             }
@@ -140,7 +140,7 @@ const Navbar: React.FC<NavbarHeaderProps> = ({ social = [] }) => {
                             >
                                 <Link
                                     href={item.href ?? "#"}
-                                    className="text-white text-md 2xl:text-2xl font-medium hover:text-blue-400 transition flex items-center" // Added flex for alignment
+                                    className="text-white text-md 2xl:text-2xl font-medium hover:text-red-400 transition flex items-center" // Added flex for alignment
                                 >
                                     {item.title}
 
@@ -210,7 +210,7 @@ const Navbar: React.FC<NavbarHeaderProps> = ({ social = [] }) => {
                         <nav className="flex justify-between items-center flex-col w-full h-full px-10 pt-[100px] pb-[50px]">
                             <div className="flex gap-2 flex-col">
                                 {navLinks.map((link, i) => (
-                                    <div key={`b_${i}`} className="" onClick={() => setIsActive(false)}>
+                                    <div key={`b_${i}`} onClick={() => setIsActive(false)}>
                                         <Link href={link.href} className="text-white flex flex-wrap overflow-hidden">
                                             <motion.div
                                                 variants={{

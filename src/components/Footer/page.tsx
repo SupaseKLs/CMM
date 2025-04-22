@@ -10,7 +10,7 @@ export default function Footer() {
             <div className="mx-auto w-11/12">
                 <div className="flex flex-col md:flex-row justify-between">
                     <div>
-                        <h1 className="text-4xl uppercase text-[#535151] font-bold">get in touch</h1>
+                        <h1 className="text-5xl uppercase text-[#535151] font-bold">get in touch</h1>
                         <div className="py-4 flex items-center text-white md:justify-center">
                             <Image src={Arrow_right} width={20} height={20} alt="arrow_right" />
                             <p className="pl-4 text-2xl">orgcomit@kmutt.ac.th</p>
@@ -19,25 +19,25 @@ export default function Footer() {
                     <div className="flex">
                         <div className="pr-10">
                             <h1 className="text-4xl text-[#535151] uppercase font-bold pb-4">Page</h1>
-                            <div className="text-md text-white flex">
+                            <div className="text-md 2xl:text-3xl text-white flex">
                                 <ul>
                                     <li>
-                                        <Link href="">หน้าหลัก</Link>
+                                        <Link href="/">หน้าหลัก</Link>
                                     </li>
                                     <li>
-                                        <Link href="">บุคลากร</Link>
+                                        <Link href="/Executive">บุคลากร</Link>
                                     </li>
                                     <li>
                                         <Link href="">หลักสูตร</Link>
                                     </li>
                                     <li>
-                                        <Link href="">บริการ</Link>
+                                        <Link href="/Services">บริการ</Link>
                                     </li>
                                     <li>
-                                        <Link href="">ข่าวสาร</Link>
+                                        <Link href="/Info">ข่าวสาร</Link>
                                     </li>
                                     <li>
-                                        <Link href="">ติดต่อเรา</Link>
+                                        <Link href="/Contact">ติดต่อเรา</Link>
                                     </li>
                                 </ul>
                                 <ul className="px-4">
@@ -53,7 +53,7 @@ export default function Footer() {
 
                         <div>
                             <h1 className="text-4xl text-[#535151] uppercase font-bold pb-4">contact</h1>
-                            <ul className="text-md text-white">
+                            <ul className="text-md 2xl:text-3xl text-white">
                                 <li><Link href="">Facebook</Link></li>
                                 <li><Link href="">Instagram</Link></li>
                                 <li><Link href="">Tiktok</Link></li>
@@ -64,8 +64,8 @@ export default function Footer() {
                 </div>
 
                 <div className="pt-20 md:pt-0">
-                    <h1 className="text-gray-600 text-2xl w-11/12 md:w-[860px]">Appiled Computer Science-Multimedia</h1>
-                    <div className="pl-4 text-md w-full text-white">
+                    <h1 className="text-gray-600 font-semibold text-2xl 2xl:text-4xl w-11/12 md:w-[860px]">Appiled Computer Science-Multimedia</h1>
+                    <div className="w-full md:w-[40%] pl-4 text-md 2xl:text-2xl text-white">
                         <p>สาขาวิชาคอมพิวเตอร์และเทคโนโลยีสารสนเทศ คณะครุศาสตร์อุตสาหกรรมและเทคโนโลยี อาคารเรียนรวมชั้น 6 มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี</p>
                         <p>โทร. 02-470-8500</p>
                     </div>
