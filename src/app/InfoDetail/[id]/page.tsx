@@ -1,88 +1,133 @@
 "use client";
+
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Image from 'next/image';
-import { useParams } from 'next/navigation'; 
-import Calendar from "@/assets/svg/calendar.svg"
-interface Info {
-    title: string;
-    description: {
-        first: string;
-        second: string;
-        third: string;
-    };
-    image: {
-        first: string;
-        second: string;
-        third: string;
-    };
+import { useParams } from 'next/navigation';
+
+interface NewsItem {
+  id: number;
+  title: string;
+  desFirst: string;
+  desSecond: string;
+  desThird: string;
+  desFourth: string;
+  desFifth: string;
+  createdAt: string;
+  coverImage: string;
+  secondImage: string;
+  thirdImage: string;
+  fourthImage: string;
+  fifthImage: string;
 }
 
-interface Card {
-    image: string;
-    date: string;
-    title: string;
-    description: string;
-}
+const InfoDetailPage: React.FC = () => {
+  const { id } = useParams();
+  const [news, setNews] = useState<NewsItem | null>(null);
+  const [loading, setLoading] = useState(true);
 
-interface EventData {
-    id: number;
-    cards: Card;
-    info: Info;
-}
+  const projectUrl = "https://ggbvtgyrzwbrtkxbiorx.supabase.co/storage/v1/object/public";
+  const bucketName = "imgnews/News"; 
 
-const InfoDetail: React.FC = () => {
-    const { id } = useParams(); // this gives the dynamic [id]
-    const [eventData, setEventData] = useState<EventData | null>(null);
-    const [loading, setLoading] = useState<boolean>(true);
-    const [error, setError] = useState<string | null>(null);
+  function getImageUrl(fileName: string) {
+    return `${projectUrl}/${bucketName}/${fileName}`;
+  }
 
-    useEffect(() => {
-        axios.get<EventData[]>(`/data/info.json`)
-            .then(response => {
-                const data = response.data;
-                const selected = data.find(item => item.id === Number(id)); // Find by id
-                if (selected) {
-                    setEventData(selected);
-                } else {
-                    setError('Event not found');
-                }
-                setLoading(false);
-            })
-            .catch(err => {
-                console.error("Error loading event data:", err);
-                setError('Error loading event data');
-                setLoading(false);
-            });
-    }, [id]);
+  useEffect(() => {
+    if (!id) return;
 
-    if (loading) return <div>Loading...</div>;
-    if (error) return <div>{error}</div>;
+    axios.get(`/api/news/${id}`)
+      .then(response => {
+        setNews(response.data);
+        setLoading(false);
+      })
+      .catch(error => {
+        console.error('Error fetching news:', error);
+        setLoading(false);
+      });
+  }, [id]);
 
-    return (
-        <div className='bg-white'>
-            <div className="w-11/12 md:w-6/12 mx-auto">
-                <div className="pt-20 flex justify-center items-center">
-                    <Image src={eventData?.cards.image || ''} alt='Event Image' width={800} height={400} className="mt-10 w-full h-auto rounded-lg" />
-                </div>
-                <div className="flex items-center pt-10">
-                    <Image src={Calendar} alt='' />
-                    <h2 className='text-xl ml-4'>{eventData?.cards.date}</h2>
-                </div>
+  if (loading) return <div className="text-center py-20">Loading...</div>;
+  if (!news) return <div className="text-center py-20">ไม่พบข่าว</div>;
 
-                <h1 className='text-4xl md:text-5xl py-4 font-bold mt-2'>{eventData?.cards.title}</h1>
-                <p className='mt-2 text-xl pb-10'>{eventData?.info.description.first}</p>
-                <Image src={eventData?.info.image.first || ''} alt='Event Image 1' width={300} height={200} className="w-full h-auto rounded-lg" />
-                <p className='mt-2 text-xl py-10'>{eventData?.info.description.second}</p>
-                <p className='text-xl'>{eventData?.info.description.third}</p>
+  return (
+    <div className="w-11/12 md:w-6/12 mx-auto pt-20">
 
-                <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mt-10 pb-20'>
-                    <Image src={eventData?.info.image.second || ''} alt='Event Image 2' width={300} height={200} className="w-full h-[250px] 2xl:h-[520px] rounded-lg" />
-                    <Image src={eventData?.info.image.third || ''} alt='Event Image 3' width={300} height={200} className="w-full h-[250px]  2xl:h-[520px] rounded-lg" />
-                </div>
-            </div>
+      {/* รูปปก */}
+      {news.coverImage && (
+        <div className="flex justify-center items-center mb-10">
+          <Image
+            src={getImageUrl(news.coverImage)}
+            alt="รูปปก"
+            width={800}
+            height={400}
+            className="rounded-lg object-cover"
+          />
         </div>
-    );
+      )}
+
+      {/* หัวข้อข่าว */}
+      <h1 className="text-4xl font-bold mb-4">{news.title}</h1>
+
+      {/* วันที่ */}
+      <p className="text-gray-400 text-sm mb-6">
+        {new Date(news.createdAt).toLocaleDateString('th-TH', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+        })}
+      </p>
+
+      {/* เนื้อหาข่าว */}
+      <div className="space-y-6 text-lg leading-7 mb-10">
+        <p>{news.desFirst}</p>
+        {news.secondImage && (
+          <Image
+            src={getImageUrl(news.secondImage)}
+            alt="รูปที่ 2"
+            width={800}
+            height={400}
+            className="rounded-lg object-cover my-6"
+          />
+        )}
+        <p>{news.desSecond}</p>
+
+        {news.thirdImage && (
+          <Image
+            src={getImageUrl(news.thirdImage)}
+            alt="รูปที่ 3"
+            width={800}
+            height={400}
+            className="rounded-lg object-cover my-6"
+          />
+        )}
+        <p>{news.desThird}</p>
+
+        {news.fourthImage && (
+          <Image
+            src={getImageUrl(news.fourthImage)}
+            alt="รูปที่ 4"
+            width={800}
+            height={400}
+            className="rounded-lg object-cover my-6"
+          />
+        )}
+        <p>{news.desFourth}</p>
+
+        {news.fifthImage && (
+          <Image
+            src={getImageUrl(news.fifthImage)}
+            alt="รูปที่ 5"
+            width={800}
+            height={400}
+            className="rounded-lg object-cover my-6"
+          />
+        )}
+        <p>{news.desFifth}</p>
+      </div>
+
+    </div>
+  );
 };
 
-export default InfoDetail;
+export default InfoDetailPage;

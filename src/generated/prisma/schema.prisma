@@ -1,0 +1,30 @@
+// Prisma schema file
+// Learn more at: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model News {
+  id        Int      @id @default(autoincrement())
+  title     String
+  desFirst  String
+  desSecond String
+  desThird  String
+  desFourth String
+  desFifth  String
+  createdAt DateTime @default(now())
+
+  coverImage  String
+  secondImage String
+  thirdImage  String
+  fourthImage String
+  fifthImage  String
+}
