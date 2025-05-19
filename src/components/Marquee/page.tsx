@@ -1,8 +1,5 @@
 import { cn } from "@/lib/utils";
 import Marquee from "@/components/ui/marquee";
-import Share from '@/app/assets/svg/blank.svg';
-import Image from "next/image";
-import { motion } from "framer-motion";
 
 interface Review {
   img: string;

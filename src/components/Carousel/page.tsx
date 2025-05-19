@@ -6,6 +6,7 @@ import Carousel, {
   SliderContainer,
   SliderDotButton,
 } from '@/components/core/carousel';
+import Image from 'next/image';
 
 const slides = [
   {
@@ -31,7 +32,7 @@ const CarouselPage = () => {
         {slides.map((slide, index) => (
           <Slider key={index} className="w-full">
             <div className="relative rounded-xl h-[200px] md:h-[500px] 2xl:h-[800px] w-full overflow-hidden">
-              <img
+              <Image
                 src={slide.src}
                 alt={slide.label}
                 className="w-full h-full object-cover"

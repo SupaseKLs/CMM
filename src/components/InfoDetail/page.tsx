@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from 'react';
-
+import Image from 'next/image';
 // Define a TypeScript interface for the info data
 interface InfoData {
   id: string;
@@ -59,7 +59,7 @@ const CarouselSpacing = () => {
             onClick={() => handleClick(item.id)} // Use handleClick with id for dynamic routing
           >
             <div className="relative overflow-hidden">
-              <img
+              <Image
                 className="w-full h-[250px] 2xl:h-[500px] rounded-lg transition duration-300 group-hover:blur-sm"
                 src={item.cards.image}
                 alt={item.cards.title}

@@ -39,7 +39,7 @@ const CarouselSpacing = () => {
           className="relative group overflow-hidden rounded-lg cursor-pointer"
           onClick={() => handleClick(members[0]?.id)}
         >
-          <img
+          <Image
             className="w-full transition duration-300 group-hover:blur-md"
             src={members[0]?.image}
             alt={members[0]?.name.EN}
@@ -58,7 +58,7 @@ const CarouselSpacing = () => {
             className="relative group overflow-hidden rounded-lg cursor-pointer"
             onClick={() => handleClick(member.id)}
           >
-            <img
+            <Image
               className="w-full transition duration-300 group-hover:blur-md"
               src={member.image}
               alt={member.name.EN}
@@ -78,7 +78,7 @@ const CarouselSpacing = () => {
             className="relative group overflow-hidden rounded-lg cursor-pointer"
             onClick={() => handleClick(member.id)}
           >
-            <img
+            <Image
               className="w-full transition duration-300 group-hover:blur-md"
               src={member.image}
               alt={member.name.EN}
