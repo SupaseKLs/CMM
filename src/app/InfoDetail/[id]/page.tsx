@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import { createClient } from "@supabase/supabase-js";
 
@@ -10,11 +8,12 @@ const supabaseAnonKey =
 const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 interface PageProps {
-  params: { id: string };
+  params: Promise<{ id: string }>;  // เปลี่ยนเป็น Promise
 }
 
 export default async function InfoDetailPage({ params }: PageProps) {
-  const id = params.id;
+  const awaitedParams = await params;  // await params ก่อนใช้งาน
+  const id = awaitedParams.id;
 
   // เรียกข้อมูลจากตาราง News ที่ id ตรงกับพารามิเตอร์
   const { data, error } = await supabase
@@ -78,9 +77,9 @@ export default async function InfoDetailPage({ params }: PageProps) {
                 src={pic}
                 alt={`Picture ${idx + 1}`}
                 className="w-full h-auto rounded-lg shadow-md"
-                width={800} // กำหนดขนาดรูปภาพที่เหมาะสม
+                width={800}
                 height={600}
-                priority={idx === 0} // รูปแรกโหลด priority
+                priority={idx === 0}
               />
             </div>
           )
