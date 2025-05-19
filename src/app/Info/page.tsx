@@ -53,9 +53,9 @@ export default function Info() {
             <div className="w-11/12 mx-auto">
                 <div className="pt-40 pb-20 flex flex-col md:flex-row justify-between">
                     <div className="w-full font-bold md:w-[60%] text-8xl">
-                        <h1>
+                        {info && <h1>
                             we strive <br /> to innovate
-                        </h1>
+                        </h1>}
                     </div>
                     <div className="w-full md:w-[40%] pt-4 md:pt-0 text-xl">
                         <h1>

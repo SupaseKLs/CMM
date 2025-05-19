@@ -1,12 +1,5 @@
+/** @type {import('next').NextConfig} */
 module.exports = {
-  async rewrites() {
-    return [
-      {
-        source: '/api/:path*',
-        destination: 'https://x4ehc5amz7.execute-api.ap-southeast-2.amazonaws.com/vfx/:path*', // Forward to your API
-      },
-    ];
-  },
   images: {
     remotePatterns: [
       {
@@ -16,6 +9,10 @@ module.exports = {
       {
         protocol: 'https',
         hostname: 'cmmworkspace.blob.core.windows.net',
+      },
+      {
+        protocol: 'https',
+        hostname: 'eldxcanxwvrnsvxkoaiv.supabase.co', // เพิ่มบรรทัดนี้
       },
     ],
   },

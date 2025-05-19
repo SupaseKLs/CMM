@@ -5,6 +5,7 @@ import { AuroraText } from "@/components/ui/aurora";
 import Button from "@/components/ui/button";
 import Counter from "@/components/Counter/page";
 import AOS from 'aos';
+import Image from "next/image";
 import "aos/dist/aos.css";
 import VideoScroller from "@/components/VideOnScroll/page";
 
@@ -84,8 +85,10 @@ export default function HomePage() {
                                 data-aos-delay={index * 100}
                             >
                                 <a href={item.link}>
-                                    <img
+                                    <Image
                                         src={item.src}
+                                        width={800}
+                                        height={800}
                                         alt={item.label}
                                         className="w-full h-[300px] 2xl:h-[500px] object-cover rounded-md group-hover:scale-105 transition-transform duration-300"
                                     />

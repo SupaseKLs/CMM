@@ -5,8 +5,6 @@ import Image from 'next/image';
 import { useParams } from 'next/navigation'; // for App Router
 import Link from 'next/link'; // assuming you have Link for routing
 
-// Define the structure based on your members.json data
-
 interface Educational {
   bachelor: {
     field: string;
@@ -40,6 +38,7 @@ interface Publications {
   second: string;
 }
 
+// เปลี่ยน any เป็น unknown
 interface Member {
   id: number;
   name: {
@@ -53,7 +52,7 @@ interface Member {
   expertise: Expertise;
   work_experience: WorkExperience;
   publications: Publications;
-  certification: Record<string, any>;
+  certification: Record<string, unknown>;
 }
 
 const InfoDetail: React.FC = () => {
@@ -91,9 +90,9 @@ const InfoDetail: React.FC = () => {
     <div className='bg-white'>
       {/* Header */}
       <div className="bg-green-200 h-80 pt-20 md:h-full grid grid-cols-[80%_20%]">
-    <div>
-      
-    </div>
+        <div>
+          {/* คุณอาจเพิ่มข้อมูลหรือรูปแบบเพิ่มเติมที่นี่ */}
+        </div>
         <div>
           <Image width={500} height={500} src={memberData?.image || ''} alt='Profile Image' />
         </div>
@@ -129,11 +128,7 @@ const InfoDetail: React.FC = () => {
             <div>
               <h1 className='pt-12 pb-6 text-xl'>ความเชี่ยวชาญ</h1>
               <div className="flex flex-wrap gap-4 justify-start">
-                {[
-                  memberData?.expertise.first,
-                  memberData?.expertise.second,
-                  memberData?.expertise.third
-                ].map((item, index) => item && (
+                {[memberData?.expertise.first, memberData?.expertise.second, memberData?.expertise.third].map((item, index) => item && (
                   <h1 key={index} className="border-2 transition-all duration-300 hover:bg-black hover:text-white text-2xl border-black rounded-full px-4 py-3">
                     {item}
                   </h1>
@@ -204,10 +199,7 @@ const InfoDetail: React.FC = () => {
         <div className="w-11/12 mx-auto py-20">
           <h1 className="text-3xl mb-6">ผลงานวิจัย</h1>
           <ul className="list-disc pl-6 space-y-4 text-lg">
-            {[
-              memberData?.publications.first,
-              memberData?.publications.second
-            ].map((pub, index) => pub && (
+            {[memberData?.publications.first, memberData?.publications.second].map((pub, index) => pub && (
               <li key={index}>{pub}</li>
             ))}
           </ul>
