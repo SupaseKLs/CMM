@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import Marquee from "@/components/ui/marquee";
-
+import Image from "next/image";
 interface Review {
   img: string;
 }
@@ -21,7 +21,7 @@ const ReviewCard: React.FC<Review> = ({ img }) => {
   return (
     <figure className={cn("relative w-[500px] h-full overflow-hidden")}>
       <div className="flex flex-row items-center">
-        <img
+        <Image
           className="rounded-sm w-full h-full"
           width="32"
           height="32"

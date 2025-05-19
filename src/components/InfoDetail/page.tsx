@@ -61,6 +61,8 @@ const CarouselSpacing = () => {
             <div className="relative overflow-hidden">
               <Image
                 className="w-full h-[250px] 2xl:h-[500px] rounded-lg transition duration-300 group-hover:blur-sm"
+                width={800}
+                height={800}
                 src={item.cards.image}
                 alt={item.cards.title}
               />

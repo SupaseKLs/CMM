@@ -34,6 +34,8 @@ const CarouselPage = () => {
             <div className="relative rounded-xl h-[200px] md:h-[500px] 2xl:h-[800px] w-full overflow-hidden">
               <Image
                 src={slide.src}
+                width={800}
+                height={800}
                 alt={slide.label}
                 className="w-full h-full object-cover"
               />

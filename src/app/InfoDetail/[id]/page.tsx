@@ -1,4 +1,3 @@
-"use client"
 import Image from 'next/image'
 import { createClient } from '@supabase/supabase-js'
 

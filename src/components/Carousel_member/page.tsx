@@ -80,6 +80,8 @@ const CarouselSpacing = () => {
           >
             <Image
               className="w-full transition duration-300 group-hover:blur-md"
+              width={800}
+              height={800}
               src={member.image}
               alt={member.name.EN}
             />
