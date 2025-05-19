@@ -5,12 +5,10 @@ import { useState } from "react";
 
 import { cn } from "@/lib/utils";
 
-interface SectionHeadingProps extends HTMLMotionProps<"h3"> {}
-
 export const SectionHeading = ({
   className,
   ...props
-}: SectionHeadingProps) => {
+}: HTMLMotionProps<"h3">) => {
   return (
     <motion.h3
       className={cn(
@@ -47,7 +45,7 @@ export const TextReveal = ({ children, className }: TextRevealProps) => {
               transition: { delay: i * 0.02, ease: [0.215, 0.61, 0.355, 1] },
             }}
             key={i}
-            className="inline-block whitespace-"
+            className="inline-block whitespace-pre"
           >
             {char}
           </motion.span>
@@ -65,7 +63,7 @@ export const TextReveal = ({ children, className }: TextRevealProps) => {
               transition: { delay: i * 0.02, ease: [0.215, 0.61, 0.355, 1] },
             }}
             key={i}
-            className="inline-block whitespace-"
+            className="inline-block whitespace-pre"
           >
             {char}
           </motion.span>
