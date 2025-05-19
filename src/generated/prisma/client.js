@@ -1,1 +1,2 @@
-module.exports = { ...require('.') }
+const config = require('.');
+module.exports = config;
