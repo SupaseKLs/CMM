@@ -5,8 +5,6 @@ import Image from 'next/image';
 import Scroll_Perspective from "@/components/Scroll_Perspective/page"
 import { TextAnimate } from "@/components/ui/text_animate"
 import NumberTicker from '@/components/Counter/page';
-import Filter from "@/components/Filter/page"
-import VideoPlayer from '@/components/VideoPlayer/videoplayer';
 function Projects() {
     return (
         <>

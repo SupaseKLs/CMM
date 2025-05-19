@@ -112,6 +112,7 @@ const Navbar: React.FC<NavbarHeaderProps> = ({ social = [] }) => {
             </AnimatePresence>
 
             <motion.nav
+            style={{ display: isVisible ? "block" : "none" }}
                 onMouseEnter={() => { }}
                 onMouseLeave={() => {
                     setHoveredMenu(null);

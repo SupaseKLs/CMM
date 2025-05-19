@@ -1,4 +1,5 @@
 "use client"
+import Image from 'next/image'
 import { createClient } from '@supabase/supabase-js'
 
 // สร้าง Supabase Client
@@ -63,7 +64,7 @@ export default async function InfoDetailPage({ params }: PageProps) {
       {pictures.map((pic, idx) => (
         pic && (
           <div key={idx} className="mb-8">
-            <img
+            <Image
               src={pic} // <<< ใช้ URL ตรงๆเลย
               alt={`Picture ${idx + 1}`}
               className="w-full h-auto rounded-lg shadow-md"

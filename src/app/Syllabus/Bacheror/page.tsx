@@ -1,5 +1,4 @@
 import Image from "next/image"
-import CardStacking from "@/components/CardStacking/page"
 import Tabs from "@/components/tabs/page"
 import Student from "@/assets/img/Suti.png"
 import MarqueeCareers from "@/components/MarqueeCareers/page"
@@ -139,10 +138,6 @@ export default function Bacheror() {
 
                         </div>
                     </div>
-                </div>
-
-                <div className="mt-20">
-                    <CardStacking />
                 </div>
                 <div className="h-[500px] md:h-full py-12">
                     <h1 className="text-4xl md:text-5xl font-bold">โครงสร้างหลักสูตร</h1>

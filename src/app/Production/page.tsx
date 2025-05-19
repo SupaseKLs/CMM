@@ -2,13 +2,10 @@
 import { useRef } from "react"
 import { TimelineContent } from "@/components/motion-timeline/page"
 import type { Variants } from "motion/react"
-import { ArrowRight, CheckCircle } from "lucide-react"
 import { useEffect, useState } from "react";
-import { TextAnimate } from "@/components/ui/text_animate";
 import ScrollBaseAnimation from "@/components/ui/text.marquee";
 import Image from "next/image";
 import Dara from "@/assets/img/dara.png"
-import Link from "next/link";
 import BtnProduction from "@/components/ui/btnproduction"
 interface DataResponse {
   id: string;
@@ -70,7 +67,7 @@ const VFXPage = () => {
 
         <div className="relative flex justify-center">
           <div className="relative w-[90%] h-[800px] overflow-hidden">
-            <img src="https://images.pexels.com/photos/5676744/pexels-photo-5676744.jpeg" className="w-full h-full rounded-full" alt="test" />
+            <Image src="https://images.pexels.com/photos/5676744/pexels-photo-5676744.jpeg" className="w-full h-full rounded-full" alt="test" />
             <div className="absolute top-0 left-0 w-full h-full grid place-content-center">
               <ScrollBaseAnimation baseVelocity={3} scrollDependent={true}>
                 Top-Tier Multimedia

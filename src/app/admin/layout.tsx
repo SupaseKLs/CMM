@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import { Kanit } from 'next/font/google';
-import Footer from "@/components/Footer/page";
-import SmoothScroll from "@/components/SmoothScroll/page";
 import Sidebar from "@/components/Sidebar";
 const kanit = Kanit({
   weight: '300',

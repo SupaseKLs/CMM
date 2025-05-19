@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import ScrollBaseAnimation from "@/components/ui/text.marquee";
 import Admissions from "@/assets/img/Admission.jpg";
-import InfoDetail from "@/components/InfoDetail/page";
 import InfoDetails from "@/components/InfoDetail/page";
 
 type InfoData = {
