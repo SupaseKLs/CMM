@@ -20,12 +20,12 @@ const menuItems = [
         links: [
             {
                 label: "ปริญญาตรี",
-                href: "/courses/bachelor",
+                href: "/Syllabus/Bacheror",
                 image: "/images/image 161.png",
             },
             {
                 label: "ปริญญาโท",
-                href: "/courses/master",
+                href: "/Syllabus/Graduate",
                 image: "/images/image 162.png",
             },
         ],
@@ -42,16 +42,11 @@ const navLinks = [
     { title: "ข่าวสาร", href: "/Info" },
     { title: "ติดต่อเรา", href: "/Contact" },
 ];
-const courseDropdownLinks = [
-    { title: "ปริญญาตรี", href: "/courses/bachelor" },
-    { title: "ปริญญาโท", href: "/courses/master" },
-];
 
 const Navbar: React.FC<NavbarHeaderProps> = ({ social = [] }) => {
     const isMobile = useMediaQuery("(max-width:768px)");
     const [hoveredMenu, setHoveredMenu] = useState<string | null>(null);
     const [hoveredSubItem, setHoveredSubItem] = useState<string | null>(null);
-    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [isActive, setIsActive] = useState(false);
     const MotionLink = motion.create(Link);
     const [scrollPosition, setScrollPosition] = useState(0);
@@ -60,7 +55,7 @@ const Navbar: React.FC<NavbarHeaderProps> = ({ social = [] }) => {
         const handleScroll = () => {
             const currentScrollState = window.scrollY;
             if (currentScrollState > scrollPosition && currentScrollState > 50) {
-            setIsVisible(false);
+                setIsVisible(false);
             } else {
                 setIsVisible(true);
             }
@@ -117,11 +112,17 @@ const Navbar: React.FC<NavbarHeaderProps> = ({ social = [] }) => {
             </AnimatePresence>
 
             <motion.nav
+                onMouseEnter={() => { }}
+                onMouseLeave={() => {
+                    setHoveredMenu(null);
+                    setHoveredSubItem(null);
+                }}
                 animate={{ height: hoveredMenu === "หลักสูตร" || hoveredSubItem ? 280 : 80 }}
                 transition={{ duration: 0.45, ease: "easeInOut" }}
                 className="hidden lg:block fixed top-0 left-0 z-40 w-full overflow-hidden 
-       bg-black/30 backdrop-blur-md backdrop-saturate-150 shadow"
+  bg-black/30 backdrop-blur-md backdrop-saturate-150 shadow"
             >
+
                 <div className="w-11/12 mx-auto px-6 py-4 flex justify-between items-center">
                     <Link href="/" className="text-2xl font-bold text-white">
                         <img src="/images/Logo.png" width={150} alt="" />
@@ -133,10 +134,6 @@ const Navbar: React.FC<NavbarHeaderProps> = ({ social = [] }) => {
                                 key={item.title}
                                 className="relative"
                                 onMouseEnter={() => item.links && setHoveredMenu(item.title)}
-                                onMouseLeave={() => {
-                                    setHoveredMenu(null);
-                                    setHoveredSubItem(null);
-                                }}
                             >
                                 <Link
                                     href={item.href ?? "#"}
@@ -144,17 +141,16 @@ const Navbar: React.FC<NavbarHeaderProps> = ({ social = [] }) => {
                                 >
                                     {item.title}
 
-                                    {/* Chevron Icon with Rotation Animation */}
                                     {item.links && (
                                         <motion.div
-                                            className="ml-2" // Added margin to space it from the text
+                                            className="ml-2"
                                         >
                                             <motion.div
-                                                initial={{ rotate: 0 }} // Initial rotation (0 degrees)
+                                                initial={{ rotate: 0 }}
                                                 animate={{
-                                                    rotate: hoveredMenu === item.title ? 180 : 0, // Rotate on hover
+                                                    rotate: hoveredMenu === item.title ? 180 : 0,
                                                 }}
-                                                transition={{ duration: 0.3 }} // Smooth transition
+                                                transition={{ duration: 0.3 }}
                                             >
                                                 <FaChevronDown className="text-white" />
                                             </motion.div>

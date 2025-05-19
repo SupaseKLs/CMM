@@ -75,7 +75,7 @@ export default function Footer() {
                     <Image src={Multi} className="w-full" alt="" />
                 </div>
 
-                <div className="hidden md:flex justify-between text-2xl border-t-2 text-white items-center py-10">
+                <div className="hidden md:flex justify-between text-md 2xl:text-2xl border-t-2 text-white items-center py-10">
                     <div className="flex space-x-8">
                         <Image src={Kmutt} width={40} height={10} alt="Multimedia" />
                         <Image src={Logo} width={130} height={10} alt="Multimedia" />

@@ -34,7 +34,7 @@ const ScrollImageSequence = () => {
         <motion.img
           src={IMAGE_PATH(currentFrame)}
           alt={`Frame ${currentFrame}`}
-          className="w-full max-h-full object-contain"
+          className="w-full"
           loading="eager"
         />
       </div>

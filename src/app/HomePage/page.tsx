@@ -21,7 +21,7 @@ export default function HomePage() {
         <>
             <header>
                 <div className="w-full">
-                    <div className="relative">
+                    <div className="relative h-screen">
                         <video
                             playsInline
                             autoPlay
@@ -30,23 +30,24 @@ export default function HomePage() {
                             className="w-full h-screen object-cover"
                         >
                             <source
-                                src="https://cmmworkspace.blob.core.windows.net/cmmsource/CMM/8198509-hd_1920_1080_25fps.mp4?sv=2023-01-03&st=2025-03-12T04%3A42%3A52Z&se=2029-07-13T04%3A42%3A00Z&sr=b&sp=r&sig=9GzE54p4jn80XlqFiFcWRFOIkQzyKpRT1sn3W9ycew0%3D"
+                                src="https://eldxcanxwvrnsvxkoaiv.supabase.co/storage/v1/object/public/storage/Video/HomePage.mp4"
                                 type="video/mp4"
                             />
                         </video>
-                        <div className="absolute bottom-0 mb-4">
+                        <div className="absolute bottom-0 z-10 mb-4">
                             <div className="w-11/12 mx-auto">
                                 <div className="text-white text-[8vw] md:text-[5vw] font-semibold">
-                                    <h1>DIVISION OF COMPUTER AND INFORMATION TECHNOLOGY</h1>
+                                    <h2>DIVISION OF COMPUTER AND INFORMATION TECHNOLOGY</h2>
                                 </div>
                             </div>
                         </div>
+                       <div className="absolute bottom-0 z-0 left-0 w-full h-96 bg-gradient-to-t from-black via-black/30 to-transparent pointer-events-none" />
                     </div>
                 </div>
             </header>
 
             <section className="bg-white h-full py-20">
-                <div className="w-11/12 mx-auto">
+                <div className="w-10/12 mx-auto">
                     <div>
                         <div className="py-20">
                             <div className="bg-black h-[2px]" />
@@ -64,21 +65,21 @@ export default function HomePage() {
                                 <AuroraText className="text-[8vw] font-bold">Multimedia</AuroraText>
                             </div>
 
-                            <div className="text-[4vw] md:text-[1.7vw] w-[80%] md:w-[40%]" data-aos="fade-up">
-                            เรียนรู้การผลิตสื่อมัลติมีเดียอย่างมืออาชีพ ทั้งการถ่ายภาพ การจัดแสง และการตัดต่อวิดีโอ พร้อมเสริมทักษะการออกแบบและพัฒนาเว็บไซต์ให้ทันสมัยและตอบโจทย์โลกดิจิทัล พัฒนาความสามารถทั้งด้านเทคนิคและความคิดสร้างสรรค์ เพื่อก้าวสู่สายอาชีพยุคใหม่ได้อย่างมั่นใจ
+                            <div className="text-[4vw] md:text-[1.2vw] w-[80%] md:w-[40%]" data-aos="fade-up">
+                                <p>เรียนรู้การผลิตสื่อมัลติมีเดียอย่างมืออาชีพ ทั้งการถ่ายภาพ การจัดแสง และการตัดต่อวิดีโอ พร้อมเสริมทักษะการออกแบบและพัฒนาเว็บไซต์ให้ทันสมัย พัฒนาความสามารถทั้งด้านเทคนิคและความคิดสร้างสรรค์ เพื่อก้าวสู่สายอาชีพยุคใหม่ได้อย่างมั่นใจ</p>
                             </div>
                         </div>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 py-40">
                         {[
-                            { src: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=3870&auto=format&fit=crop', label: 'ผลงานนักศึกษา', link: '/works' },
-                            { src: 'https://images.unsplash.com/photo-1560264357-8d9202250f21?q=80&w=3000&auto=format&fit=crop', label: 'บริการ', link: '/Services' },
-                            { src: 'https://images.unsplash.com/photo-1590070302028-b9a00b0c5354?q=80&w=2262&auto=format=fit=crop', label: 'ข่าวสาร', link: '/Info' },
+                            { src: 'https://eldxcanxwvrnsvxkoaiv.supabase.co/storage/v1/object/public/storage/Image/work.jpg', label: 'ผลงานนักศึกษา', link: '/works' },
+                            { src: 'https://eldxcanxwvrnsvxkoaiv.supabase.co/storage/v1/object/public/storage/Image/services.jpg', label: 'บริการ', link: '/Services' },
+                            { src: 'https://eldxcanxwvrnsvxkoaiv.supabase.co/storage/v1/object/public/storage/Image/IMG_9136-Enhanced-NR.png', label: 'ข่าวสาร', link: '/Info' },
                         ].map((item, index) => (
                             <div
                                 key={index}
-                                className="relative w-full overflow-hidden rounded-md group"
+                                className="relative w-full h-auto overflow-hidden rounded-md group"
                                 data-aos="fade-up"
                                 data-aos-delay={index * 100}
                             >
@@ -86,7 +87,7 @@ export default function HomePage() {
                                     <img
                                         src={item.src}
                                         alt={item.label}
-                                        className="w-full 2xl:h-[500px] object-cover rounded-md group-hover:scale-105 transition-transform duration-300"
+                                        className="w-full h-[300px] 2xl:h-[500px] object-cover rounded-md group-hover:scale-105 transition-transform duration-300"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end pl-10 pb-6">
                                         <span className="text-white text-5xl font-semibold">{item.label}</span>
@@ -95,16 +96,12 @@ export default function HomePage() {
                             </div>
                         ))}
                     </div>
-
                     <div className="flex flex-col md:flex-row justify-between">
                         <div className="font-semibold text-[6vw] w-full md:text-[2.5vw] md:w-[200px] 2xl:w-[350px]" data-aos="fade-up">
-                            <h1>เพลิดเพลินไปกับการเรียน</h1>
+                            <h2>เพลิดเพลินไปกับการเรียน</h2>
                         </div>
-                        <div className="text-[4vw] md:text-[1.7vw] w-[80%] md:w-[40%]" data-aos="fade-up">
-                            สำหรับผู้ที่มีใจรักในเทคโนโลยีและมัลติมีเดีย นี่คือหลักสูตรที่ออกแบบมาเพื่อคุณ!
-                            เรียนรู้การเขียนโปรแกรม พัฒนาเว็บไซต์ สร้างเกม ออกแบบแอนิเมชัน 2D/3D
-                            พร้อมปลูกฝังทักษะวิเคราะห์ สร้างสรรค์ และคิดอย่างเป็นระบบ
-                            ทั้งหมดนี้ในสภาพแวดล้อมการเรียนรู้ที่ผสมผสานความรู้วิชาการกับการปฏิบัติจริงอย่างลงตัว
+                        <div className="text-[4vw] md:text-[1.2vw] w-[80%] md:w-[40%]" data-aos="fade-up">
+                            สำหรับคนที่มีความสนใจในด้านเทคโนโลยีและมัลติมีเดีย นี่คือหลักสูตรที่ออกแบบมาเพื่อคุณ เรียนรู้การเขียนโปรแกรม พัฒนาเว็บไซต์ สร้างเกม ออกแบบแอนิเมชัน 2D/3D
                         </div>
                     </div>
                 </div>
@@ -113,13 +110,13 @@ export default function HomePage() {
             <section>
                 <div className="w-11/12 mx-auto">
                     <div className="py-20 text-white">
-                        <h1 className="text-[6vw] md:text-[4vw]" data-aos="fade-up">เราเรียนเกี่ยวกับไรบ้าง</h1>
-                        <h1 className="w-[80%} md:w-[50%] pt-10 text-[4vw] md:text-[1.8vw]"></h1>
+                        <h2 className="text-[6vw] md:text-[4vw]" data-aos="fade-up">เราเรียนเกี่ยวกับไรบ้าง</h2>
+                        <h2 className="w-[80%} md:w-[50%] pt-10 text-[4vw] md:text-[1.8vw]"></h2>
                     </div>
                     <div className="my-20">
                         <Carousel />
                     </div>
-                    <h1 className="text-6xl py-20 text-white">ผลงานนักศึกษา</h1>
+                    <h3 className="text-6xl py-20 text-white">ผลงานนักศึกษา</h3>
                 </div>
                 <div className="relative">
                     <video
@@ -127,10 +124,10 @@ export default function HomePage() {
                         autoPlay
                         muted
                         loop
-                        className="w-full opacity-60 h-[800px] md:h-screen object-cover"
+                        className="w-full opacity-80 h-[800px] md:h-screen object-cover"
                     >
                         <source
-                            src="https://cmmworkspace.blob.core.windows.net/cmmsource/Final%20Vidieo2.mp4?sv=2023-01-03&st=2025-03-12T04%3A41%3A39Z&se=2029-07-13T04%3A41%3A00Z&sr=b&sp=r&sig=zLfBseXGfT6YQFWAWR%2FIw%2Fbqo%2FV7uZ48NUHU1jXeYUA%3D"
+                            src="/video/thesis.mp4"
                             type="video/mp4"
                         />
                     </video>
@@ -157,11 +154,9 @@ export default function HomePage() {
                     </div>
                     <div className="absolute bottom-0 mb-12 w-full">
                         <div className="w-11/12 mx-auto">
-                            <div>
-                                <h1 className="text-white text-[8vw] md:text-[4vw] font-semibold">Explore to Project</h1>
-                                <div className="my-10">
-                                    <Button text="อ่านเพิ่มเติม" onClick={() => alert("Submitted!")} />
-                                </div>
+                            <h2 className="text-white text-[8vw] md:text-[4vw] font-semibold">Explore to Project</h2>
+                            <div className="my-10">
+                                <Button text="อ่านเพิ่มเติม" onClick={() => alert("Submitted!")} />
                             </div>
                         </div>
                     </div>
@@ -176,11 +171,10 @@ export default function HomePage() {
                 <div className="w-11/12 mx-auto">
                     <div className="pt-20 md:pt-60 flex flex-col md:flex-row justify-between">
                         <div className="text-[5vw] md:text-[2vw] font-bold" data-aos="fade-up">
-                            <h1>คณะครุศาสตร์อุตสาหกรรมและเทคโนโลยี</h1>
-                            <h1 className="text-gray-400 pt-2">สาขาวิชาวิทยาการคอมพิวเตอร์<br />ประยุกต์-มัลติมีเดีย</h1>
+                            <h2 className="text-black pt-2">สาขาวิชาวิทยาการคอมพิวเตอร์<br />ประยุกต์-มัลติมีเดีย</h2>
                         </div>
-                        <div className="text-[4vw] md:text-[1.7vw] w-full md:w-[40%]" data-aos="fade-up">
-                            จุดเริ่มต้นสำหรับผู้มีฝันในสายเทคโนโลยีและมัลติมีเดีย ด้วยหลักสูตรที่ผสมผสานความรู้ด้านการพัฒนาเทคโนโลยีคอมพิวเตอร์กับการสร้างสรรค์สื่อมัลติมีเดียอย่างลงตัว เปิดโอกาสให้คุณได้เรียนรู้ สร้างสรรค์ และเติบโตไปพร้อมกับอนาคตแห่งโลกดิจิทัล
+                        <div className="text-[4vw] md:text-[1.2vw] w-full md:w-[40%]" data-aos="fade-up">
+                            จุดเริ่มต้นสำหรับผู้มีความฝันในสายเทคโนโลยีและมัลติมีเดีย ด้วยหลักสูตรที่ผสมผสานความรู้ด้านการพัฒนาเทคโนโลยีคอมพิวเตอร์กับการสร้างสรรค์สื่อมัลติมีเดีย เปิดโอกาสให้คุณได้เรียนรู้ สร้างสรรค์ และเติบโตไปพร้อมกับอนาคตแห่งโลกดิจิทัล
                         </div>
                     </div>
                     <video

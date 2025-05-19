@@ -30,7 +30,7 @@ const CarouselPage = () => {
       <SliderContainer className="gap-2">
         {slides.map((slide, index) => (
           <Slider key={index} className="w-full">
-            <div className="relative rounded-xl h-[200px] md:h-[800px] w-full overflow-hidden">
+            <div className="relative rounded-xl h-[200px] md:h-[500px] 2xl:h-[800px] w-full overflow-hidden">
               <img
                 src={slide.src}
                 alt={slide.label}

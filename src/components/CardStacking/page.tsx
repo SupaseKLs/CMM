@@ -76,8 +76,8 @@ export default function index() {
               </figure>
             </div>
             <div className="sticky top-0 h-full md:h-screen grid place-content-center">
-              <h1 className="text-black hidden md:block text-4xl px-8 font-medium text-center tracking-tight leading-[120%]">
-                What We <br /> Have Now😎
+              <h1 className="text-black hidden md:block text-6xl px-8 font-medium text-center tracking-tight leading-[120%]">
+                มัลติมีเดียบางมด<br /> ดียังไง 
               </h1>
             </div>
           </div>

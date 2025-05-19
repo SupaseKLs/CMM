@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 // Prisma schema file
 // Learn more at: https://pris.ly/d/prisma-schema
+=======
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+>>>>>>> 6ee66b7 (add video db)
 
 generator client {
   provider = "prisma-client-js"
@@ -12,6 +20,7 @@ datasource db {
   directUrl = env("DIRECT_URL")
 }
 
+<<<<<<< HEAD
 model News {
   id           Int      @id @default(autoincrement())
   title        String
@@ -29,3 +38,69 @@ model News {
   fifthImage   String
 }
 
+=======
+model AdminProfile {
+  id           Int          @id @default(autoincrement())  
+  email        String       @unique
+  password     String       
+  createdAt    DateTime     @default(now())
+
+  checkinLogs  CheckinLog[]  
+  newsLogs     NewsLog[]     
+}
+
+
+model CheckinLog {
+  id         String          @id @default(uuid())
+  adminId    Int             
+  action     CheckinAction
+  timestamp  DateTime        @default(now())
+  ip         String?
+
+  admin      AdminProfile    @relation(fields: [adminId], references: [id])
+}
+
+
+enum CheckinAction {
+  CHECKIN
+  CHECKOUT
+}
+
+model News {
+  id            Int           @id @default(autoincrement())
+  date          DateTime
+  title         String
+  description1  String?
+  description2  String?
+  description3  String?
+  description4  String?
+  description5  String?
+  picture1      String?
+  picture2      String?
+  picture3      String?
+  picture4      String?
+  picture5      String?
+
+  logs          NewsLog[]     
+}
+
+model NewsLog {
+  id           String          @id @default(uuid())
+  newsId       Int
+  adminId      Int             
+  action       NewsAction
+  timestamp    DateTime         @default(now())
+  oldData      Json?
+  newData      Json?
+  ip           String?
+  news         News             @relation(fields: [newsId], references: [id])
+  admin        AdminProfile     @relation(fields: [adminId], references: [id])
+}
+
+
+enum NewsAction {
+  CREATE
+  UPDATE
+  DELETE
+}
+>>>>>>> 6ee66b7 (add video db)
