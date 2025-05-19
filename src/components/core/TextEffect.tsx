@@ -177,7 +177,8 @@ const createVariantsWithTransition = (
 ): Variants => {
   if (!transition) return baseVariants;
 
-  const { exit: _, ...mainTransition } = transition;
+  // เปลี่ยนชื่อ _ เป็น _exit เพื่อปิด warning
+  const { exit: _exit, ...mainTransition } = transition;
 
   return {
     ...baseVariants,

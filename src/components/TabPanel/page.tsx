@@ -1,7 +1,7 @@
 "use client"
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-
+import Image from "next/image";
 const tabs = [
   { id: "tab1", label: "ยืมอุปกรณ์", image: "/images/thing.jpg" },
   { id: "tab2", label: "จองห้องปฏิบัติการ", image: "/images/room.jpg" },
@@ -35,7 +35,7 @@ export default function TabsWithTransition() {
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <img src={tab.image} alt={tab.label} className="w-10/12 mx-auto h-auto rounded-lg" />
+                  <Image src={tab.image} width={150} height={150} alt={tab.label} className="w-10/12 mx-auto h-auto rounded-lg" />
                 </motion.div>
               )
           )}

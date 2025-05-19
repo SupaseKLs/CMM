@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { SocialHandle } from "@/utils/interface";
 import { TextReveal } from "@/components/ui/typography";
 import Link from "next/link";
+import Image from "next/image";
 import { FaChevronDown } from 'react-icons/fa';
 import { useMediaQuery } from "@/utils/useMediaQuery";
 interface NavbarHeaderProps {
@@ -102,7 +103,7 @@ const Navbar: React.FC<NavbarHeaderProps> = ({ social = [] }) => {
                         transition={{ duration: 0.3 }}
                         className="fixed top-0 left-0 w-64 h-40 z-50"
                     >
-                        <img
+                        <Image
                             src={currentImage}
                             alt=""
                             className="ml-20 mt-24 w-full h-full object-cover rounded-r-lg shadow-lg"
@@ -112,7 +113,6 @@ const Navbar: React.FC<NavbarHeaderProps> = ({ social = [] }) => {
             </AnimatePresence>
 
             <motion.nav
-            style={{ display: isVisible ? "block" : "none" }}
                 onMouseEnter={() => { }}
                 onMouseLeave={() => {
                     setHoveredMenu(null);
@@ -126,7 +126,7 @@ const Navbar: React.FC<NavbarHeaderProps> = ({ social = [] }) => {
 
                 <div className="w-11/12 mx-auto px-6 py-4 flex justify-between items-center">
                     <Link href="/" className="text-2xl font-bold text-white">
-                        <img src="/images/Logo.png" width={150} alt="" />
+                        <Image src="/images/Logo.png" width={150} height={150} alt="CMMKMUTT" />
                     </Link>
 
                     <div className="flex space-x-10">
@@ -193,7 +193,7 @@ const Navbar: React.FC<NavbarHeaderProps> = ({ social = [] }) => {
                 <div className="fixed lg:top-0 pt-5 top-2 md:left-8 left-6 z-30">
                     <Link href={"/"}>
                         <div>
-                            <img src="/images/Logo.png" width={150} height={150} alt="Logo" />
+                            <Image src="/images/Logo.png" width={150} height={150} alt="Logo" />
                         </div>
                     </Link>
                 </div>
