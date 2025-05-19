@@ -177,7 +177,8 @@ const createVariantsWithTransition = (
 ): Variants => {
   if (!transition) return baseVariants;
 
-  // เปลี่ยนชื่อ _ เป็น _exit เพื่อปิด warning
+  // ปิด warning no-unused-vars ด้วย comment นี้
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { exit: _exit, ...mainTransition } = transition;
 
   return {

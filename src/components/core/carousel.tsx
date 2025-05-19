@@ -1,5 +1,3 @@
-// @ts-nocheck
-
 'use client';
 import React, {
   ReactNode,
@@ -21,11 +19,17 @@ import {
 import useEmblaCarousel from 'embla-carousel-react';
 import ClassNames from 'embla-carousel-class-names';
 import { cn } from '@/lib/utils';
+
 type UseDotButtonType = {
   selectedIndex: number;
   scrollSnaps: number[];
   onDotButtonClick: (index: number) => void;
 };
+
+interface ThumbnailSlide {
+  src: string;
+  alt?: string;
+}
 
 interface CarouselProps {
   children: React.ReactNode;
@@ -35,36 +39,35 @@ interface CarouselProps {
   isAutoPlay?: boolean;
   isScale?: boolean;
 }
-interface ThumbnailSlide {
-  src: string;
-  alt: string;
-}
+
 interface CarouselContextType {
   prevBtnDisabled: boolean;
   nextBtnDisabled: boolean;
   onPrevButtonClick: () => void;
   onNextButtonClick: () => void;
-  selectedIndex: any;
-  scrollSnaps: any;
-  onDotButtonClick: any;
-  scrollProgress: any;
-  selectedSnap: any;
-  snapCount: any;
+  selectedIndex: number;
+  scrollSnaps: number[];
+  onDotButtonClick: (index: number) => void;
+  scrollProgress: number;
+  selectedSnap: number;
+  snapCount: number;
   isScale: boolean;
   slidesrArr: ThumbnailSlide[];
-  setSlidesArr: any;
-  emblaThumbsRef: any;
-  onThumbClick: any;
+  setSlidesArr: React.Dispatch<React.SetStateAction<ThumbnailSlide[]>>;
+  emblaThumbsRef: React.RefObject<HTMLDivElement>;
+  onThumbClick: (index: number) => void;
   carouselId: string;
 }
 
 const CarouselContext = createContext<CarouselContextType | undefined>(
   undefined
 );
+
 const TWEEN_FACTOR_BASE = 0.52;
 
 const numberWithinRange = (number: number, min: number, max: number): number =>
   Math.min(Math.max(number, min), max);
+
 export const useCarouselContext = () => {
   const context = useContext(CarouselContext);
   if (!context) {
@@ -84,7 +87,7 @@ const Carousel: React.FC<CarouselProps> = ({
   isAutoPlay = false,
 }) => {
   const carouselId = useId();
-  const [slidesrArr, setSlidesArr] = useState<Element[]>([]);
+  const [slidesrArr, setSlidesArr] = useState<ThumbnailSlide[]>([]);
   const plugins = [];
 
   if (activeSlider) {
@@ -102,6 +105,7 @@ const Carousel: React.FC<CarouselProps> = ({
       })
     );
   }
+
   const [emblaRef, emblaApi] = useEmblaCarousel(options, plugins);
   const [selectedThumbIndex, setSelectedThumbIndex] = useState(0);
   const [emblaThumbsRef, emblaThumbsApi] = useEmblaCarousel({
@@ -119,9 +123,9 @@ const Carousel: React.FC<CarouselProps> = ({
 
   const onSelect = useCallback(() => {
     if (!emblaApi || !emblaThumbsApi) return;
-    setSelectedThumbIndex(emblaApi.selectedScrollSnap()); // Use setSelectedThumbIndex here
+    setSelectedThumbIndex(emblaApi.selectedScrollSnap());
     emblaThumbsApi.scrollTo(emblaApi.selectedScrollSnap());
-  }, [emblaApi, emblaThumbsApi, setSelectedThumbIndex]);
+  }, [emblaApi, emblaThumbsApi]);
 
   useEffect(() => {
     if (!emblaApi) return;
@@ -133,6 +137,7 @@ const Carousel: React.FC<CarouselProps> = ({
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
     useDotButton(emblaApi);
   const [scrollProgress, setScrollProgress] = useState(0);
+
   const {
     prevBtnDisabled,
     nextBtnDisabled,
@@ -144,6 +149,7 @@ const Carousel: React.FC<CarouselProps> = ({
     const progress = Math.max(0, Math.min(1, emblaApi.scrollProgress()));
     setScrollProgress(progress * 100);
   }, []);
+
   useEffect(() => {
     if (!emblaApi) return;
 
@@ -151,12 +157,13 @@ const Carousel: React.FC<CarouselProps> = ({
     emblaApi.on('reInit', onScroll);
     emblaApi.on('scroll', onScroll);
   }, [emblaApi, onScroll]);
+
   const { selectedSnap, snapCount } = useSelectedSnapDisplay(emblaApi);
 
-  // for scale animation
-
+  // Scale animation refs
   const tweenFactor = useRef(0);
   const tweenNodes = useRef<HTMLElement[]>([]);
+
   const setTweenNodes = useCallback(
     (emblaApi: EmblaCarouselType): void => {
       if (!isScale) return;
@@ -215,7 +222,6 @@ const Carousel: React.FC<CarouselProps> = ({
           const tweenValue = 1 - Math.abs(diffToTarget * tweenFactor.current);
           const scale = numberWithinRange(tweenValue, 0, 1).toString();
           const tweenNode = tweenNodes.current[slideIndex];
-          // Add null check here
           if (tweenNode) {
             tweenNode.style.transform = `scale(${scale})`;
           }
@@ -239,6 +245,7 @@ const Carousel: React.FC<CarouselProps> = ({
         .on('scroll', tweenScale);
     }
   }, [emblaApi, tweenScale, isScale, setTweenNodes, setTweenFactor]);
+
   return (
     <CarouselContext.Provider
       value={{
@@ -261,7 +268,7 @@ const Carousel: React.FC<CarouselProps> = ({
       }}
     >
       <div
-        className={cn(className, 'overflow-hidden  rounded-md ')}
+        className={cn(className, 'overflow-hidden rounded-md')}
         ref={emblaRef}
       >
         {children}
@@ -292,18 +299,19 @@ export const SliderContainer = ({
     </div>
   );
 };
+
 export const Slider: React.FC<SliderProps> = ({
   children,
   className,
   thumnailSrc,
 }) => {
   const { isScale, setSlidesArr } = useCarouselContext();
-  // console.log(thumnailSrc)
 
   const addImgToSlider = useCallback(() => {
-    setSlidesArr((prev: any) => {
-      // Prevent adding duplicate images
-      return [...prev, thumnailSrc];
+    if (!thumnailSrc) return;
+    setSlidesArr((prev) => {
+      if (prev.some((slide) => slide.src === thumnailSrc)) return prev;
+      return [...prev, { src: thumnailSrc, alt: '' }];
     });
   }, [setSlidesArr, thumnailSrc]);
 
@@ -314,9 +322,7 @@ export const Slider: React.FC<SliderProps> = ({
   return (
     <div className={cn('min-w-0 flex-grow-0 flex-shrink-0', className)}>
       {isScale ? (
-        <>
-          <div className='slider_content'>{children}</div>
-        </>
+        <div className='slider_content'>{children}</div>
       ) : (
         <>{children}</>
       )}
@@ -331,7 +337,7 @@ export const SliderPrevButton = ({
   children?: ReactNode;
   className?: string;
 }) => {
-  const { onPrevButtonClick, prevBtnDisabled }: any = useCarouselContext();
+  const { onPrevButtonClick, prevBtnDisabled } = useCarouselContext();
   return (
     <button
       className={cn('', className)}
@@ -343,6 +349,7 @@ export const SliderPrevButton = ({
     </button>
   );
 };
+
 export const SliderNextButton = ({
   children,
   className,
@@ -350,26 +357,25 @@ export const SliderNextButton = ({
   children?: ReactNode;
   className?: string;
 }) => {
-  const { onNextButtonClick, nextBtnDisabled }: any = useCarouselContext();
+  const { onNextButtonClick, nextBtnDisabled } = useCarouselContext();
   return (
-    <>
-      <button
-        className={cn('', className)}
-        type='button'
-        onClick={onNextButtonClick}
-        disabled={nextBtnDisabled}
-      >
-        {children}
-      </button>
-    </>
+    <button
+      className={cn('', className)}
+      type='button'
+      onClick={onNextButtonClick}
+      disabled={nextBtnDisabled}
+    >
+      {children}
+    </button>
   );
 };
+
 export const SliderProgress = ({ className }: { className?: string }) => {
-  const { scrollProgress }: any = useCarouselContext();
+  const { scrollProgress } = useCarouselContext();
   return (
     <div
       className={cn(
-        '  bg-gray-500 relative rounded-md h-2 justify-end w-96 max-w-[90%] overflow-hidden',
+        'bg-gray-500 relative rounded-md h-2 justify-end w-96 max-w-[90%] overflow-hidden',
         className
       )}
     >
@@ -411,6 +417,7 @@ export const SliderSnapDisplay = ({ className }: { className?: string }) => {
     </div>
   );
 };
+
 export const SliderDotButton = ({
   className,
   activeclass,
@@ -418,19 +425,19 @@ export const SliderDotButton = ({
   className?: string;
   activeclass?: string;
 }) => {
-  const { selectedIndex, scrollSnaps, onDotButtonClick, carouselId }: any =
+  const { selectedIndex, scrollSnaps, onDotButtonClick, carouselId } =
     useCarouselContext();
   return (
     <div className={cn('flex', className)}>
       <div className='flex gap-2'>
-        {scrollSnaps.map((_: any, index: React.Key | null | undefined) => (
+        {scrollSnaps.map((_: number, index: number) => (
           <button
             type='button'
             key={index}
             onClick={() => onDotButtonClick(index)}
-            className={`relative inline-flex  p-0 m-0 w-10 h-2 `}
+            className='relative inline-flex p-0 m-0 w-10 h-2'
           >
-            <div className=' bg-gray-500/40  h-2 rounded-full w-10 '></div>
+            <div className='bg-gray-500/40 h-2 rounded-full w-10'></div>
             {index === selectedIndex && (
               <AnimatePresence mode='wait'>
                 <motion.div
@@ -494,6 +501,7 @@ export const useDotButton = (
     onDotButtonClick,
   };
 };
+
 type UsePrevNextButtonsType = {
   prevBtnDisabled: boolean;
   nextBtnDisabled: boolean;
@@ -571,7 +579,6 @@ export const useSelectedSnapDisplay = (
 export const ThumsSlider: React.FC = () => {
   const { emblaThumbsRef, slidesrArr, selectedIndex, onThumbClick } =
     useCarouselContext();
-  // console.log(slidesrArr);
 
   return (
     <div className='overflow-hidden mt-2' ref={emblaThumbsRef}>
@@ -588,7 +595,7 @@ export const ThumsSlider: React.FC = () => {
             onClick={() => onThumbClick(index)}
           >
             <motion.img
-              src={slide}
+              src={slide.src}
               className='w-full h-full object-cover rounded-sm'
               width={400}
               height={400}
@@ -600,4 +607,5 @@ export const ThumsSlider: React.FC = () => {
     </div>
   );
 };
+
 export default Carousel;
